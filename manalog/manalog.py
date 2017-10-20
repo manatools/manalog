@@ -72,7 +72,7 @@ class MlDialog(basedialog.BaseDialog):
     self.sinceFrame = self.factory.createCheckBoxFrame(row1, _("Since"), True)
     self.sinceFrame.setNotify(True)
     self.eventManager.addWidgetEvent(self.sinceFrame, self.onSinceFrameEvent)
-    self.untilFrame = self.factory.createCheckBoxFrame(row1, _("Until"), True)
+    self.untilFrame = self.factory.createCheckBoxFrame(row2, _("Until"), True)
     self.untilFrame.setNotify(True)
     self.eventManager.addWidgetEvent(self.untilFrame, self.onUntilFrameEvent)
     if (optFactory.hasDateField()):

@@ -25,7 +25,7 @@ import manatools.ui.basedialog as basedialog
 import manatools.services as mnservices
 import yui
 import time
-from gettext import gettext as _
+import gettext
 from datetime import date, datetime
 from systemd import journal
 import os
@@ -263,7 +263,7 @@ class MlDialog(basedialog.BaseDialog):
                 fd.write(self.logView.logText())
 
 if __name__ == '__main__':
-      
+  gettext.install('manatools', localedir='/usr/share/locale', names=('ngettext',))
   ml = MlDialog()
   ml.run()
 

@@ -50,12 +50,12 @@ class MlDialog(basedialog.BaseDialog):
     lbl1 = self.factory.createLabel(  self.factory.createLeft(dialog), _("A tool to monitor your logs"))
     #### matching
     hbox = self.factory.createHBox(layout)
-    matchingInputField = self.factory.createInputField(hbox, _("Matching"))
+    self.matchingInputField = self.factory.createInputField(hbox, _("Matching"))
     self.factory.createSpacing(hbox,1)
     #### not matching
-    notMatchingInputField =self.factory.createInputField(hbox, _("but not matching"))
-    #$matchingInputField->setWeight($yui::YD_HORIZ, 2);
-    #$notMatchingInputField->setWeight($yui::YD_HORIZ, 2);
+    self.notMatchingInputField =self.factory.createInputField(hbox, _("but not matching"))
+    self.matchingInputField.setWeight(yui.YD_HORIZ, 2)
+    self.notMatchingInputField.setWeight(yui.YD_HORIZ, 2)
     frame = self.factory.createFrame(layout, _("Options"))
     vbox = self.factory.createVBox(frame)
     self.lastBoot = self.factory.createCheckBox(self.factory.createLeft(vbox),_("Last boot"),True)
@@ -204,10 +204,32 @@ class MlDialog(basedialog.BaseDialog):
         j.seek_realtime(begin)
     i=0
     logstr=""
+    matching = self.matchingInputField.value()
+    notmatching = self.notMatchingInputField.value()
+    matching = matching.replace(' OR ','|')
+    if matching == '*' : 
+        matching = ''
+    if notmatching =='*' : 
+        notmatching = '.*'
+    neni = not notmatching and not matching
+    yeni = notmatching and not matching
+    neyi = not notmatching and matching
+    yeyi = notmatching and matching
     for l in j:
         i+=1
         try:
-            logstr +="{} {}[{}]: {}\n".format( datetime.strftime(l['__REALTIME_TIMESTAMP'], '%Y-%m-%d %H:%M:%S' ), l['SYSLOG_IDENTIFIER'],l['_PID'], l['MESSAGE'])
+            newline="{} {}[{}]: {}\n".format( datetime.strftime(l['__REALTIME_TIMESTAMP'], '%Y-%m-%d %H:%M:%S' ), l['SYSLOG_IDENTIFIER'],l['_PID'], l['MESSAGE'])
+            if neni : # not notmatching and not matching
+                    logstr += newline
+            if yeni : #notmatching and not matching
+                if not (notmatching in newline) :
+                    logstr += newline
+            if neyi :  #not notmatching and matching
+                if matching in newline :
+                    logstr += newline
+            if yeyi : # notmatching and matching
+                if not (notmatching in newline) and (matching in newline):
+                    logstr += newline
         except:
             for key in l.keys() :
                 logstr += ("{}: {}\n".format(key,l[key]))
@@ -261,7 +283,7 @@ class MlDialog(basedialog.BaseDialog):
        if save_name :
            with open(save_name, 'w') as fd:
                 fd.write(self.logView.logText())
-
+      
 if __name__ == '__main__':
   gettext.install('manatools', localedir='/usr/share/locale', names=('ngettext',))
   ml = MlDialog()

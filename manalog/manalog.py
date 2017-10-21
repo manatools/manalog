@@ -47,15 +47,7 @@ class MlDialog(basedialog.BaseDialog):
     optFactory = yui.YUI.optionalWidgetFactory()
     dialog = self.factory.createVBox(layout)
 
-    lbl1 = self.factory.createLabel(  self.factory.createLeft(dialog), _("A tool to monitor your logs"))
-    #### matching
-    hbox = self.factory.createHBox(layout)
-    self.matchingInputField = self.factory.createInputField(hbox, _("Matching"))
-    self.factory.createSpacing(hbox,1)
-    #### not matching
-    self.notMatchingInputField =self.factory.createInputField(hbox, _("but not matching"))
-    self.matchingInputField.setWeight(yui.YD_HORIZ, 2)
-    self.notMatchingInputField.setWeight(yui.YD_HORIZ, 2)
+    lbl1 = self.factory.createLabel(  (dialog), _("A tool to monitor your logs"),True,False)
     frame = self.factory.createFrame(layout, _("Options"))
     vbox = self.factory.createVBox(frame)
     self.lastBoot = self.factory.createCheckBox(self.factory.createLeft(vbox),_("Last boot"),True)
@@ -67,6 +59,8 @@ class MlDialog(basedialog.BaseDialog):
     row2 = self.factory.createHBox(vbox)
     self.factory.createVSpacing(vbox, 0.5)
     row3 = self.factory.createHBox(vbox)
+    self.factory.createVSpacing(vbox, 0.5)
+    row4 = self.factory.createHBox(vbox)
     
     #### since and until
     self.sinceFrame = self.factory.createCheckBoxFrame(row1, _("Since"), True)
@@ -153,8 +147,16 @@ class MlDialog(basedialog.BaseDialog):
     itemCollection = yui.YItemCollection(dlist)
     priorityTo.addItems(itemCollection)
 
+    #### matching
+    self.matchingInputField = self.factory.createInputField(row3, _("Matching"))
+    self.factory.createSpacing(row3,1)
+    #### not matching
+    self.notMatchingInputField =self.factory.createInputField(row3, _("but not matching"))
+    self.matchingInputField.setWeight(yui.YD_HORIZ, 2)
+    self.notMatchingInputField.setWeight(yui.YD_HORIZ, 2)
+
     #### search
-    findButton = self.factory.createPushButton(self.factory.createRight(row3), _("&Find"))
+    findButton = self.factory.createPushButton(self.factory.createRight(row4), _("&Find"))
     self.eventManager.addWidgetEvent(findButton, self.onFindButton)
     
     #### create log view object

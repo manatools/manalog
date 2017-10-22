@@ -28,7 +28,7 @@ import time
 import gettext
 from datetime import date, datetime
 from systemd import journal
-import os
+import os, select
 
 ######################################################################
 ## 
@@ -50,9 +50,16 @@ class MlDialog(basedialog.BaseDialog):
     lbl1 = self.factory.createLabel(  (dialog), _("A tool to monitor your logs"),True,False)
     frame = self.factory.createFrame(layout, _("Options"))
     vbox = self.factory.createVBox(frame)
-    self.lastBoot = self.factory.createCheckBox(self.factory.createLeft(vbox),_("Last boot"),True)
+    hbox = self.factory.createHBox(vbox)
+    #### Last Boot
+    self.lastBoot = self.factory.createCheckBox(self.factory.createLeft(hbox),_("Last boot"),True)
     self.lastBoot.setNotify(True)
     self.eventManager.addWidgetEvent(self.lastBoot, self.onLastBootEvent)
+    #### Tailing mode
+    self.tailing = self.factory.createCheckBox(self.factory.createLeft(hbox),_("Occuring logs"),False)
+    self.tailing.setNotify(True)
+    self.eventManager.addWidgetEvent(self.tailing, self.onTailingEvent)
+
     self.factory.createVSpacing(vbox,0.5)
     row1 = self.factory.createHBox(vbox)
     self.factory.createVSpacing(vbox, 0.5)
@@ -156,8 +163,10 @@ class MlDialog(basedialog.BaseDialog):
     self.notMatchingInputField.setWeight(yui.YD_HORIZ, 2)
 
     #### search
-    findButton = self.factory.createPushButton(self.factory.createRight(row4), _("&Find"))
-    self.eventManager.addWidgetEvent(findButton, self.onFindButton)
+    self.stopButton = self.factory.createPushButton(self.factory.createRight(row4), _("&Stop"))
+    self.eventManager.addWidgetEvent(self.stopButton, self.onStopButton)
+    self.findButton = self.factory.createPushButton(self.factory.createRight(row4), _("&Find"))
+    self.eventManager.addWidgetEvent(self.findButton, self.onFindButton)
     
     #### create log view object
     self.logView = self.factory.createLogView(layout, _("Log content"), 10, 0)
@@ -186,9 +195,10 @@ class MlDialog(basedialog.BaseDialog):
     self.eventManager.addCancelEvent(self.onCancelEvent)
  
     # End Dialof layout
-    
+  def onStopButton(self): 
+    print ('Button "Stop" pressed')
+      
   def onFindButton(self) :
-    print ('Button "Find" pressed')
     yui.YUI.app().busyCursor()
     j = journal.Reader()
     if self.lastBoot.value() :
@@ -204,6 +214,25 @@ class MlDialog(basedialog.BaseDialog):
     if self.sinceFrame.value() :
         begin = datetime.strptime(self.sinceDate.value() +" "+self.sinceTime.value(), '%Y-%m-%d %H:%M:%S' )
         j.seek_realtime(begin)
+    if self.tailing.value() :
+        j.seek_tail()
+        j.get_previous()
+        p = select.poll()
+        journal_fd = j.fileno()
+        poll_event_mask = j.get_events()
+        p.register(journal_fd, poll_event_mask)
+        while True:
+            ev = self.dialog.pollEvent()
+            if ev != None :
+                if ev.widget() == self.stopButton :
+                    break
+            if p.poll(250):
+                if j.process() == journal.APPEND:
+                    for l in j:
+                        try:
+                            self.logView.appendLines("{} {}[{}]: {}\n".format( datetime.strftime(l['__REALTIME_TIMESTAMP'], '%Y-%m-%d %H:%M:%S' ), l['SYSLOG_IDENTIFIER'],l['_PID'], l['MESSAGE']))
+                        except:
+                            self.logView.appendLines("{} {}: {}\n".format( datetime.strftime(l['__REALTIME_TIMESTAMP'], '%Y-%m-%d %H:%M:%S' ), l['SYSLOG_IDENTIFIER'], l['MESSAGE']))
     i=0
     logstr=""
     matching = self.matchingInputField.value()
@@ -236,6 +265,7 @@ class MlDialog(basedialog.BaseDialog):
             for key in l.keys() :
                 logstr += ("{}: {}\n".format(key,l[key]))
     self.logView.setLogText(logstr)
+    print("Found {} lines".format(i))
     yui.YUI.app().normalCursor()
     
   def onLastBootEvent(self) :
@@ -266,6 +296,15 @@ class MlDialog(basedialog.BaseDialog):
       yui.YUI.ui().blockEvents()
       if self.priorityToFrame.value() and not self.priorityFromFrame.value():
           self.priorityFromFrame.setValue(True)
+      yui.YUI.ui().unblockEvents()
+
+  def onTailingEvent(self):
+      yui.YUI.ui().blockEvents()
+      self.sinceFrame.setValue(False)
+      self.untilFrame.setValue(False)
+      self.priorityToFrame.setValue(False)
+      self.priorityFromFrame.setValue(False)
+      self.unitsFrame.setValue(False) 
       yui.YUI.ui().unblockEvents()
 
   def onCancelEvent(self) :

@@ -233,9 +233,10 @@ class MlDialog(basedialog.BaseDialog):
                 if j.process() == journal.APPEND:
                     for l in j:
                         try:
-                            self.logView.appendLines("{} {}[{}]: {}\n".format( datetime.strftime(l['__REALTIME_TIMESTAMP'], '%Y-%m-%d %H:%M:%S' ), l['SYSLOG_IDENTIFIER'],l['_PID'], l['MESSAGE']))
-                        except:
                             self.logView.appendLines("{} {}: {}\n".format( datetime.strftime(l['__REALTIME_TIMESTAMP'], '%Y-%m-%d %H:%M:%S' ), l['SYSLOG_IDENTIFIER'], l['MESSAGE']))
+                        except:
+                            for key in l.keys() :
+                                logstr += ("{}: {}\n".format(key,l[key]))
     else:
         i=0
         logstr=""
@@ -253,7 +254,7 @@ class MlDialog(basedialog.BaseDialog):
         for l in j:
             i+=1
             try:
-                newline="{} {}[{}]: {}\n".format( datetime.strftime(l['__REALTIME_TIMESTAMP'], '%Y-%m-%d %H:%M:%S' ), l['SYSLOG_IDENTIFIER'],l['_PID'], l['MESSAGE'])
+                newline="{} {}: {}\n".format( datetime.strftime(l['__REALTIME_TIMESTAMP'], '%Y-%m-%d %H:%M:%S' ), l['SYSLOG_IDENTIFIER'], l['MESSAGE'])
                 if neni : # not notmatching and not matching
                         logstr += newline
                 if yeni : #notmatching and not matching

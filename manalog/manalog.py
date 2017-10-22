@@ -165,6 +165,7 @@ class MlDialog(basedialog.BaseDialog):
     #### search
     self.stopButton = self.factory.createPushButton(self.factory.createRight(row4), _("&Stop"))
     self.eventManager.addWidgetEvent(self.stopButton, self.onStopButton)
+    self.stopButton.setDisabled()
     self.findButton = self.factory.createPushButton(self.factory.createRight(row4), _("&Find"))
     self.eventManager.addWidgetEvent(self.findButton, self.onFindButton)
     
@@ -215,6 +216,7 @@ class MlDialog(basedialog.BaseDialog):
         begin = datetime.strptime(self.sinceDate.value() +" "+self.sinceTime.value(), '%Y-%m-%d %H:%M:%S' )
         j.seek_realtime(begin)
     if self.tailing.value() :
+        self.stopButton.setEnabled()
         j.seek_tail()
         j.get_previous()
         p = select.poll()
@@ -225,6 +227,7 @@ class MlDialog(basedialog.BaseDialog):
             ev = self.dialog.pollEvent()
             if ev != None :
                 if ev.widget() == self.stopButton :
+                    self.stopButton.setDisabled()
                     break
             if p.poll(250):
                 if j.process() == journal.APPEND:

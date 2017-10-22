@@ -240,6 +240,10 @@ class MlDialog(basedialog.BaseDialog):
     else:
         i=0
         logstr=""
+        if self.untilFrame.value() :
+            untilDatetime = datetime.strptime(self.untilDate.value() +" "+self.untilTime.value(), '%Y-%m-%d %H:%M:%S' )
+        else :
+            untilDatetime = datetime.now()
         matching = self.matchingInputField.value()
         notmatching = self.notMatchingInputField.value()
         matching = matching.replace(' OR ','|')
@@ -252,6 +256,8 @@ class MlDialog(basedialog.BaseDialog):
         neyi = not notmatching and matching
         yeyi = notmatching and matching
         for l in j:
+            if untilDatetime < l['__REALTIME_TIMESTAMP'] :
+                break
             i+=1
             try:
                 newline="{} {}: {}\n".format( datetime.strftime(l['__REALTIME_TIMESTAMP'], '%Y-%m-%d %H:%M:%S' ), l['SYSLOG_IDENTIFIER'], l['MESSAGE'])

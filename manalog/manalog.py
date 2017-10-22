@@ -236,39 +236,40 @@ class MlDialog(basedialog.BaseDialog):
                             self.logView.appendLines("{} {}[{}]: {}\n".format( datetime.strftime(l['__REALTIME_TIMESTAMP'], '%Y-%m-%d %H:%M:%S' ), l['SYSLOG_IDENTIFIER'],l['_PID'], l['MESSAGE']))
                         except:
                             self.logView.appendLines("{} {}: {}\n".format( datetime.strftime(l['__REALTIME_TIMESTAMP'], '%Y-%m-%d %H:%M:%S' ), l['SYSLOG_IDENTIFIER'], l['MESSAGE']))
-    i=0
-    logstr=""
-    matching = self.matchingInputField.value()
-    notmatching = self.notMatchingInputField.value()
-    matching = matching.replace(' OR ','|')
-    if matching == '*' : 
-        matching = ''
-    if notmatching =='*' : 
-        notmatching = '.*'
-    neni = not notmatching and not matching
-    yeni = notmatching and not matching
-    neyi = not notmatching and matching
-    yeyi = notmatching and matching
-    for l in j:
-        i+=1
-        try:
-            newline="{} {}[{}]: {}\n".format( datetime.strftime(l['__REALTIME_TIMESTAMP'], '%Y-%m-%d %H:%M:%S' ), l['SYSLOG_IDENTIFIER'],l['_PID'], l['MESSAGE'])
-            if neni : # not notmatching and not matching
-                    logstr += newline
-            if yeni : #notmatching and not matching
-                if not (notmatching in newline) :
-                    logstr += newline
-            if neyi :  #not notmatching and matching
-                if matching in newline :
-                    logstr += newline
-            if yeyi : # notmatching and matching
-                if not (notmatching in newline) and (matching in newline):
-                    logstr += newline
-        except:
-            for key in l.keys() :
-                logstr += ("{}: {}\n".format(key,l[key]))
-    self.logView.setLogText(logstr)
-    print("Found {} lines".format(i))
+    else:
+        i=0
+        logstr=""
+        matching = self.matchingInputField.value()
+        notmatching = self.notMatchingInputField.value()
+        matching = matching.replace(' OR ','|')
+        if matching == '*' : 
+            matching = ''
+        if notmatching =='*' : 
+            notmatching = '.*'
+        neni = not notmatching and not matching
+        yeni = notmatching and not matching
+        neyi = not notmatching and matching
+        yeyi = notmatching and matching
+        for l in j:
+            i+=1
+            try:
+                newline="{} {}[{}]: {}\n".format( datetime.strftime(l['__REALTIME_TIMESTAMP'], '%Y-%m-%d %H:%M:%S' ), l['SYSLOG_IDENTIFIER'],l['_PID'], l['MESSAGE'])
+                if neni : # not notmatching and not matching
+                        logstr += newline
+                if yeni : #notmatching and not matching
+                    if not (notmatching in newline) :
+                        logstr += newline
+                if neyi :  #not notmatching and matching
+                    if matching in newline :
+                        logstr += newline
+                if yeyi : # notmatching and matching
+                    if not (notmatching in newline) and (matching in newline):
+                        logstr += newline
+            except:
+                for key in l.keys() :
+                    logstr += ("{}: {}\n".format(key,l[key]))
+        self.logView.setLogText(logstr)
+        print("Found {} lines".format(i))
     yui.YUI.app().normalCursor()
     
   def onLastBootEvent(self) :

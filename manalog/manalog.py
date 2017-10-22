@@ -176,8 +176,6 @@ class MlDialog(basedialog.BaseDialog):
     #### create log view object
     self.logView = self.factory.createLogView(layout, _("Log content"), 10, 0)
 
-
-    ### NOTE CheckBoxFrame doesn't honoured his costructor checked value for his children
     self.unitsFrame.setValue(False)
     self.sinceFrame.setValue(False)
     self.untilFrame.setValue(False)
@@ -200,9 +198,11 @@ class MlDialog(basedialog.BaseDialog):
     self.eventManager.addCancelEvent(self.onCancelEvent)
  
     # End Dialof layout
+
   def onStopButton(self): 
     print ('Button "Stop" pressed')
-      
+
+      #  Active section
   def onFindButton(self) :
     yui.YUI.app().busyCursor()
     j = journal.Reader()
@@ -220,6 +220,7 @@ class MlDialog(basedialog.BaseDialog):
         begin = datetime.strptime(self.sinceDate.value() +" "+self.sinceTime.value(), '%Y-%m-%d %H:%M:%S' )
         j.seek_realtime(begin)
     if self.tailing.value() :
+        #   Display in logview all new lines starting from now
         self.stopButton.setEnabled()
         j.seek_tail()
         j.get_previous()
@@ -242,6 +243,7 @@ class MlDialog(basedialog.BaseDialog):
                             for key in l.keys() :
                                 logstr += ("{}: {}\n".format(key,l[key]))
     else:
+        #   Query for journal lines matching the criteria
         i=0
         logstr=""
         if self.untilFrame.value() :
@@ -277,6 +279,7 @@ class MlDialog(basedialog.BaseDialog):
                     if not (notmatching in newline) and (matching in newline):
                         logstr += newline
             except:
+                #   At least one parameter to display is not provided
                 for key in l.keys() :
                     logstr += ("{}: {}\n".format(key,l[key]))
         self.logView.setLogText(logstr)

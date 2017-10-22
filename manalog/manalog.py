@@ -38,7 +38,11 @@ import os, select
 
 class MlDialog(basedialog.BaseDialog):
   def __init__(self):
-    basedialog.BaseDialog.__init__(self, "Manatools - log viewer", "", basedialog.DialogType.POPUP, 80, 10)
+        if os.getuid() == 0 :
+          space = _("System space")
+        else :
+            space = _("User space")
+        basedialog.BaseDialog.__init__(self, _("Manatools - log viewer - {}").format(space), "", basedialog.DialogType.POPUP, 80, 10)
     
   def UIlayout(self, layout):
     '''

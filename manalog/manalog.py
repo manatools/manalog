@@ -5,7 +5,7 @@
 #  
 #  This program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
-#  the Free Software Foundation; either version 2 of the License, or
+#  the Free Software Foundation; either version 3 of the License, or
 #  (at your option) any later version.
 #  
 #  This program is distributed in the hope that it will be useful,
@@ -233,6 +233,9 @@ class MlDialog(basedialog.BaseDialog):
             if ev != None :
                 if ev.widget() == self.stopButton :
                     self.stopButton.setDisabled()
+                    self.matchingInputField.setEnabled()
+                    self.notMatchingInputField.setEnabled()
+                    self.lastBoot.setEnabled()
                     break
             if p.poll(250):
                 if j.process() == journal.APPEND:
@@ -323,6 +326,15 @@ class MlDialog(basedialog.BaseDialog):
       self.priorityToFrame.setValue(False)
       self.priorityFromFrame.setValue(False)
       self.unitsFrame.setValue(False) 
+      self.matchingInputField.setValue("")
+      self.notMatchingInputField.setValue("")
+      self.matchingInputField.setDisabled()
+      self.notMatchingInputField.setDisabled()
+      self.lastBoot.setDisabled()
+      self.sinceFrame.setDisabled()
+      self.untilFrame.setDisabled()
+      self.priorityToFrame.setDisabled()
+      self.unitsFrame.setDisabled()
       yui.YUI.ui().unblockEvents()
 
   def onCancelEvent(self) :
@@ -334,7 +346,7 @@ class MlDialog(basedialog.BaseDialog):
     self.ExitLoop()
 
   def onAbout(self) :
-      ok = common.infoMsgBox({'title':"About", 'text':"Log viewer is a systemd journal viewer\nWork in progress"})
+      ok = common.infoMsgBox({'title':"About", 'text':_("Log viewer is a systemd journal viewer\nWork in progress")})
 
   def _save(self) :
        yui.YUI.app().busyCursor()

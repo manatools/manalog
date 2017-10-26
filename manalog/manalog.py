@@ -240,11 +240,7 @@ class MlDialog(basedialog.BaseDialog):
             if p.poll(250):
                 if j.process() == journal.APPEND:
                     for l in j:
-                        try:
-                            self.logView.appendLines("{} {}: {}\n".format( datetime.strftime(l['__REALTIME_TIMESTAMP'], '%Y-%m-%d %H:%M:%S' ), l['SYSLOG_IDENTIFIER'], l['MESSAGE']))
-                        except:
-                            for key in l.keys() :
-                                logstr += ("{}: {}\n".format(key,l[key]))
+                        self.logView.appendLines(self._displayLine(l))
     else:
         #   Query for journal lines matching the criteria
         i=0
@@ -268,27 +264,35 @@ class MlDialog(basedialog.BaseDialog):
             if untilDatetime < l['__REALTIME_TIMESTAMP'] :
                 break
             i+=1
-            try:
-                newline="{} {}: {}\n".format( datetime.strftime(l['__REALTIME_TIMESTAMP'], '%Y-%m-%d %H:%M:%S' ), l['SYSLOG_IDENTIFIER'], l['MESSAGE'])
-                if neni : # not notmatching and not matching
-                        logstr += newline
-                if yeni : #notmatching and not matching
-                    if not (notmatching in newline) :
-                        logstr += newline
-                if neyi :  #not notmatching and matching
-                    if matching in newline :
-                        logstr += newline
-                if yeyi : # notmatching and matching
-                    if not (notmatching in newline) and (matching in newline):
-                        logstr += newline
-            except:
-                #   At least one parameter to display is not provided
-                for key in l.keys() :
-                    logstr += ("{}: {}\n".format(key,l[key]))
+            newline=self._displayLine(l)
+            if neni : # not notmatching and not matching
+                    logstr += newline
+            if yeni : #notmatching and not matching
+                if not (notmatching in newline) :
+                    logstr += newline
+            if neyi :  #not notmatching and matching
+                if matching in newline :
+                    logstr += newline
+            if yeyi : # notmatching and matching
+                if not (notmatching in newline) and (matching in newline):
+                    logstr += newline
         self.logView.setLogText(logstr)
         print("Found {} lines".format(i))
     yui.YUI.app().normalCursor()
     
+  def _displayLine(self, entry):
+      if 'SYSLOG_IDENTIFIER' in entry.keys() :
+           rline = "{} {}[{}]: {}\n".format( datetime.strftime(entry['__REALTIME_TIMESTAMP'], '%Y-%m-%d %H:%M:%S' ),entry['SYSLOG_IDENTIFIER'], entry['_PID'], entry['MESSAGE'])
+           rline = ""
+      else:
+        try:
+              rline = "{} {}[{}]: {}\n".format( datetime.strftime(entry['__REALTIME_TIMESTAMP'], '%Y-%m-%d %H:%M:%S' ),entry['_SYSTEMD_SLICE'], entry['_PID'], entry['MESSAGE'])
+        except:
+            rline=""
+            for key in l.keys() :
+                rline += ("{}: {}\n".format(key,l[key]))
+      return rline
+            
   def onLastBootEvent(self) :
       yui.YUI.ui().blockEvents()
       self.sinceFrame.setValue(False)

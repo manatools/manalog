@@ -289,7 +289,7 @@ class MlDialog(basedialog.BaseDialog):
            rline = "{} {}[{}]: {}\n".format( datetime.strftime(entry['__REALTIME_TIMESTAMP'], '%Y-%m-%d %H:%M:%S' ),entry['SYSLOG_IDENTIFIER'], entry['_PID'], entry['MESSAGE'])
       else:
         try:
-              rline = "{} {}[{}]: {}\n".format( datetime.strftime(entry['__REALTIME_TIMESTAMP'], '%Y-%m-%d %H:%M:%S' ),entry['_SYSTEMD_SLICE'], entry['_PID'], entry['MESSAGE'])
+              rline = "{} {}[{}]: {}\n".format( datetime.strftime(entry['__REALTIME_TIMESTAMP'], '%Y-%m-%d %H:%M:%S' ),entry['_COMM'], entry['_PID'], entry['MESSAGE'])
         except:
             rline=""
             for key in entry.keys() :

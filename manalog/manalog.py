@@ -244,6 +244,7 @@ class MlDialog(basedialog.BaseDialog):
     else:
         #   Query for journal lines matching the criteria
         i=0
+        lenghtlimit = 100000
         logstr=""
         if self.untilFrame.value() :
             untilDatetime = datetime.strptime(self.untilDate.value() +" "+self.untilTime.value(), '%Y-%m-%d %H:%M:%S' )
@@ -263,6 +264,9 @@ class MlDialog(basedialog.BaseDialog):
         for l in j:
             if untilDatetime < l['__REALTIME_TIMESTAMP'] :
                 break
+            if i>lenghtlimit :
+               logstr += _("Limit of {} lines reached. Please add some filters.\n").format(lenghtlimit) 
+               break
             i+=1
             newline=self._displayLine(l)
             if neni : # not notmatching and not matching
@@ -283,14 +287,13 @@ class MlDialog(basedialog.BaseDialog):
   def _displayLine(self, entry):
       if 'SYSLOG_IDENTIFIER' in entry.keys() :
            rline = "{} {}[{}]: {}\n".format( datetime.strftime(entry['__REALTIME_TIMESTAMP'], '%Y-%m-%d %H:%M:%S' ),entry['SYSLOG_IDENTIFIER'], entry['_PID'], entry['MESSAGE'])
-           rline = ""
       else:
         try:
               rline = "{} {}[{}]: {}\n".format( datetime.strftime(entry['__REALTIME_TIMESTAMP'], '%Y-%m-%d %H:%M:%S' ),entry['_SYSTEMD_SLICE'], entry['_PID'], entry['MESSAGE'])
         except:
             rline=""
-            for key in l.keys() :
-                rline += ("{}: {}\n".format(key,l[key]))
+            for key in entry.keys() :
+                rline += ("{}: {}\n".format(key,entry[key]))
       return rline
             
   def onLastBootEvent(self) :

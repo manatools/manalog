@@ -261,7 +261,12 @@ class MlDialog(basedialog.BaseDialog):
         yeni = notmatching and not matching
         neyi = not notmatching and matching
         yeyi = notmatching and matching
+        previousBoot = ""
         for l in j:
+            if previousBoot != l['_BOOT_ID'] :
+                if previousBoot != "" :
+                    logstr += "=== {} ===\n".format(_("Reboot"))
+                previousBoot = l['_BOOT_ID']
             if untilDatetime < l['__REALTIME_TIMESTAMP'] :
                 break
             if i>lenghtlimit :

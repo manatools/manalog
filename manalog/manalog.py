@@ -38,12 +38,13 @@ import os, select
 
 class MlDialog(basedialog.BaseDialog):
   def __init__(self):
-        if os.getuid() == 0 :
-          space = _("System space")
-        else :
-            space = _("User space")
-        basedialog.BaseDialog.__init__(self, _("Manatools - log viewer - {}").format(space), "", basedialog.DialogType.POPUP, 80, 10)
-    
+    if os.getuid() == 0 :
+        space = _("System space")
+    else :
+        space = _("User space")
+    self._application_name = _("ManaLog - ManaTools log viewer")
+    basedialog.BaseDialog.__init__(self, _("Manatools - log viewer - {}").format(space), "", basedialog.DialogType.POPUP, 80, 10)
+
   def UIlayout(self, layout):
     '''
     layout to setup UI for Manalog
@@ -353,7 +354,15 @@ class MlDialog(basedialog.BaseDialog):
     self.ExitLoop()
 
   def onAbout(self) :
-      ok = common.infoMsgBox({'title':"About", 'text':_("Log viewer is a systemd journal viewer\nWork in progress")})
+      ok = common.AboutDialog({
+            'name' : self._application_name,
+            'dialog_mode' : common.AboutDialogMode.TABBED,
+            'version' : "x.y.z",
+            'credits' :"Copyright (C) 2017 Papoteur",
+            'license' : 'GPLv3',
+            'authors' : 'Papoteur &lt;mail@address.here&gt;',
+            'description' : "Log viewer is a systemd journal viewer<br>Work in progress",
+      })
 
   def _save(self) :
        yui.YUI.app().busyCursor()

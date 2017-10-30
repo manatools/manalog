@@ -60,9 +60,11 @@ class MlDialog(basedialog.BaseDialog):
     self.lastBoot.setNotify(True)
     self.eventManager.addWidgetEvent(self.lastBoot, self.onLastBootEvent)
     #### Tailing mode
-    self.tailing = self.factory.createCheckBox(self.factory.createLeft(hbox),_("Occuring logs"),False)
+    self.tailing = self.factory.createCheckBox(self.factory.createLeft(hbox),_("Tail mode"),False)
     self.tailing.setNotify(True)
     self.eventManager.addWidgetEvent(self.tailing, self.onTailingEvent)
+    #### Monotonic display for timestamp
+    self.monotonbt = self.factory.createCheckBox(self.factory.createLeft(hbox),_("Monotonic timestamp"),True)
 
     self.factory.createVSpacing(vbox,0.5)
     row1 = self.factory.createHBox(vbox)
@@ -208,6 +210,9 @@ class MlDialog(basedialog.BaseDialog):
     j = journal.Reader()
     if self.lastBoot.value() :
          j.this_boot()
+         monotonic = self.monotonbt.value()
+    else :
+        monotonic = False
     if self.unitsFrame.value() :
         if self.units.value() != "" :
             j.add_match("_SYSTEMD_UNIT={}.service".format(self.units.value()))
@@ -240,12 +245,13 @@ class MlDialog(basedialog.BaseDialog):
             if p.poll(250):
                 if j.process() == journal.APPEND:
                     for l in j:
-                        self.logView.appendLines(self._displayLine(l))
+                        self.logView.appendLines(self._displayLine(l, monotonic))
     else:
         #   Query for journal lines matching the criteria
         i=0
         lenghtlimit = 100000
         logstr=""
+        previousBoot = ""
         if self.untilFrame.value() :
             untilDatetime = datetime.strptime(self.untilDate.value() +" "+self.untilTime.value(), '%Y-%m-%d %H:%M:%S' )
         else :
@@ -261,7 +267,7 @@ class MlDialog(basedialog.BaseDialog):
         yeni = notmatching and not matching
         neyi = not notmatching and matching
         yeyi = notmatching and matching
-        previousBoot = ""
+        
         for l in j:
             if previousBoot != l['_BOOT_ID'] :
                 if previousBoot != "" :
@@ -273,7 +279,7 @@ class MlDialog(basedialog.BaseDialog):
                logstr += _("Limit of {} lines reached. Please add some filters.\n").format(lenghtlimit) 
                break
             i+=1
-            newline=self._displayLine(l)
+            newline=self._displayLine(l,monotonic)
             if neni : # not notmatching and not matching
                     logstr += newline
             if yeni : #notmatching and not matching
@@ -289,12 +295,20 @@ class MlDialog(basedialog.BaseDialog):
         print("Found {} lines".format(i))
     yui.YUI.app().normalCursor()
     
-  def _displayLine(self, entry):
+  def _displayLine(self, entry, monotonic = False):
+      if monotonic :
+         timeStr = "[{:.3f}]".format(entry['__MONOTONIC_TIMESTAMP'].timestamp.total_seconds())
+      else :
+          timeStr = datetime.strftime(entry['__REALTIME_TIMESTAMP'], '%Y-%m-%d %H:%M:%S' )
+      try:
+              pid = "[{}]".format(entry['_PID'])
+      except :
+             pid = ""
       if 'SYSLOG_IDENTIFIER' in entry.keys() :
-           rline = "{} {}[{}]: {}\n".format( datetime.strftime(entry['__REALTIME_TIMESTAMP'], '%Y-%m-%d %H:%M:%S' ),entry['SYSLOG_IDENTIFIER'], entry['_PID'], entry['MESSAGE'])
+           rline = "{} {}{}: {}\n".format(timeStr ,entry['SYSLOG_IDENTIFIER'], pid, entry['MESSAGE'])
       else:
         try:
-              rline = "{} {}[{}]: {}\n".format( datetime.strftime(entry['__REALTIME_TIMESTAMP'], '%Y-%m-%d %H:%M:%S' ),entry['_COMM'], entry['_PID'], entry['MESSAGE'])
+              rline = "{} {}{}: {}\n".format( timeStr,entry['_COMM'],pid, entry['MESSAGE'])
         except:
             rline=""
             for key in entry.keys() :
@@ -305,6 +319,7 @@ class MlDialog(basedialog.BaseDialog):
       yui.YUI.ui().blockEvents()
       self.sinceFrame.setValue(False)
       self.untilFrame.setValue(False)
+      self.monotonbt.setValue(self.lastBoot.value())
       yui.YUI.ui().unblockEvents()
 
   def onSinceFrameEvent(self) :

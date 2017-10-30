@@ -28,7 +28,8 @@ import time
 import gettext
 from datetime import date, datetime
 from systemd import journal
-import os, select
+import os, select, subprocess
+import re
 
 ######################################################################
 ## 
@@ -43,6 +44,30 @@ class MlDialog(basedialog.BaseDialog):
         else :
             space = _("User space")
         basedialog.BaseDialog.__init__(self, _("Manatools - log viewer - {}").format(space), "", basedialog.DialogType.POPUP, 80, 10)
+
+  def commands_getstatusoutput(self, cmd):
+    """Return (status, output) of executing cmd in a shell."""
+    pipe = subprocess.Popen('{ ' + cmd + '; } 2>&1', stdin = subprocess.PIPE, stdout=subprocess.PIPE, universal_newlines = True, shell = True)
+    of = pipe.stdout.fileno()
+    text = ''
+    pipe.stdin.close()
+    while True:
+        text += os.read(of,8192).decode('utf8')
+        status = pipe.poll()
+        if status is not None or text == '':
+            break
+    if text[-1:] == '\n': text = text[:-1]
+    return status, text
+
+  def listBoots(self) :
+    boots = []
+    status,text = self.commands_getstatusoutput("LC_ALL=C journalctl --list-boots -q")
+    lines = text.split("\n")
+    boot_re = re.compile("(?P<order>[+-]?[0-9]+) (?P<bootid>[0-9A-Za-z]+) [A-Za-z]+ (?P<start>(-?(?:[1-9][0-9]*)?[0-9]{4})-(1[0-2]|0[1-9])-(3[0-1]|0[1-9]|[1-2][0-9]) (2[0-3]|[0-1][0-9]):([0-5][0-9]):([0-5][0-9])(\.[0-9]+)?(Z|[+-](?:2[0-3]|[0-1][0-9]):[0-5][0-9])? [A-Za-z]+)—[A-Za-z]+ (?P<end>(-?(?:[1-9][0-9]*)?[0-9]{4})-(1[0-2]|0[1-9])-(3[0-1]|0[1-9]|[1-2][0-9]) (2[0-3]|[0-1][0-9]):([0-5][0-9]):([0-5][0-9])(\.[0-9]+)?(Z|[+-](?:2[0-3]|[0-1][0-9]):[0-5][0-9])? [A-Za-z]+)")
+    for line in lines :
+        res = boot_re.search(line)
+        boots.append([res.group('order'), res.group('bootid'), res.group('start'), res.group('end')])
+    return boots
     
   def UIlayout(self, layout):
     '''
@@ -103,7 +128,6 @@ class MlDialog(basedialog.BaseDialog):
 
     #### units
     spacing = self.factory.createHSpacing(row1, 2.0)
-
     self.unitsFrame = self.factory.createCheckBoxFrame(row1,_("Select a unit"), True)
     self.unitsFrame.setNotify(True)
     self.units = self.factory.createComboBox( self.factory.createLeft(self.unitsFrame), "" )
@@ -122,6 +146,21 @@ class MlDialog(basedialog.BaseDialog):
         dlist.append(item)
     itemCollection = yui.YItemCollection(dlist)
     self.units.addItems(itemCollection)
+    #### boots
+    self.bootsFrame = self.factory.createCheckBoxFrame(hbox,_("Select a boot"), True)
+    self.bootsFrame.setNotify(True)
+    self.eventManager.addWidgetEvent(self.bootsFrame, self.onBootFrameEvent)
+    self.boots = self.factory.createComboBox( self.factory.createLeft(self.bootsFrame), "" )
+    dlist = []
+    self.bootModel = {}
+    for boot in self.listBoots() :
+        key = boot[0]+' '+boot[2]
+        item = yui.YItem(key)
+        self.bootModel[key] = boot[1]    #  boot_id
+        item.this.own(False)
+        dlist.append(item)
+    itemCollection = yui.YItemCollection(dlist)
+    self.boots.addItems(itemCollection)
     yui.YUI.app().normalCursor()
 
     #### priority
@@ -183,6 +222,7 @@ class MlDialog(basedialog.BaseDialog):
     self.untilFrame.setValue(False)
     self.priorityFromFrame.setValue(False)
     self.priorityToFrame.setValue(False)
+    self.bootsFrame.setValue(False)
 
     # buttons on the last line
     align = self.factory.createRight(layout)
@@ -216,6 +256,10 @@ class MlDialog(basedialog.BaseDialog):
     if self.unitsFrame.value() :
         if self.units.value() != "" :
             j.add_match("_SYSTEMD_UNIT={}.service".format(self.units.value()))
+    if self.bootsFrame.value() :
+        monotonic = self.monotonbt.value()
+        if self.boots.value() != "" :
+            j.this_boot(self.bootModel[self.boots.value()])
     if self.priorityFromFrame.value() :
         level = self.priorityFromFrame.value()
         if self.priorityToFrame.value() :
@@ -320,6 +364,13 @@ class MlDialog(basedialog.BaseDialog):
       self.sinceFrame.setValue(False)
       self.untilFrame.setValue(False)
       self.monotonbt.setValue(self.lastBoot.value())
+      self.bootsFrame.setValue(False)
+      yui.YUI.ui().unblockEvents()
+
+  def onBootFrameEvent(self):
+      yui.YUI.ui().blockEvents()
+      if self.bootsFrame.value() :
+          self.lastBoot.setValue(False)
       yui.YUI.ui().unblockEvents()
 
   def onSinceFrameEvent(self) :
@@ -348,20 +399,24 @@ class MlDialog(basedialog.BaseDialog):
 
   def onTailingEvent(self):
       yui.YUI.ui().blockEvents()
-      self.sinceFrame.setValue(False)
-      self.untilFrame.setValue(False)
-      self.priorityToFrame.setValue(False)
-      self.priorityFromFrame.setValue(False)
-      self.unitsFrame.setValue(False) 
-      self.matchingInputField.setValue("")
-      self.notMatchingInputField.setValue("")
-      self.matchingInputField.setDisabled()
-      self.notMatchingInputField.setDisabled()
-      self.lastBoot.setDisabled()
-      self.sinceFrame.setDisabled()
-      self.untilFrame.setDisabled()
-      self.priorityToFrame.setDisabled()
-      self.unitsFrame.setDisabled()
+      if self.tailing.value() :
+            self.sinceFrame.setValue(False)
+            self.untilFrame.setValue(False)
+            self.priorityToFrame.setValue(False)
+            self.priorityFromFrame.setValue(False)
+            self.unitsFrame.setValue(False) 
+            self.matchingInputField.setValue("")
+            self.notMatchingInputField.setValue("")
+            self.matchingInputField.setDisabled()
+            self.notMatchingInputField.setDisabled()
+            self.lastBoot.setDisabled()
+            self.sinceFrame.setDisabled()
+            self.untilFrame.setDisabled()
+            self.priorityToFrame.setDisabled()
+            self.unitsFrame.setDisabled()
+      else:
+           self.lastBoot.setEnabled()
+           
       yui.YUI.ui().unblockEvents()
 
   def onCancelEvent(self) :

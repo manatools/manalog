@@ -432,11 +432,11 @@ class MlDialog(basedialog.BaseDialog):
       ok = common.AboutDialog({
             'name' : self._application_name,
             'dialog_mode' : common.AboutDialogMode.TABBED,
-            'version' : "x.y.z",
+            'version' : "0.1.0",
             'credits' :"Credits 2017 Papoteur",
             'license' : 'GPLv3',
             'authors' : 'Papoteur &lt;papoteur@mageialinux-online.org&gt;',
-            'description' : "Log viewer is a systemd journal viewer",
+            'description' : _("Log viewer is a systemd journal viewer"),
       })
 
   def _save(self) :

@@ -1,0 +1,140 @@
+# #-#-#-#-#  manatools_perl.pot (ManaTools 1.1.2)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Angelo Naselli - Matteo Pasotti
+# This file is distributed under the same license as the PACKAGE package.
+#
+# #-#-#-#-#  manadesktop.pot (PACKAGE VERSION)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Translators:
+# Pablo Saratxaga <pablo@walon.org>, 2016
+msgid ""
+msgstr ""
+"Project-Id-Version: Mageia\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-12 20:21+0100\n"
+"PO-Revision-Date: 2016-06-27 23:15+0000\n"
+"Last-Translator: Pablo Saratxaga <pablo@walon.org>\n"
+"Language-Team: Walloon (http://www.transifex.com/MageiaLinux/mageia/language/"
+"wa/)\n"
+"Language: wa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: manalog/manalog.py:43
+msgid "System space"
+msgstr ""
+
+#: manalog/manalog.py:45
+msgid "User space"
+msgstr ""
+
+#: manalog/manalog.py:46
+msgid "ManaLog - ManaTools log viewer"
+msgstr ""
+
+#: manalog/manalog.py:47
+msgid "Manatools - log viewer - {}"
+msgstr ""
+
+#: manalog/manalog.py:80
+msgid "A tool to monitor your logs"
+msgstr "Ene usteye po vey vos fitchîs djournås"
+
+#: manalog/manalog.py:81
+msgid "Options"
+msgstr "Tchuzes"
+
+#: manalog/manalog.py:85
+msgid "Last boot"
+msgstr "Dierin enondaedje"
+
+#: manalog/manalog.py:89
+msgid "Tail mode"
+msgstr ""
+
+#: manalog/manalog.py:93
+msgid "Monotonic timestamp"
+msgstr ""
+
+#: manalog/manalog.py:105
+msgid "Since"
+msgstr "Dispoy"
+
+#: manalog/manalog.py:108
+msgid "Until"
+msgstr "Disk' a"
+
+#: manalog/manalog.py:132
+msgid "Select a unit"
+msgstr ""
+
+#: manalog/manalog.py:151
+msgid "Select a boot"
+msgstr ""
+
+#: manalog/manalog.py:170
+msgid "From priority"
+msgstr ""
+
+#: manalog/manalog.py:188
+msgid "To priority"
+msgstr ""
+
+#: manalog/manalog.py:204
+msgid "Matching"
+msgstr ""
+
+#: manalog/manalog.py:207
+msgid "but not matching"
+msgstr ""
+
+#: manalog/manalog.py:212
+msgid "&Stop"
+msgstr ""
+
+#: manalog/manalog.py:215
+msgid "&Find"
+msgstr "&Trover"
+
+#: manalog/manalog.py:219
+msgid "Log content"
+msgstr ""
+
+#: manalog/manalog.py:231
+msgid "&About"
+msgstr "Å&d fwait"
+
+#: manalog/manalog.py:235
+msgid "&Save"
+msgstr "&Schaper"
+
+#: manalog/manalog.py:237
+msgid "&Quit"
+msgstr "C&witer"
+
+#: manalog/manalog.py:319
+msgid "Reboot"
+msgstr ""
+
+#: manalog/manalog.py:324
+msgid "Limit of {} lines reached. Please add some filters.\n"
+msgstr ""
+
+#: manalog/manalog.py:439
+msgid "Log viewer is a systemd journal viewer"
+msgstr ""
+
+#: manalog/manalog.py:444
+msgid "Save as.."
+msgstr "Schaper eyet rlomer..."
+
+#~ msgid "Copyright (C) %s Mageia community"
+#~ msgstr "Copyright © %s li cminålté Mageia"
+
+#~ msgid "_: Translator(s) name(s) & email(s)\n"
+#~ msgstr "Pablo Saratxaga <pablo@walon.org>\n"

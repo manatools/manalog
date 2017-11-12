@@ -1,0 +1,129 @@
+# Copyright (C) YEAR Angelo Naselli - Matteo Pasotti
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Marek Laane <qiilaq69@gmail.com>, 2015, 2016.
+msgid ""
+msgstr ""
+"Project-Id-Version: ManaTools 1.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-12 16:21+0100\n"
+"PO-Revision-Date: 2016-06-12 08:23+0300\n"
+"Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
+"Language-Team: Estonian <i18n-et@ml.mageia.org>\n"
+"Language: et\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 1.5\n"
+
+#: manalog/manalog.py:43
+msgid "System space"
+msgstr ""
+
+#: manalog/manalog.py:45
+msgid "User space"
+msgstr ""
+
+#: manalog/manalog.py:46
+msgid "ManaLog - ManaTools log viewer"
+msgstr ""
+
+#: manalog/manalog.py:47
+msgid "Manatools - log viewer - {}"
+msgstr ""
+
+#: manalog/manalog.py:80
+msgid "A tool to monitor your logs"
+msgstr "Tööriist logide jälgimiseks"
+
+#: manalog/manalog.py:81
+msgid "Options"
+msgstr "Valikud"
+
+#: manalog/manalog.py:85
+msgid "Last boot"
+msgstr "Viimane algkäivitus"
+
+#: manalog/manalog.py:89
+msgid "Tail mode"
+msgstr ""
+
+#: manalog/manalog.py:93
+msgid "Monotonic timestamp"
+msgstr ""
+
+#: manalog/manalog.py:105
+msgid "Since"
+msgstr "Alates"
+
+#: manalog/manalog.py:108
+msgid "Until"
+msgstr "Kuni"
+
+#: manalog/manalog.py:132
+msgid "Select a unit"
+msgstr "Üksuse valimine"
+
+#: manalog/manalog.py:151
+msgid "Select a boot"
+msgstr ""
+
+#: manalog/manalog.py:170
+msgid "From priority"
+msgstr "Prioriteedist"
+
+#: manalog/manalog.py:188
+msgid "To priority"
+msgstr "Prioriteedini"
+
+#: manalog/manalog.py:204
+msgid "Matching"
+msgstr "Sobib"
+
+#: manalog/manalog.py:207
+msgid "but not matching"
+msgstr "aga ei sobi"
+
+#: manalog/manalog.py:212
+msgid "&Stop"
+msgstr ""
+
+#: manalog/manalog.py:215
+msgid "&Find"
+msgstr "&Otsi"
+
+#: manalog/manalog.py:219
+msgid "Log content"
+msgstr "Logi sisu"
+
+#: manalog/manalog.py:231
+msgid "&About"
+msgstr "&Teave"
+
+#: manalog/manalog.py:235
+msgid "&Save"
+msgstr "&Salvesta"
+
+#: manalog/manalog.py:237
+msgid "&Quit"
+msgstr "&Välju"
+
+#: manalog/manalog.py:319
+msgid "Reboot"
+msgstr ""
+
+#: manalog/manalog.py:324
+msgid "Limit of {} lines reached. Please add some filters.\n"
+msgstr ""
+
+#: manalog/manalog.py:439
+msgid "Log viewer is a systemd journal viewer"
+msgstr ""
+
+#: manalog/manalog.py:444
+msgid "Save as.."
+msgstr "Salvesta kui..."
+
+#~ msgid "_: Translator(s) name(s) & email(s)\n"
+#~ msgstr "Marek Laane <qiilaq69@gmail.com>\n"

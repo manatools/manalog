@@ -1,0 +1,136 @@
+# #-#-#-#-#  manatools_perl.pot (ManaTools 1.1.7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Angelo Naselli - Matteo Pasotti
+# This file is distributed under the same license as the ManaTools package.
+#
+# #-#-#-#-#  manadesktop.pot (PACKAGE VERSION)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Translators:
+# Davidmp <medipas@gmail.com>, 2015-2017
+# Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2015,2017
+# Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: Mageia\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-12 16:21+0100\n"
+"PO-Revision-Date: 2017-09-13 16:22+0000\n"
+"Last-Translator: Davidmp <medipas@gmail.com>\n"
+"Language-Team: Catalan (http://www.transifex.com/MageiaLinux/mageia/language/"
+"ca/)\n"
+"Language: ca\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: manalog/manalog.py:43
+msgid "System space"
+msgstr ""
+
+#: manalog/manalog.py:45
+msgid "User space"
+msgstr ""
+
+#: manalog/manalog.py:46
+msgid "ManaLog - ManaTools log viewer"
+msgstr ""
+
+#: manalog/manalog.py:47
+msgid "Manatools - log viewer - {}"
+msgstr ""
+
+#: manalog/manalog.py:80
+msgid "A tool to monitor your logs"
+msgstr "Eina per veure els registres"
+
+#: manalog/manalog.py:81
+msgid "Options"
+msgstr "Opcions"
+
+#: manalog/manalog.py:85
+msgid "Last boot"
+msgstr "Última arrencada"
+
+#: manalog/manalog.py:89
+msgid "Tail mode"
+msgstr ""
+
+#: manalog/manalog.py:93
+msgid "Monotonic timestamp"
+msgstr ""
+
+#: manalog/manalog.py:105
+msgid "Since"
+msgstr "Des de"
+
+#: manalog/manalog.py:108
+msgid "Until"
+msgstr "fins a"
+
+#: manalog/manalog.py:132
+msgid "Select a unit"
+msgstr "Seleccioneu una unitat"
+
+#: manalog/manalog.py:151
+msgid "Select a boot"
+msgstr ""
+
+#: manalog/manalog.py:170
+msgid "From priority"
+msgstr "Des de la prioritat"
+
+#: manalog/manalog.py:188
+msgid "To priority"
+msgstr "Fins a la prioritat"
+
+#: manalog/manalog.py:204
+msgid "Matching"
+msgstr "Que coincideixin amb"
+
+#: manalog/manalog.py:207
+msgid "but not matching"
+msgstr "però que no coincideixin amb"
+
+#: manalog/manalog.py:212
+msgid "&Stop"
+msgstr ""
+
+#: manalog/manalog.py:215
+msgid "&Find"
+msgstr "&Cerca"
+
+#: manalog/manalog.py:219
+msgid "Log content"
+msgstr "Contingut del registre"
+
+#: manalog/manalog.py:231
+msgid "&About"
+msgstr "&Quant a"
+
+#: manalog/manalog.py:235
+msgid "&Save"
+msgstr "&Desa"
+
+#: manalog/manalog.py:237
+msgid "&Quit"
+msgstr "Surt"
+
+#: manalog/manalog.py:319
+msgid "Reboot"
+msgstr ""
+
+#: manalog/manalog.py:324
+msgid "Limit of {} lines reached. Please add some filters.\n"
+msgstr ""
+
+#: manalog/manalog.py:439
+msgid "Log viewer is a systemd journal viewer"
+msgstr ""
+
+#: manalog/manalog.py:444
+msgid "Save as.."
+msgstr "Desa com a..."

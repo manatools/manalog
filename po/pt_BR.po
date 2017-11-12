@@ -1,0 +1,147 @@
+# #-#-#-#-#  manatools_perl.pot (ManaTools 1.1.2)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Angelo Naselli - Matteo Pasotti
+# This file is distributed under the same license as the PACKAGE package.
+#
+# #-#-#-#-#  manadesktop.pot (PACKAGE VERSION)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Translators:
+# Marcio Andre Padula <padula1000@gmail.com>, 2015-2016
+# Michael Ferreira Martins <michaelfm21@gmail.com>, 2017
+# Rodrigo de Almeida Sottomaior Macedo <rmsolucoeseminformatic4@gmail.com>, 2015-2016
+msgid ""
+msgstr ""
+"Project-Id-Version: Mageia\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-12 20:21+0100\n"
+"PO-Revision-Date: 2017-06-30 04:54+0000\n"
+"Last-Translator: Michael Ferreira Martins <michaelfm21@gmail.com>\n"
+"Language-Team: Portuguese (Brazil) (http://www.transifex.com/MageiaLinux/"
+"mageia/language/pt_BR/)\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: manalog/manalog.py:43
+msgid "System space"
+msgstr ""
+
+#: manalog/manalog.py:45
+msgid "User space"
+msgstr ""
+
+#: manalog/manalog.py:46
+msgid "ManaLog - ManaTools log viewer"
+msgstr ""
+
+#: manalog/manalog.py:47
+msgid "Manatools - log viewer - {}"
+msgstr ""
+
+#: manalog/manalog.py:80
+msgid "A tool to monitor your logs"
+msgstr "Uma ferramenta para monitorar seus logs"
+
+#: manalog/manalog.py:81
+msgid "Options"
+msgstr "Opções"
+
+#: manalog/manalog.py:85
+msgid "Last boot"
+msgstr "Ultima Atualização"
+
+#: manalog/manalog.py:89
+msgid "Tail mode"
+msgstr ""
+
+#: manalog/manalog.py:93
+msgid "Monotonic timestamp"
+msgstr ""
+
+#: manalog/manalog.py:105
+msgid "Since"
+msgstr "Ano"
+
+#: manalog/manalog.py:108
+msgid "Until"
+msgstr "Até"
+
+#: manalog/manalog.py:132
+msgid "Select a unit"
+msgstr "Selecione uma Unidade"
+
+#: manalog/manalog.py:151
+msgid "Select a boot"
+msgstr ""
+
+#: manalog/manalog.py:170
+msgid "From priority"
+msgstr "Dar prioridade"
+
+#: manalog/manalog.py:188
+msgid "To priority"
+msgstr "Dar prioridade"
+
+#: manalog/manalog.py:204
+msgid "Matching"
+msgstr "Pacotes compatível:"
+
+#: manalog/manalog.py:207
+msgid "but not matching"
+msgstr "Pacotes não compatível:"
+
+#: manalog/manalog.py:212
+msgid "&Stop"
+msgstr ""
+
+#: manalog/manalog.py:215
+msgid "&Find"
+msgstr "&encontrar"
+
+#: manalog/manalog.py:219
+msgid "Log content"
+msgstr "Conteúdo de Log"
+
+#: manalog/manalog.py:231
+msgid "&About"
+msgstr "&Sobre"
+
+#: manalog/manalog.py:235
+msgid "&Save"
+msgstr "&Salvar"
+
+#: manalog/manalog.py:237
+msgid "&Quit"
+msgstr "&Sair"
+
+#: manalog/manalog.py:319
+msgid "Reboot"
+msgstr ""
+
+#: manalog/manalog.py:324
+msgid "Limit of {} lines reached. Please add some filters.\n"
+msgstr ""
+
+#: manalog/manalog.py:439
+msgid "Log viewer is a systemd journal viewer"
+msgstr ""
+
+#: manalog/manalog.py:444
+msgid "Save as.."
+msgstr "Salvar como.."
+
+#~ msgid "GPLv2"
+#~ msgstr "GPLv2"
+
+#~ msgid "Copyright (C) %s Mageia community"
+#~ msgstr "Copyright (C) %s comunidade Mageia"
+
+#~ msgid "_: Translator(s) name(s) & email(s)\n"
+#~ msgstr ""
+#~ "Marcio Andre Padula <padula1000@gmail.com>\n"
+#~ "Michael Martins <michaelfm21@gmail.com>\n"

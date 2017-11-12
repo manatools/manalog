@@ -1,0 +1,134 @@
+# #-#-#-#-#  manatools_perl.pot (ManaTools 1.1.1)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Angelo Naselli - Matteo Pasotti
+# This file is distributed under the same license as the PACKAGE package.
+#
+# #-#-#-#-#  manadesktop.pot (PACKAGE VERSION)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: Mageia\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-12 16:21+0100\n"
+"PO-Revision-Date: 2016-03-13 20:35+0000\n"
+"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
+"Language-Team: Arabic (http://www.transifex.com/MageiaLinux/mageia/language/"
+"ar/)\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+
+#: manalog/manalog.py:43
+msgid "System space"
+msgstr ""
+
+#: manalog/manalog.py:45
+msgid "User space"
+msgstr ""
+
+#: manalog/manalog.py:46
+msgid "ManaLog - ManaTools log viewer"
+msgstr ""
+
+#: manalog/manalog.py:47
+msgid "Manatools - log viewer - {}"
+msgstr ""
+
+#: manalog/manalog.py:80
+msgid "A tool to monitor your logs"
+msgstr ""
+
+#: manalog/manalog.py:81
+msgid "Options"
+msgstr ""
+
+#: manalog/manalog.py:85
+msgid "Last boot"
+msgstr ""
+
+#: manalog/manalog.py:89
+msgid "Tail mode"
+msgstr ""
+
+#: manalog/manalog.py:93
+msgid "Monotonic timestamp"
+msgstr ""
+
+#: manalog/manalog.py:105
+msgid "Since"
+msgstr ""
+
+#: manalog/manalog.py:108
+msgid "Until"
+msgstr ""
+
+#: manalog/manalog.py:132
+msgid "Select a unit"
+msgstr ""
+
+#: manalog/manalog.py:151
+msgid "Select a boot"
+msgstr ""
+
+#: manalog/manalog.py:170
+msgid "From priority"
+msgstr ""
+
+#: manalog/manalog.py:188
+msgid "To priority"
+msgstr ""
+
+#: manalog/manalog.py:204
+msgid "Matching"
+msgstr ""
+
+#: manalog/manalog.py:207
+msgid "but not matching"
+msgstr ""
+
+#: manalog/manalog.py:212
+msgid "&Stop"
+msgstr ""
+
+#: manalog/manalog.py:215
+msgid "&Find"
+msgstr ""
+
+#: manalog/manalog.py:219
+msgid "Log content"
+msgstr ""
+
+#: manalog/manalog.py:231
+msgid "&About"
+msgstr ""
+
+#: manalog/manalog.py:235
+msgid "&Save"
+msgstr ""
+
+#: manalog/manalog.py:237
+msgid "&Quit"
+msgstr ""
+
+#: manalog/manalog.py:319
+msgid "Reboot"
+msgstr ""
+
+#: manalog/manalog.py:324
+msgid "Limit of {} lines reached. Please add some filters.\n"
+msgstr ""
+
+#: manalog/manalog.py:439
+msgid "Log viewer is a systemd journal viewer"
+msgstr ""
+
+#: manalog/manalog.py:444
+msgid "Save as.."
+msgstr ""

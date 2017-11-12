@@ -1,0 +1,136 @@
+# Ukrainian translation of manatools.pot.
+# Copyright (C) 2015 Angelo Naselli - Matteo Pasotti
+# This file is distributed under the same license as the manatools package.
+#
+# Yuri Chornoivan <yurchor@ukr.net>, 2015, 2016, 2017.
+msgid ""
+msgstr ""
+"Project-Id-Version: ManaTools 1.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-12 20:21+0100\n"
+"PO-Revision-Date: 2017-09-10 13:59+0200\n"
+"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
+"Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 2.0\n"
+
+#: manalog/manalog.py:43
+msgid "System space"
+msgstr ""
+
+#: manalog/manalog.py:45
+msgid "User space"
+msgstr ""
+
+#: manalog/manalog.py:46
+msgid "ManaLog - ManaTools log viewer"
+msgstr ""
+
+#: manalog/manalog.py:47
+msgid "Manatools - log viewer - {}"
+msgstr ""
+
+#: manalog/manalog.py:80
+msgid "A tool to monitor your logs"
+msgstr "Інструмент для доглядання за журнальними файлами"
+
+#: manalog/manalog.py:81
+msgid "Options"
+msgstr "Параметри"
+
+#: manalog/manalog.py:85
+msgid "Last boot"
+msgstr "Останнє завантаження"
+
+#: manalog/manalog.py:89
+msgid "Tail mode"
+msgstr ""
+
+#: manalog/manalog.py:93
+msgid "Monotonic timestamp"
+msgstr ""
+
+#: manalog/manalog.py:105
+msgid "Since"
+msgstr "З"
+
+#: manalog/manalog.py:108
+msgid "Until"
+msgstr "До"
+
+#: manalog/manalog.py:132
+msgid "Select a unit"
+msgstr "Виберіть модуль"
+
+#: manalog/manalog.py:151
+msgid "Select a boot"
+msgstr ""
+
+#: manalog/manalog.py:170
+msgid "From priority"
+msgstr "З пріоритетності"
+
+#: manalog/manalog.py:188
+msgid "To priority"
+msgstr "На пріоритетність"
+
+#: manalog/manalog.py:204
+msgid "Matching"
+msgstr "Відповідність"
+
+#: manalog/manalog.py:207
+msgid "but not matching"
+msgstr "але не відповідає"
+
+#: manalog/manalog.py:212
+msgid "&Stop"
+msgstr ""
+
+#: manalog/manalog.py:215
+msgid "&Find"
+msgstr "&Знайти"
+
+#: manalog/manalog.py:219
+msgid "Log content"
+msgstr "Вміст журналу"
+
+#: manalog/manalog.py:231
+msgid "&About"
+msgstr "Пр&о програму"
+
+#: manalog/manalog.py:235
+msgid "&Save"
+msgstr "З&берегти"
+
+#: manalog/manalog.py:237
+msgid "&Quit"
+msgstr "Ви&йти"
+
+#: manalog/manalog.py:319
+msgid "Reboot"
+msgstr ""
+
+#: manalog/manalog.py:324
+msgid "Limit of {} lines reached. Please add some filters.\n"
+msgstr ""
+
+#: manalog/manalog.py:439
+msgid "Log viewer is a systemd journal viewer"
+msgstr ""
+
+#: manalog/manalog.py:444
+msgid "Save as.."
+msgstr "Зберегти як…"
+
+#~ msgid "Copyright (C) %s Mageia community"
+#~ msgstr "© Спільнота Mageia, %s"
+
+#~ msgid "_: Translator(s) name(s) & email(s)\n"
+#~ msgstr ""
+#~ "Тарас Бойчук <btr0001@ukr.net>\n"
+#~ "Юрій Чорноіван <yurchor@ukr.net>\n"

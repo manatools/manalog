@@ -9,21 +9,20 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
+# Miklos Horvath <hmiki@blackpantheros.eu>, 2017
+# Charles Barcza <charles.barcza@blackpantheros.eu>, 2017
 # Balzamon, 2015
-# Balzamon, 2015
-# Ferenc Teknős <teknos.ferenc@gmail.com>, 2017
 # gergo huba <hubasetech@gmail.com>, 2016
-# Kardos László <kardiweb@protonmail.ch>, 2017
+# Zsolt Bölöny <bolony.zsolt@gmail.com>, 2013-2014
 # root, 2005
 # Tamas Szanto <tszanto@mol.hu>, 2000
-# Zsolt Bölöny <bolony.zsolt@gmail.com>, 2013-2014
 msgid ""
 msgstr ""
 "Project-Id-Version: Mageia\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-11-12 16:21+0100\n"
-"PO-Revision-Date: 2017-09-18 17:03+0000\n"
-"Last-Translator: Kardos László <kardiweb@protonmail.ch>\n"
+"PO-Revision-Date: 2017-12-13 01:25+0100\n"
+"Last-Translator: Miklos Horvath <hmiki@blackpantheros.eu>\n"
 "Language-Team: Hungarian (http://www.transifex.com/MageiaLinux/mageia/"
 "language/hu/)\n"
 "Language: hu\n"
@@ -31,6 +30,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.8.12\n"
 
 #: manalog/manalog.py:43
 msgid "System space"
@@ -42,43 +42,43 @@ msgstr ""
 
 #: manalog/manalog.py:46
 msgid "ManaLog - ManaTools log viewer"
-msgstr ""
+msgstr "ManaLog - ManaTools log nézegető"
 
 #: manalog/manalog.py:47
 msgid "Manatools - log viewer - {}"
-msgstr ""
+msgstr "Manatools - log nézegető - {}"
 
 #: manalog/manalog.py:80
 msgid "A tool to monitor your logs"
-msgstr ""
+msgstr "Egy eszköz a logjaid monitorozásához"
 
 #: manalog/manalog.py:81
 msgid "Options"
-msgstr ""
+msgstr "Opciók"
 
 #: manalog/manalog.py:85
 msgid "Last boot"
-msgstr ""
+msgstr "Utolsó boot"
 
 #: manalog/manalog.py:89
 msgid "Tail mode"
-msgstr ""
+msgstr "Tail üzemmód"
 
 #: manalog/manalog.py:93
 msgid "Monotonic timestamp"
-msgstr ""
+msgstr "Monoton időbélyeg"
 
 #: manalog/manalog.py:105
 msgid "Since"
-msgstr ""
+msgstr "Ezóta"
 
 #: manalog/manalog.py:108
 msgid "Until"
-msgstr ""
+msgstr "Eddig"
 
 #: manalog/manalog.py:132
 msgid "Select a unit"
-msgstr ""
+msgstr "Válassz egy egységet"
 
 #: manalog/manalog.py:151
 msgid "Select a boot"
@@ -86,31 +86,31 @@ msgstr ""
 
 #: manalog/manalog.py:170
 msgid "From priority"
-msgstr ""
+msgstr "Ettől a prioritástól"
 
 #: manalog/manalog.py:188
 msgid "To priority"
-msgstr ""
+msgstr "Eddig a prioritásig"
 
 #: manalog/manalog.py:204
 msgid "Matching"
-msgstr ""
+msgstr "Összeillesztés"
 
 #: manalog/manalog.py:207
 msgid "but not matching"
-msgstr ""
+msgstr "de nem illik össze"
 
 #: manalog/manalog.py:212
 msgid "&Stop"
-msgstr ""
+msgstr "&Stop"
 
 #: manalog/manalog.py:215
 msgid "&Find"
-msgstr ""
+msgstr "Keresés"
 
 #: manalog/manalog.py:219
 msgid "Log content"
-msgstr ""
+msgstr "Log tartalom"
 
 #: manalog/manalog.py:231
 msgid "&About"
@@ -118,7 +118,7 @@ msgstr "Névjegy"
 
 #: manalog/manalog.py:235
 msgid "&Save"
-msgstr ""
+msgstr "Menté&s"
 
 #: manalog/manalog.py:237
 msgid "&Quit"
@@ -126,24 +126,24 @@ msgstr "Kilépés"
 
 #: manalog/manalog.py:319
 msgid "Reboot"
-msgstr ""
+msgstr "Újraindítás"
 
 #: manalog/manalog.py:324
 msgid "Limit of {} lines reached. Please add some filters.\n"
-msgstr ""
+msgstr "A {} sor limt elérve. Kérlek adj hozzá néhány szűrőt.\n"
 
 #: manalog/manalog.py:439
 msgid "Log viewer is a systemd journal viewer"
-msgstr ""
+msgstr "A log nézegető egy systemd napló nézegető"
 
 #: manalog/manalog.py:444
 msgid "Save as.."
-msgstr ""
+msgstr "Mentés másként"
 
 #~ msgid "_: Translator(s) name(s) & email(s)\n"
 #~ msgstr ""
+#~ "Miklos Horvath <hmiki@blackpantheros.eu>\n"
+#~ "Charles Barcza <charles.barcza@blackpantheros.eu>\n"
 #~ "gergo huba <hubasetech@gmail.com>\n"
-#~ "Laszlo Espadas <kardiweb@protonmail.ch>\n"
 #~ "Tamas Szanto <tszanto@mol.hu>\n"
 #~ "Zsolt Bölöny <bolony.zsolt@gmail.com>\n"
-#~ "Teknős Ferenc<teknos.ferenc@gmail.com>\n"

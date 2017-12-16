@@ -161,6 +161,10 @@ class MlDialog(basedialog.BaseDialog):
         self.bootModel[key] = boot[1]    #  boot_id
         item.this.own(False)
         dlist.append(item)
+    if not dlist :
+      wd = common.warningMsgBox({'title' : _("Boots cannot be listed"),
+                                 'text' : _("Failed to determine boots: No data available.\nVerify the system journal."),
+                                 'richtext' : True})
     itemCollection = yui.YItemCollection(dlist)
     self.boots.addItems(itemCollection)
     yui.YUI.app().normalCursor()

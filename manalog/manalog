@@ -63,9 +63,10 @@ class MlDialog(basedialog.BaseDialog):
   def listBoots(self) :
     boots = []
     status,text = self.commands_getstatusoutput("LC_ALL=C journalctl --list-boots -q")
-    lines = text.split("\n")
-    boot_re = re.compile("(?P<order>[+-]?[0-9]+) (?P<bootid>[0-9A-Za-z]+) [A-Za-z]+ (?P<start>(-?(?:[1-9][0-9]*)?[0-9]{4})-(1[0-2]|0[1-9])-(3[0-1]|0[1-9]|[1-2][0-9]) (2[0-3]|[0-1][0-9]):([0-5][0-9]):([0-5][0-9])(\.[0-9]+)?(Z|[+-](?:2[0-3]|[0-1][0-9]):[0-5][0-9])? [A-Za-z]+)—[A-Za-z]+ (?P<end>(-?(?:[1-9][0-9]*)?[0-9]{4})-(1[0-2]|0[1-9])-(3[0-1]|0[1-9]|[1-2][0-9]) (2[0-3]|[0-1][0-9]):([0-5][0-9]):([0-5][0-9])(\.[0-9]+)?(Z|[+-](?:2[0-3]|[0-1][0-9]):[0-5][0-9])? [A-Za-z]+)")
-    for line in lines :
+    if status == 0 :
+      lines = text.split("\n")
+      boot_re = re.compile("(?P<order>[+-]?[0-9]+) (?P<bootid>[0-9A-Za-z]+) [A-Za-z]+ (?P<start>(-?(?:[1-9][0-9]*)?[0-9]{4})-(1[0-2]|0[1-9])-(3[0-1]|0[1-9]|[1-2][0-9]) (2[0-3]|[0-1][0-9]):([0-5][0-9]):([0-5][0-9])(\.[0-9]+)?(Z|[+-](?:2[0-3]|[0-1][0-9]):[0-5][0-9])? [A-Za-z]+)—[A-Za-z]+ (?P<end>(-?(?:[1-9][0-9]*)?[0-9]{4})-(1[0-2]|0[1-9])-(3[0-1]|0[1-9]|[1-2][0-9]) (2[0-3]|[0-1][0-9]):([0-5][0-9]):([0-5][0-9])(\.[0-9]+)?(Z|[+-](?:2[0-3]|[0-1][0-9]):[0-5][0-9])? [A-Za-z]+)")
+      for line in lines :
         res = boot_re.search(line)
         boots.append([res.group('order'), res.group('bootid'), res.group('start'), res.group('end')])
     return boots

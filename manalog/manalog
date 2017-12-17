@@ -237,6 +237,8 @@ class MlDialog(basedialog.BaseDialog):
     self.eventManager.addWidgetEvent(aboutButton, self.onAbout)
     align = self.factory.createRight(hbox)
     hbox     = self.factory.createHBox(align)
+    verifyButton = self.factory.createPushButton(hbox, _("&Verify"))
+    self.eventManager.addWidgetEvent(verifyButton, self.onVerify)
     saveButton = self.factory.createPushButton(hbox, _("&Save"))
     self.eventManager.addWidgetEvent(saveButton, self._save)
     quitButton = self.factory.createPushButton(hbox, _("&Quit"))
@@ -444,6 +446,15 @@ class MlDialog(basedialog.BaseDialog):
             'description' : _("Log viewer is a systemd journal viewer"),
       })
 
+  def onVerify(self) :
+    yui.YUI.app().busyCursor()
+    status,text = self.commands_getstatusoutput("LC_ALL=C journalctl --verify -q")
+    ok = common.msgBox({
+      'title' : _("ManaLog - Verify journal"),
+      'text' : text,
+      'richText' : True,
+      })
+  
   def _save(self) :
        yui.YUI.app().busyCursor()
        save_name = yui.YUI.app().askForSaveFileName(os.path.expanduser("~"), "*", _("Save as.."))

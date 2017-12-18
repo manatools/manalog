@@ -449,9 +449,18 @@ class MlDialog(basedialog.BaseDialog):
   def onVerify(self) :
     yui.YUI.app().busyCursor()
     status,text = self.commands_getstatusoutput("LC_ALL=C journalctl --verify -q")
+    if status == -1 :
+      lines = text.splitlines(keepends = True)
+      textToShow = ""
+      for element in lines :
+        if "FAIL" in element:
+          textToShow += element
+    else :
+      textToShow = _("No errors have been detected in journal files.")
+    yui.YUI.app().normalCursor()
     ok = common.msgBox({
       'title' : _("ManaLog - Verify journal"),
-      'text' : text,
+      'text' : textToShow,
       'richText' : True,
       })
   

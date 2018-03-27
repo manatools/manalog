@@ -29,7 +29,7 @@ import gettext
 from datetime import date, datetime
 from systemd import journal
 import os, select, subprocess
-import re
+from re import search, match
 import operator
 
 ######################################################################
@@ -40,6 +40,7 @@ import operator
 
 class MlDialog(basedialog.BaseDialog):
   def __init__(self):
+
     if os.getuid() == 0 :
         space = _("System space")
     else :
@@ -173,10 +174,39 @@ class MlDialog(basedialog.BaseDialog):
         self.bootModel[key] = boot[1]    #  boot_id
         item.this.own(False)
         dlist.append(item)
+
     if not dlist :
-      wd = common.warningMsgBox({'title' : _("Boots cannot be listed"),
-                                 'text' : _("Failed to determine boots: No data available.\nVerify the system journal."),
-                                 'richtext' : True})
+      # Display error message and ask for journal verification when boots cannot be listed.
+      if common.askYesOrNo({'title' : _("Boots cannot be listed"),
+                            'text' : _("Failed to determine boots: No data available. Do you want to verify the system journal ? (this can take a while)"),
+                            'richtext' : True,
+                            'default_button' : 2}) == True :
+        status,text = self.commands_getstatusoutput("LC_ALL=C journalctl --verify -q")
+        if status != 0 :
+          textToShow = ""
+          failedFiles= ""
+          for element in text.splitlines(keepends = True) :
+            if "FAIL" in element:
+              failedFiles += element
+          textToShow += failedFiles
+          if os.getuid() == 0 :
+            textToShow += _("\nDo you want to remove these files ?")
+            if common.askYesOrNo({'title' : _("ManaLog - Verify journal"),
+                                  'text' : textToShow,
+                                  'richText' : True,
+                                  'default_button' : 2}) == True :
+              for element in failedFiles.splitlines(keepends = False) :
+                os.remove(search('\s(.+?)\s', element).group(1))
+          else :
+            textToShow += _("\nYou must be root to remove these files.")
+            common.warningMsgBox ({'title' : _("ManaLog - Verify journal"),
+                                   'text' : textToShow,
+                                   'richtext' : True})
+        else :
+          common.infoMsgBox({'title' : _("ManaLog - Verify journal"),
+                             'text' : _("No errors have been detected in journal files."),
+                             'richtext' : True})
+        
     itemCollection = yui.YItemCollection(dlist)
     self.boots.addItems(itemCollection)
     yui.YUI.app().normalCursor()
@@ -249,8 +279,6 @@ class MlDialog(basedialog.BaseDialog):
     self.eventManager.addWidgetEvent(aboutButton, self.onAbout)
     align = self.factory.createRight(hbox)
     hbox     = self.factory.createHBox(align)
-    verifyButton = self.factory.createPushButton(hbox, _("&Verify"))
-    self.eventManager.addWidgetEvent(verifyButton, self.onVerify)
     saveButton = self.factory.createPushButton(hbox, _("&Save"))
     self.eventManager.addWidgetEvent(saveButton, self._save)
     quitButton = self.factory.createPushButton(hbox, _("&Quit"))
@@ -456,24 +484,6 @@ class MlDialog(basedialog.BaseDialog):
             'license' : 'GPLv3',
             'authors' : 'Papoteur &lt;papoteur@mageialinux-online.org&gt;',
             'description' : _("Log viewer is a systemd journal viewer"),
-      })
-
-  def onVerify(self) :
-    yui.YUI.app().busyCursor()
-    status,text = self.commands_getstatusoutput("LC_ALL=C journalctl --verify -q")
-    if status == -1 :
-      lines = text.splitlines(keepends = True)
-      textToShow = ""
-      for element in lines :
-        if "FAIL" in element:
-          textToShow += element
-    else :
-      textToShow = _("No errors have been detected in journal files.")
-    yui.YUI.app().normalCursor()
-    ok = common.msgBox({
-      'title' : _("ManaLog - Verify journal"),
-      'text' : textToShow,
-      'richText' : True,
       })
   
   def _save(self) :

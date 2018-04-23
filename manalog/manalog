@@ -170,7 +170,6 @@ class MlDialog(basedialog.BaseDialog):
         self.bootModel[key] = boot[1]    #  boot_id
         item.this.own(False)
         dlist.append(item)
-    dlist = [] # For testing purpose
     self.bootsFrame = self.factory.createCheckBoxFrame(hbox,_("Select a boot"), True)
     self.bootsFrame.setNotify(True)
     if dlist == [] :
@@ -392,6 +391,46 @@ class MlDialog(basedialog.BaseDialog):
           self.lastBoot.setValue(False)
       yui.YUI.ui().unblockEvents()
 
+  def onBootFrameErrorEvent(self):
+    # Display error message and ask for journal verification when boots cannot be listed.
+    yui.YUI.ui().blockEvents()
+    if self.bootsFrame.value() :
+      yui.YUI.app().busyCursor()
+      if common.askYesOrNo({'title' : _("Boots cannot be listed"),
+                            'text' : _("Failed to determine boots: No data available. Do you want to verify the system journal ? (this can take a while)"),
+                            'richtext' : True,
+                            'default_button' : 2}) == True :
+        status,text = self.commands_getstatusoutput("LC_ALL=C journalctl --verify -q")
+        yui.YUI.app().normalCursor()
+        if status != 0 :
+          textToShow = ""
+          failedFiles= ""
+          for element in text.splitlines(keepends = True) :
+            if "FAIL" in element:
+              failedFiles += element
+              textToShow += failedFiles
+          if os.getuid() == 0 :
+            textToShow += _("\nDo you want to remove these files ?")
+            if common.askYesOrNo({'title' : _("ManaLog - Verify journal"),
+                                  'text' : textToShow,
+                                  'richText' : True,
+                                  'default_button' : 2}) == True :
+              for element in failedFiles.splitlines(keepends = False) :
+                os.remove(search('\s(.+?)\s', element).group(1))
+          else :
+            textToShow += _("\nYou must be root to remove these files.")
+            common.warningMsgBox ({'title' : _("ManaLog - Verify journal"),
+                                   'text' : textToShow,
+                                   'richtext' : True})
+        else :
+          common.infoMsgBox({'title' : _("ManaLog - Verify journal"),
+                             'text' : _("No errors have been detected in journal files."),
+                             'richtext' : True})
+      else :
+        yui.YUI.app().normalCursor()
+    self.bootsFrame.setValue(False)
+    yui.YUI.ui().unblockEvents()
+
   def onSinceFrameEvent(self) :
       yui.YUI.ui().blockEvents()
       if self.sinceFrame.value() :
@@ -437,46 +476,6 @@ class MlDialog(basedialog.BaseDialog):
            self.lastBoot.setEnabled()
            
       yui.YUI.ui().unblockEvents()
-
-  def onBootFrameErrorEvent(self):
-    # Display error message and ask for journal verification when boots cannot be listed.
-    yui.YUI.ui().blockEvents()
-    if self.bootsFrame.value() :
-      yui.YUI.app().busyCursor()
-      if common.askYesOrNo({'title' : _("Boots cannot be listed"),
-                            'text' : _("Failed to determine boots: No data available. Do you want to verify the system journal ? (this can take a while)"),
-                            'richtext' : True,
-                            'default_button' : 2}) == True :
-        status,text = self.commands_getstatusoutput("LC_ALL=C journalctl --verify -q")
-        yui.YUI.app().normalCursor()
-        if status != 0 :
-          textToShow = ""
-          failedFiles= ""
-          for element in text.splitlines(keepends = True) :
-            if "FAIL" in element:
-              failedFiles += element
-              textToShow += failedFiles
-          if os.getuid() == 0 :
-            textToShow += _("\nDo you want to remove these files ?")
-            if common.askYesOrNo({'title' : _("ManaLog - Verify journal"),
-                                  'text' : textToShow,
-                                  'richText' : True,
-                                  'default_button' : 2}) == True :
-              for element in failedFiles.splitlines(keepends = False) :
-                os.remove(search('\s(.+?)\s', element).group(1))
-          else :
-            textToShow += _("\nYou must be root to remove these files.")
-            common.warningMsgBox ({'title' : _("ManaLog - Verify journal"),
-                                   'text' : textToShow,
-                                   'richtext' : True})
-        else :
-          common.infoMsgBox({'title' : _("ManaLog - Verify journal"),
-                             'text' : _("No errors have been detected in journal files."),
-                             'richtext' : True})
-      else :
-        yui.YUI.app().normalCursor()
-    self.bootsFrame.setValue(False)
-    yui.YUI.ui().unblockEvents()
     
   def onCancelEvent(self) :
     print ("Got a cancel event")

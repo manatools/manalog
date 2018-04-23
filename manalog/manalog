@@ -29,7 +29,7 @@ import gettext
 from datetime import date, datetime
 from systemd import journal
 import os, select, subprocess
-from re import search, match
+import re
 import operator
 
 ######################################################################
@@ -40,7 +40,7 @@ import operator
 
 class MlDialog(basedialog.BaseDialog):
   def __init__(self):
-
+    gettext.install('manatools', localedir='/usr/share/locale', names=('ngettext',))
     if os.getuid() == 0 :
         space = _("System space")
     else :
@@ -502,11 +502,8 @@ class MlDialog(basedialog.BaseDialog):
        if save_name :
            with open(save_name, 'w') as fd:
                 fd.write(self.logView.logText())
-
-
       
 if __name__ == '__main__':
-  gettext.install('manatools', localedir='/usr/share/locale', names=('ngettext',))
   ml = MlDialog()
   ml.run()
 

@@ -93,18 +93,18 @@ class MlDialog(basedialog.BaseDialog):
 
     lbl1 = self.factory.createLabel(  (dialog), _("A tool to monitor your logs"),True,False)
     frame = self.factory.createFrame(layout, _("Options"))
-    vbox = self.factory.createVBox(frame)
-    hbox = self.factory.createHBox(vbox)
+    cols = self.factory.createHBox(frame)
+    vbox = self.factory.createVBox(cols)
     #### Last Boot
-    self.lastBoot = self.factory.createCheckBox(self.factory.createLeft(hbox),_("Last boot"),True)
+    self.lastBoot = self.factory.createCheckBox(self.factory.createLeft(vbox),_("Last boot"),True)
     self.lastBoot.setNotify(True)
     self.eventManager.addWidgetEvent(self.lastBoot, self.onLastBootEvent)
     #### Tailing mode
-    self.tailing = self.factory.createCheckBox(self.factory.createLeft(hbox),_("Tail mode"),False)
+    self.tailing = self.factory.createCheckBox(self.factory.createLeft(vbox),_("Tail mode"),False)
     self.tailing.setNotify(True)
     self.eventManager.addWidgetEvent(self.tailing, self.onTailingEvent)
     #### Monotonic display for timestamp
-    self.monotonbt = self.factory.createCheckBox(self.factory.createLeft(hbox),_("Monotonic timestamp"),True)
+    self.monotonbt = self.factory.createCheckBox(self.factory.createLeft(vbox),_("Monotonic timestamp"),True)
 
     self.factory.createVSpacing(vbox,0.5)
     row1 = self.factory.createHBox(vbox)
@@ -114,12 +114,24 @@ class MlDialog(basedialog.BaseDialog):
     row3 = self.factory.createHBox(vbox)
     self.factory.createVSpacing(vbox, 0.5)
     row4 = self.factory.createHBox(vbox)
+    self.factory.createVSpacing(vbox, 0.5)
+    row5 = self.factory.createHBox(vbox)
+    self.factory.createVSpacing(vbox, 0.5)
+    row6 = self.factory.createHBox(vbox)
+    self.factory.createVSpacing(vbox, 0.5)
+    row7 = self.factory.createHBox(vbox)
+    self.factory.createVSpacing(vbox, 0.5)
+    row8 = self.factory.createHBox(vbox)
+    self.factory.createVSpacing(vbox, 0.5)
+    row9 = self.factory.createHBox(vbox)
     
     #### since and until
     self.sinceFrame = self.factory.createCheckBoxFrame(row1, _("Since"), True)
+    self.sinceFrame.setWeight(yui.YD_HORIZ, 1)
     self.sinceFrame.setNotify(True)
     self.eventManager.addWidgetEvent(self.sinceFrame, self.onSinceFrameEvent)
     self.untilFrame = self.factory.createCheckBoxFrame(row2, _("Until"), True)
+    self.untilFrame.setWeight(yui.YD_HORIZ, 1)
     self.untilFrame.setNotify(True)
     self.eventManager.addWidgetEvent(self.untilFrame, self.onUntilFrameEvent)
     if (optFactory.hasDateField()):
@@ -143,7 +155,7 @@ class MlDialog(basedialog.BaseDialog):
 
     #### units
     spacing = self.factory.createHSpacing(row1, 2.0)
-    self.unitsFrame = self.factory.createCheckBoxFrame(row1,_("Select a unit"), True)
+    self.unitsFrame = self.factory.createCheckBoxFrame(row3,_("Select a unit"), True)
     self.unitsFrame.setNotify(True)
     self.units = self.factory.createComboBox( self.factory.createLeft(self.unitsFrame), "" )
     
@@ -170,7 +182,7 @@ class MlDialog(basedialog.BaseDialog):
         self.bootModel[key] = boot[1]    #  boot_id
         item.this.own(False)
         dlist.append(item)
-    self.bootsFrame = self.factory.createCheckBoxFrame(hbox,_("Select a boot"), True)
+    self.bootsFrame = self.factory.createCheckBoxFrame(row4,_("Select a boot"), True)
     self.bootsFrame.setNotify(True)
     if dlist == [] :
         self.eventManager.addWidgetEvent(self.bootsFrame, self.onBootFrameErrorEvent)
@@ -183,62 +195,45 @@ class MlDialog(basedialog.BaseDialog):
     #### priority
     # From
     self.factory.createHSpacing(row2, 2.0)
-    self.priorityFromFrame = self.factory.createCheckBoxFrame(row2, _("From priority"), True)
+    self.priorityFromFrame = self.factory.createCheckBoxFrame(row5, _("Priority level"), True)
     self.priorityFromFrame.setNotify(True)
     self.priorityFromFrame.setWeight(yui.YD_HORIZ, 1)
-    priorityFrom = self.factory.createComboBox( self.priorityFromFrame, "" )
+    self.priorityFrom = self.factory.createComboBox( self.priorityFromFrame, "" )
 
-    pr = ('emerg', 'alert', 'crit', 'err', 'warning', 'notice', 'info', 'debug')
+    self.pr = ('emerg', 'alert', 'crit', 'err', 'warning', 'notice', 'info', 'debug')
     dlist = []
-    for prio in pr:
-        item = yui.YItem(prio)
-        if ( prio == 'emerg' ):
-            item.setSelected(True)
-        item.this.own(False)
-        dlist.append(item)
-    itemCollection = yui.YItemCollection(dlist)
-    priorityFrom.addItems(itemCollection)
-
-    self.factory.createHSpacing( row2, 2.0 )
-    # To
-    self.priorityToFrame = self.factory.createCheckBoxFrame(row2, _("To priority"), True)
-    self.priorityToFrame.setNotify(True)
-    self.priorityToFrame.setWeight(yui.YD_HORIZ, 1)
-    priorityTo = self.factory.createComboBox( self.priorityToFrame, "" )
-
-    dlist = []
-    for prio in pr:
+    for prio in self.pr:
         item = yui.YItem(prio)
         if ( prio == 'debug' ):
             item.setSelected(True)
         item.this.own(False)
         dlist.append(item)
     itemCollection = yui.YItemCollection(dlist)
-    priorityTo.addItems(itemCollection)
+    self.priorityFrom.addItems(itemCollection)
 
     #### matching
-    self.matchingInputField = self.factory.createInputField(row3, _("Matching"))
+    self.matchingInputField = self.factory.createInputField(row6, _("Matching"))
     self.factory.createSpacing(row3,1)
     #### not matching
-    self.notMatchingInputField =self.factory.createInputField(row3, _("but not matching"))
-    self.matchingInputField.setWeight(yui.YD_HORIZ, 2)
-    self.notMatchingInputField.setWeight(yui.YD_HORIZ, 2)
+    self.notMatchingInputField =self.factory.createInputField(row7, _("but not matching"))
+    self.matchingInputField.setWeight(yui.YD_HORIZ, 1)
+    self.notMatchingInputField.setWeight(yui.YD_HORIZ, 1)
 
     #### search
-    self.stopButton = self.factory.createPushButton(self.factory.createRight(row4), _("&Stop"))
+    self.stopButton = self.factory.createPushButton(self.factory.createRight(row8), _("&Stop"))
     self.eventManager.addWidgetEvent(self.stopButton, self.onStopButton)
     self.stopButton.setDisabled()
-    self.findButton = self.factory.createPushButton(self.factory.createRight(row4), _("&Find"))
+    self.findButton = self.factory.createPushButton(self.factory.createRight(row8), _("&Find"))
     self.eventManager.addWidgetEvent(self.findButton, self.onFindButton)
     
     #### create log view object
-    self.logView = self.factory.createLogView(layout, _("Log content"), 10, 0)
+    self.logView = self.factory.createLogView(cols, _("Log content"), 10, 0)
+    self.logView.setWeight(yui.YD_HORIZ, 4)
 
     self.unitsFrame.setValue(False)
     self.sinceFrame.setValue(False)
     self.untilFrame.setValue(False)
     self.priorityFromFrame.setValue(False)
-    self.priorityToFrame.setValue(False)
     self.bootsFrame.setValue(False)
 
     # buttons on the last line
@@ -279,9 +274,8 @@ class MlDialog(basedialog.BaseDialog):
         if self.boots.value() != "" :
             j.this_boot(self.bootModel[self.boots.value()])
     if self.priorityFromFrame.value() :
-        level = self.priorityFromFrame.value()
-        if self.priorityToFrame.value() :
-            level += self.priorityToFrame.value()
+        level = self.pr.index(self.priorityFrom.value())
+        print(level)
         j.log_level(level)
     if self.sinceFrame.value() :
         begin = datetime.strptime(self.sinceDate.value() +" "+self.sinceTime.value(), '%Y-%m-%d %H:%M:%S' )
@@ -443,24 +437,11 @@ class MlDialog(basedialog.BaseDialog):
           self.lastBoot.setValue(False)
       yui.YUI.ui().unblockEvents()
 
-  def onPriorityFromFrameEvent(self):
-      yui.YUI.ui().blockEvents()
-      if self.priorityToFrame.value() and not self.priorityFromFrame.value():
-          self.priorityToFrame.setValue(False)
-      yui.YUI.ui().unblockEvents()
-   
-  def onPriorityToFrameEvent(self):
-      yui.YUI.ui().blockEvents()
-      if self.priorityToFrame.value() and not self.priorityFromFrame.value():
-          self.priorityFromFrame.setValue(True)
-      yui.YUI.ui().unblockEvents()
-
   def onTailingEvent(self):
       yui.YUI.ui().blockEvents()
       if self.tailing.value() :
             self.sinceFrame.setValue(False)
             self.untilFrame.setValue(False)
-            self.priorityToFrame.setValue(False)
             self.priorityFromFrame.setValue(False)
             self.unitsFrame.setValue(False) 
             self.matchingInputField.setValue("")
@@ -470,7 +451,6 @@ class MlDialog(basedialog.BaseDialog):
             self.lastBoot.setDisabled()
             self.sinceFrame.setDisabled()
             self.untilFrame.setDisabled()
-            self.priorityToFrame.setDisabled()
             self.unitsFrame.setDisabled()
       else:
            self.lastBoot.setEnabled()

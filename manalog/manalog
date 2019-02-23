@@ -470,9 +470,9 @@ class MlDialog(basedialog.BaseDialog):
             'name' : self._application_name,
             'dialog_mode' : common.AboutDialogMode.TABBED,
             'version' : "0.1.0",
-            'credits' :"Credits 2017 Papoteur",
+            'credits' :"Credits 2017, 2019 Papoteur, Cyril Levet",
             'license' : 'GPLv3',
-            'authors' : 'Papoteur &lt;papoteur@mageialinux-online.org&gt;',
+            'authors' : 'Papoteur &lt;papoteur@mageialinux-online.org&gt;<br />Cyril Levet &lt;cyril.levet0780@orange.fr&gt;',
             'description' : _("Log viewer is a systemd journal viewer"),
       })
   

@@ -92,9 +92,10 @@ class MlDialog(basedialog.BaseDialog):
     dialog = self.factory.createVBox(layout)
 
     lbl1 = self.factory.createLabel(  (dialog), _("A tool to monitor your logs"),True,False)
-    frame = self.factory.createFrame(layout, _("Options"))
-    cols = self.factory.createHBox(frame)
-    vbox = self.factory.createVBox(cols)
+    cols = self.factory.createHBox(layout)
+    col1 = self.factory.createVBox(cols)
+    frame = self.factory.createFrame(col1, _("Options"))
+    vbox = self.factory.createVBox(col1)
     #### Last Boot
     self.lastBoot = self.factory.createCheckBox(self.factory.createLeft(vbox),_("Last boot"),True)
     self.lastBoot.setNotify(True)

@@ -45,7 +45,8 @@ endif(GETTEXT_FOUND)
 
 # Installing application code
 install(PROGRAMS ${CMAKE_SOURCE_DIR}/manalog/manalog DESTINATION ${CMAKE_INSTALL_BINDIR})
-
+install(PROGRAMS ${CMAKE_SOURCE_DIR}/manalog/manalog.py DESTINATION ${PYTHON_INSTALL_DIR}/manalog)
+install(PROGRAMS ${CMAKE_SOURCE_DIR}/manalog/__init__.py DESTINATION ${PYTHON_INSTALL_DIR}/manalog)
 install(FILES ${CMAKE_SOURCE_DIR}/extras/manalog.desktop DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/applications)
 install(FILES ${CMAKE_SOURCE_DIR}/extras/manalog-root.desktop DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/applications)
 install(FILES ${CMAKE_SOURCE_DIR}/extras/org.mageia.manalog.policy DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/polkit-1/actions)

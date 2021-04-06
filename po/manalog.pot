@@ -1,31 +1,21 @@
-# #-#-#-#-#  manatools_perl.pot (ManaTools 1.1.2)  #-#-#-#-#
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR Angelo Naselli - Matteo Pasotti
-# This file is distributed under the same license as the PACKAGE package.
-#
-# #-#-#-#-#  manadesktop.pot (PACKAGE VERSION)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# This file is distributed under the same license as the manalog package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-# Translators:
-# Marcio Andre Padula <padula1000@gmail.com>, 2015-2016
-# Michael Ferreira Martins <michaelfm21@gmail.com>, 2017
-# Rodrigo de Almeida Sottomaior Macedo <rmsolucoeseminformatic4@gmail.com>, 2015-2016
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Mageia\n"
+"Project-Id-Version: manalog 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-04-06 07:21+0200\n"
-"PO-Revision-Date: 2017-06-30 04:54+0000\n"
-"Last-Translator: Michael Ferreira Martins <michaelfm21@gmail.com>\n"
-"Language-Team: Portuguese (Brazil) (http://www.transifex.com/MageiaLinux/"
-"mageia/language/pt_BR/)\n"
-"Language: pt_BR\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: manalog/manalog.py:45
 msgid "System space"
@@ -45,15 +35,15 @@ msgstr ""
 
 #: manalog/manalog.py:94
 msgid "A tool to monitor your logs"
-msgstr "Uma ferramenta para monitorar seus logs"
+msgstr ""
 
 #: manalog/manalog.py:97
 msgid "Options"
-msgstr "Opções"
+msgstr ""
 
 #: manalog/manalog.py:100
 msgid "Last boot"
-msgstr "Ultima Atualização"
+msgstr ""
 
 #: manalog/manalog.py:104
 msgid "Tail mode"
@@ -65,15 +55,15 @@ msgstr ""
 
 #: manalog/manalog.py:130
 msgid "Since"
-msgstr "Ano"
+msgstr ""
 
 #: manalog/manalog.py:134
 msgid "Until"
-msgstr "Até"
+msgstr ""
 
 #: manalog/manalog.py:159
 msgid "Select a unit"
-msgstr "Selecione uma Unidade"
+msgstr ""
 
 #: manalog/manalog.py:186
 msgid "Select a boot"
@@ -85,11 +75,11 @@ msgstr ""
 
 #: manalog/manalog.py:216
 msgid "Matching"
-msgstr "Pacotes compatível:"
+msgstr ""
 
 #: manalog/manalog.py:219
 msgid "but not matching"
-msgstr "Pacotes não compatível:"
+msgstr ""
 
 #: manalog/manalog.py:224
 msgid "&Stop"
@@ -97,23 +87,23 @@ msgstr ""
 
 #: manalog/manalog.py:227
 msgid "&Find"
-msgstr "&encontrar"
+msgstr ""
 
 #: manalog/manalog.py:231
 msgid "Log content"
-msgstr "Conteúdo de Log"
+msgstr ""
 
 #: manalog/manalog.py:243
 msgid "&About"
-msgstr "&Sobre"
+msgstr ""
 
 #: manalog/manalog.py:247
 msgid "&Save"
-msgstr "&Salvar"
+msgstr ""
 
 #: manalog/manalog.py:249
 msgid "&Quit"
-msgstr "&Sair"
+msgstr ""
 
 #: manalog/manalog.py:331
 msgid "Reboot"
@@ -159,21 +149,4 @@ msgstr ""
 
 #: manalog/manalog.py:482
 msgid "Save as.."
-msgstr "Salvar como.."
-
-#~ msgid "_: Translator(s) name(s) & email(s)\n"
-#~ msgstr ""
-#~ "Marcio Andre Padula <padula1000@gmail.com>\n"
-#~ "Michael Martins <michaelfm21@gmail.com>\n"
-
-#~ msgid "Copyright (C) %s Mageia community"
-#~ msgstr "Copyright (C) %s comunidade Mageia"
-
-#~ msgid "GPLv2"
-#~ msgstr "GPLv2"
-
-#~ msgid "To priority"
-#~ msgstr "Dar prioridade"
-
-#~ msgid "From priority"
-#~ msgstr "Dar prioridade"
+msgstr ""

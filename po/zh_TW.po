@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mageia\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-12 16:21+0100\n"
+"POT-Creation-Date: 2021-04-06 07:21+0200\n"
 "PO-Revision-Date: 2016-02-15 09:41+0000\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/MageiaLinux/mageia/"
@@ -25,111 +25,137 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: manalog/manalog.py:43
+#: manalog/manalog.py:45
 msgid "System space"
 msgstr ""
 
-#: manalog/manalog.py:45
+#: manalog/manalog.py:47
 msgid "User space"
 msgstr ""
 
-#: manalog/manalog.py:46
+#: manalog/manalog.py:48
 msgid "ManaLog - ManaTools log viewer"
 msgstr ""
 
-#: manalog/manalog.py:47
+#: manalog/manalog.py:49
 msgid "Manatools - log viewer - {}"
 msgstr ""
 
-#: manalog/manalog.py:80
+#: manalog/manalog.py:94
 msgid "A tool to monitor your logs"
 msgstr "監察記錄檔的工具"
 
-#: manalog/manalog.py:81
+#: manalog/manalog.py:97
 msgid "Options"
 msgstr "選項"
 
-#: manalog/manalog.py:85
+#: manalog/manalog.py:100
 msgid "Last boot"
 msgstr ""
 
-#: manalog/manalog.py:89
+#: manalog/manalog.py:104
 msgid "Tail mode"
 msgstr ""
 
-#: manalog/manalog.py:93
+#: manalog/manalog.py:108
 msgid "Monotonic timestamp"
 msgstr ""
 
-#: manalog/manalog.py:105
+#: manalog/manalog.py:130
 msgid "Since"
 msgstr ""
 
-#: manalog/manalog.py:108
+#: manalog/manalog.py:134
 msgid "Until"
 msgstr ""
 
-#: manalog/manalog.py:132
+#: manalog/manalog.py:159
 msgid "Select a unit"
 msgstr ""
 
-#: manalog/manalog.py:151
+#: manalog/manalog.py:186
 msgid "Select a boot"
 msgstr ""
 
-#: manalog/manalog.py:170
-msgid "From priority"
+#: manalog/manalog.py:199
+msgid "Priority level"
 msgstr ""
 
-#: manalog/manalog.py:188
-msgid "To priority"
-msgstr ""
-
-#: manalog/manalog.py:204
+#: manalog/manalog.py:216
 msgid "Matching"
 msgstr "相配的"
 
-#: manalog/manalog.py:207
+#: manalog/manalog.py:219
 msgid "but not matching"
 msgstr "但是不相配"
 
-#: manalog/manalog.py:212
+#: manalog/manalog.py:224
 msgid "&Stop"
 msgstr ""
 
-#: manalog/manalog.py:215
+#: manalog/manalog.py:227
 msgid "&Find"
 msgstr ""
 
-#: manalog/manalog.py:219
+#: manalog/manalog.py:231
 msgid "Log content"
 msgstr ""
 
-#: manalog/manalog.py:231
+#: manalog/manalog.py:243
 msgid "&About"
 msgstr ""
 
-#: manalog/manalog.py:235
+#: manalog/manalog.py:247
 msgid "&Save"
 msgstr ""
 
-#: manalog/manalog.py:237
+#: manalog/manalog.py:249
 msgid "&Quit"
 msgstr ""
 
-#: manalog/manalog.py:319
+#: manalog/manalog.py:331
 msgid "Reboot"
 msgstr ""
 
-#: manalog/manalog.py:324
+#: manalog/manalog.py:336
 msgid "Limit of {} lines reached. Please add some filters.\n"
 msgstr ""
 
-#: manalog/manalog.py:439
+#: manalog/manalog.py:394
+msgid "Boots cannot be listed"
+msgstr ""
+
+#: manalog/manalog.py:395
+msgid ""
+"Failed to determine boots: No data available. Do you want to verify the "
+"system journal ? (this can take a while)"
+msgstr ""
+
+#: manalog/manalog.py:408
+msgid ""
+"\n"
+"Do you want to remove these files ?"
+msgstr ""
+
+#: manalog/manalog.py:409 manalog/manalog.py:417 manalog/manalog.py:421
+msgid "ManaLog - Verify journal"
+msgstr ""
+
+#: manalog/manalog.py:416
+msgid ""
+"\n"
+"You must be root to remove these files."
+msgstr ""
+
+#: manalog/manalog.py:422
+msgid "No errors have been detected in journal files."
+msgstr ""
+
+#: manalog/manalog.py:477
 msgid "Log viewer is a systemd journal viewer"
 msgstr ""
 
-#: manalog/manalog.py:444
+#: manalog/manalog.py:482
 msgid "Save as.."
 msgstr "另存新檔..."
 

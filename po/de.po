@@ -10,7 +10,7 @@
 #
 # Translators:
 # Ettore Atalan <atalanttore@googlemail.com>, 2015-2016
-# psyca, 2015-2017
+# psyca, 2015-2020
 # Marc Lattemann, 2017
 # Marc Lattemann, 2017
 # psyca, 2015
@@ -22,7 +22,7 @@ msgstr ""
 "Project-Id-Version: Mageia\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-04-06 07:21+0200\n"
-"PO-Revision-Date: 2017-09-10 13:28+0000\n"
+"PO-Revision-Date: 2020-05-29 20:00+0000\n"
 "Last-Translator: psyca\n"
 "Language-Team: German (http://www.transifex.com/MageiaLinux/mageia/language/"
 "de/)\n"
@@ -33,20 +33,24 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: manalog/manalog.py:45
+#, fuzzy
 msgid "System space"
-msgstr ""
+msgstr "System"
 
 #: manalog/manalog.py:47
+#, fuzzy
 msgid "User space"
-msgstr ""
+msgstr "Benutzername"
 
 #: manalog/manalog.py:48
+#, fuzzy
 msgid "ManaLog - ManaTools log viewer"
-msgstr ""
+msgstr "ManaTools Protokollbetrachter, Benutzermodus"
 
 #: manalog/manalog.py:49
+#, fuzzy
 msgid "Manatools - log viewer - {}"
-msgstr ""
+msgstr "ManaTools Protokollbetrachter, Benutzermodus"
 
 #: manalog/manalog.py:94
 msgid "A tool to monitor your logs"
@@ -81,8 +85,9 @@ msgid "Select a unit"
 msgstr "Einheit auswählen"
 
 #: manalog/manalog.py:186
+#, fuzzy
 msgid "Select a boot"
-msgstr ""
+msgstr "Einheit auswählen"
 
 #: manalog/manalog.py:199
 msgid "Priority level"
@@ -121,16 +126,18 @@ msgid "&Quit"
 msgstr "&Beenden"
 
 #: manalog/manalog.py:331
+#, fuzzy
 msgid "Reboot"
-msgstr ""
+msgstr "Beim Systemstart"
 
 #: manalog/manalog.py:336
 msgid "Limit of {} lines reached. Please add some filters.\n"
 msgstr ""
 
 #: manalog/manalog.py:394
+#, fuzzy
 msgid "Boots cannot be listed"
-msgstr ""
+msgstr "Einige Pakete konnten nicht installiert werden"
 
 #: manalog/manalog.py:395
 msgid ""
@@ -139,10 +146,11 @@ msgid ""
 msgstr ""
 
 #: manalog/manalog.py:408
+#, fuzzy
 msgid ""
 "\n"
 "Do you want to remove these files ?"
-msgstr ""
+msgstr "Sind Sie sicher, dass Sie folgende Quellen entfernen möchten?"
 
 #: manalog/manalog.py:409 manalog/manalog.py:417 manalog/manalog.py:421
 msgid "ManaLog - Verify journal"
@@ -160,20 +168,8 @@ msgstr ""
 
 #: manalog/manalog.py:477
 msgid "Log viewer is a systemd journal viewer"
-msgstr ""
+msgstr "Protokollbetrachter ist ein systemd-Journalbetrachter"
 
 #: manalog/manalog.py:482
 msgid "Save as.."
 msgstr "Speichern unter.."
-
-#~ msgid "_: Translator(s) name(s) & email(s)\n"
-#~ msgstr ""
-#~ "Ettore Atalan <atalanattore@googlemail.com>\n"
-#~ "psyca <linux@psyca.de>\n"
-#~ "Valsu <valsu@hylia.de>\n"
-
-#~ msgid "To priority"
-#~ msgstr "Nach Priorität"
-
-#~ msgid "From priority"
-#~ msgstr "Von Priorität"

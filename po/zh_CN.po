@@ -1,7 +1,7 @@
-# #-#-#-#-#  manatools_perl.pot (ManaTools 1.1.2)  #-#-#-#-#
+# #-#-#-#-#  manatools_perl.pot (ManaTools 1.1.7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Angelo Naselli - Matteo Pasotti
-# This file is distributed under the same license as the PACKAGE package.
+# This file is distributed under the same license as the ManaTools package.
 #
 # #-#-#-#-#  manadesktop.pot (PACKAGE VERSION)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
@@ -9,13 +9,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
-# zwpwjwtz <zwpwjwtz@126.com>, 2016
+# zwpwjwtz <zwpwjwtz@126.com>, 2016-2017
 msgid ""
 msgstr ""
 "Project-Id-Version: Mageia\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-04-06 07:21+0200\n"
-"PO-Revision-Date: 2016-12-13 02:38+0000\n"
+"PO-Revision-Date: 2017-10-22 13:41+0000\n"
 "Last-Translator: zwpwjwtz <zwpwjwtz@126.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/MageiaLinux/mageia/"
 "language/zh_CN/)\n"
@@ -26,20 +26,24 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: manalog/manalog.py:45
+#, fuzzy
 msgid "System space"
-msgstr ""
+msgstr "系统"
 
 #: manalog/manalog.py:47
+#, fuzzy
 msgid "User space"
-msgstr ""
+msgstr "用户名"
 
 #: manalog/manalog.py:48
+#, fuzzy
 msgid "ManaLog - ManaTools log viewer"
-msgstr ""
+msgstr "ManaTools 日志查看器（用户模式）"
 
 #: manalog/manalog.py:49
+#, fuzzy
 msgid "Manatools - log viewer - {}"
-msgstr ""
+msgstr "ManaTools 日志查看器（用户模式）"
 
 #: manalog/manalog.py:94
 msgid "A tool to monitor your logs"
@@ -74,8 +78,9 @@ msgid "Select a unit"
 msgstr "选择一个 unit"
 
 #: manalog/manalog.py:186
+#, fuzzy
 msgid "Select a boot"
-msgstr ""
+msgstr "选择一个 unit"
 
 #: manalog/manalog.py:199
 msgid "Priority level"
@@ -114,16 +119,18 @@ msgid "&Quit"
 msgstr "退出(&Q)"
 
 #: manalog/manalog.py:331
+#, fuzzy
 msgid "Reboot"
-msgstr ""
+msgstr "启动时"
 
 #: manalog/manalog.py:336
 msgid "Limit of {} lines reached. Please add some filters.\n"
 msgstr ""
 
 #: manalog/manalog.py:394
+#, fuzzy
 msgid "Boots cannot be listed"
-msgstr ""
+msgstr "部分软件包无法安装"
 
 #: manalog/manalog.py:395
 msgid ""
@@ -132,10 +139,11 @@ msgid ""
 msgstr ""
 
 #: manalog/manalog.py:408
+#, fuzzy
 msgid ""
 "\n"
 "Do you want to remove these files ?"
-msgstr ""
+msgstr "您确定移除下列源吗？"
 
 #: manalog/manalog.py:409 manalog/manalog.py:417 manalog/manalog.py:421
 msgid "ManaLog - Verify journal"
@@ -153,22 +161,8 @@ msgstr ""
 
 #: manalog/manalog.py:477
 msgid "Log viewer is a systemd journal viewer"
-msgstr ""
+msgstr "Log viewer 是一个 systemd 日志查看器"
 
 #: manalog/manalog.py:482
 msgid "Save as.."
 msgstr "另存为..."
-
-#~ msgid "_: Translator(s) name(s) & email(s)\n"
-#~ msgstr ""
-#~ "Funda Wang <fundawang@gmail.com>\n"
-#~ "Tianze Wang <zwpwjwtz@126.com>\n"
-
-#~ msgid "Copyright (C) %s Mageia community"
-#~ msgstr "Copyright (C) %s Mageia 社区"
-
-#~ msgid "To priority"
-#~ msgstr "至优先级"
-
-#~ msgid "From priority"
-#~ msgstr "从优先级"

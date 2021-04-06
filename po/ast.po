@@ -1,7 +1,7 @@
-# #-#-#-#-#  manatools_perl.pot (ManaTools 1.1.2)  #-#-#-#-#
+# #-#-#-#-#  manatools_perl.pot (ManaTools 1.1.7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Angelo Naselli - Matteo Pasotti
-# This file is distributed under the same license as the PACKAGE package.
+# This file is distributed under the same license as the ManaTools package.
 #
 # #-#-#-#-#  manadesktop.pot (PACKAGE VERSION)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
@@ -9,13 +9,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
-# enolp <enolp@softastur.org>, 2016
+# enolp <enolp@softastur.org>, 2016,2018,2020-2021
 msgid ""
 msgstr ""
 "Project-Id-Version: Mageia\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-04-06 07:21+0200\n"
-"PO-Revision-Date: 2016-10-04 11:55+0000\n"
+"PO-Revision-Date: 2021-01-06 05:26+0000\n"
 "Last-Translator: enolp <enolp@softastur.org>\n"
 "Language-Team: Asturian (http://www.transifex.com/MageiaLinux/mageia/"
 "language/ast/)\n"
@@ -26,28 +26,31 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: manalog/manalog.py:45
+#, fuzzy
 msgid "System space"
-msgstr ""
+msgstr "Sistema"
 
 #: manalog/manalog.py:47
+#, fuzzy
 msgid "User space"
-msgstr ""
+msgstr "Nome"
 
 #: manalog/manalog.py:48
 msgid "ManaLog - ManaTools log viewer"
 msgstr ""
 
 #: manalog/manalog.py:49
+#, fuzzy
 msgid "Manatools - log viewer - {}"
-msgstr ""
+msgstr "%s - Visor de rexistros"
 
 #: manalog/manalog.py:94
 msgid "A tool to monitor your logs"
-msgstr ""
+msgstr "Una ferramienta pa supervisar los rexistros"
 
 #: manalog/manalog.py:97
 msgid "Options"
-msgstr ""
+msgstr "Opciones"
 
 #: manalog/manalog.py:100
 msgid "Last boot"
@@ -103,7 +106,7 @@ msgstr ""
 
 #: manalog/manalog.py:243
 msgid "&About"
-msgstr ""
+msgstr "&Tocante a"
 
 #: manalog/manalog.py:247
 msgid "&Save"
@@ -114,16 +117,18 @@ msgid "&Quit"
 msgstr "&Colar"
 
 #: manalog/manalog.py:331
+#, fuzzy
 msgid "Reboot"
-msgstr ""
+msgstr "Nel arrinque"
 
 #: manalog/manalog.py:336
 msgid "Limit of {} lines reached. Please add some filters.\n"
 msgstr ""
 
 #: manalog/manalog.py:394
+#, fuzzy
 msgid "Boots cannot be listed"
-msgstr ""
+msgstr "Dalgunos paquetes nun puen instalase"
 
 #: manalog/manalog.py:395
 msgid ""
@@ -132,10 +137,11 @@ msgid ""
 msgstr ""
 
 #: manalog/manalog.py:408
+#, fuzzy
 msgid ""
 "\n"
 "Do you want to remove these files ?"
-msgstr ""
+msgstr "¿De xuru que quies desaniciar los oríxenes de darréu?"
 
 #: manalog/manalog.py:409 manalog/manalog.py:417 manalog/manalog.py:421
 msgid "ManaLog - Verify journal"

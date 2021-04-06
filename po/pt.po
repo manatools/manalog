@@ -1,7 +1,7 @@
-# #-#-#-#-#  manatools_perl.pot (ManaTools 1.1.2)  #-#-#-#-#
+# #-#-#-#-#  manatools_perl.pot (ManaTools 1.1.7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Angelo Naselli - Matteo Pasotti
-# This file is distributed under the same license as the PACKAGE package.
+# This file is distributed under the same license as the ManaTools package.
 #
 # #-#-#-#-#  manadesktop.pot (PACKAGE VERSION)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
@@ -9,15 +9,16 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
-# Manuela Silva <manuela.silva@sky.com>, 2017
-# Manuela Silva <manuela.silva@sky.com>, 2016
+# MS <manuelarodsilva@gmail.com>, 2016-2018
+# MS <manuelarodsilva@gmail.com>, 2016
+# Rui <xymarior@yandex.com>, 2018
 msgid ""
 msgstr ""
 "Project-Id-Version: Mageia\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-04-06 07:21+0200\n"
-"PO-Revision-Date: 2017-04-05 18:22+0000\n"
-"Last-Translator: Manuela Silva <manuela.silva@sky.com>\n"
+"PO-Revision-Date: 2018-12-05 12:41+0000\n"
+"Last-Translator: Rui <xymarior@yandex.com>\n"
 "Language-Team: Portuguese (http://www.transifex.com/MageiaLinux/mageia/"
 "language/pt/)\n"
 "Language: pt\n"
@@ -27,12 +28,14 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: manalog/manalog.py:45
+#, fuzzy
 msgid "System space"
-msgstr ""
+msgstr "Sistema"
 
 #: manalog/manalog.py:47
+#, fuzzy
 msgid "User space"
-msgstr ""
+msgstr "Nome de Utilizador"
 
 #: manalog/manalog.py:48
 msgid "ManaLog - ManaTools log viewer"
@@ -75,8 +78,9 @@ msgid "Select a unit"
 msgstr "Selecione uma unidade"
 
 #: manalog/manalog.py:186
+#, fuzzy
 msgid "Select a boot"
-msgstr ""
+msgstr "Selecione uma unidade"
 
 #: manalog/manalog.py:199
 msgid "Priority level"
@@ -115,8 +119,9 @@ msgid "&Quit"
 msgstr "&Sair"
 
 #: manalog/manalog.py:331
+#, fuzzy
 msgid "Reboot"
-msgstr ""
+msgstr "No arranque"
 
 #: manalog/manalog.py:336
 msgid "Limit of {} lines reached. Please add some filters.\n"
@@ -133,10 +138,11 @@ msgid ""
 msgstr ""
 
 #: manalog/manalog.py:408
+#, fuzzy
 msgid ""
 "\n"
 "Do you want to remove these files ?"
-msgstr ""
+msgstr "Tem a certeza que deseja remover as seguintes fontes?"
 
 #: manalog/manalog.py:409 manalog/manalog.py:417 manalog/manalog.py:421
 msgid "ManaLog - Verify journal"
@@ -159,18 +165,3 @@ msgstr ""
 #: manalog/manalog.py:482
 msgid "Save as.."
 msgstr "Guardar como..."
-
-#~ msgid "_: Translator(s) name(s) & email(s)\n"
-#~ msgstr "Manuela Silva - manuela.silva@sky.com\n"
-
-#~ msgid "Copyright (C) %s Mageia community"
-#~ msgstr "Direitos de Autor (C) %s Comunidade Mageia"
-
-#~ msgid "GPLv2"
-#~ msgstr "GPLv2"
-
-#~ msgid "To priority"
-#~ msgstr "Para a prioridade"
-
-#~ msgid "From priority"
-#~ msgstr "Da prioridade"

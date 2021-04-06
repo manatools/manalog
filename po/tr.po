@@ -1,7 +1,7 @@
-# #-#-#-#-#  manatools_perl.pot (ManaTools 1.1.2)  #-#-#-#-#
+# #-#-#-#-#  manatools_perl.pot (ManaTools 1.1.7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Angelo Naselli - Matteo Pasotti
-# This file is distributed under the same license as the PACKAGE package.
+# This file is distributed under the same license as the ManaTools package.
 #
 # #-#-#-#-#  manadesktop.pot (PACKAGE VERSION)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
@@ -13,13 +13,15 @@
 # tarakbumba <tarakbumba@gmail.com>, 2015-2016
 # mahmut özcan <faradundamarti@yandex.com>, 2015
 # Fırat Kutlu <firatkutlu@yandex.com>, 2015
-# tarakbumba <tarakbumba@gmail.com>, 2017
+# Fırat Kutlu <firatkutlu@yandex.com>, 2015
+# mahmut özcan <faradundamarti@yandex.com>, 2015
+# tarakbumba <tarakbumba@gmail.com>, 2015,2017-2018
 msgid ""
 msgstr ""
 "Project-Id-Version: Mageia\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-04-06 07:21+0200\n"
-"PO-Revision-Date: 2017-03-15 13:43+0000\n"
+"PO-Revision-Date: 2018-01-11 22:13+0000\n"
 "Last-Translator: tarakbumba <tarakbumba@gmail.com>\n"
 "Language-Team: Turkish (http://www.transifex.com/MageiaLinux/mageia/language/"
 "tr/)\n"
@@ -30,20 +32,24 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: manalog/manalog.py:45
+#, fuzzy
 msgid "System space"
-msgstr ""
+msgstr "Sistem"
 
 #: manalog/manalog.py:47
+#, fuzzy
 msgid "User space"
-msgstr ""
+msgstr "Kullanıcı Adı"
 
 #: manalog/manalog.py:48
+#, fuzzy
 msgid "ManaLog - ManaTools log viewer"
-msgstr ""
+msgstr "ManaTools günlük kaydı okuyucu, kullanıcı kipi"
 
 #: manalog/manalog.py:49
+#, fuzzy
 msgid "Manatools - log viewer - {}"
-msgstr ""
+msgstr "ManaTools günlük kaydı okuyucu, kullanıcı kipi"
 
 #: manalog/manalog.py:94
 msgid "A tool to monitor your logs"
@@ -78,8 +84,9 @@ msgid "Select a unit"
 msgstr "Bir birim seçin"
 
 #: manalog/manalog.py:186
+#, fuzzy
 msgid "Select a boot"
-msgstr ""
+msgstr "Bir birim seçin"
 
 #: manalog/manalog.py:199
 msgid "Priority level"
@@ -118,16 +125,18 @@ msgid "&Quit"
 msgstr "&Çık"
 
 #: manalog/manalog.py:331
+#, fuzzy
 msgid "Reboot"
-msgstr ""
+msgstr "Önyüklemede"
 
 #: manalog/manalog.py:336
 msgid "Limit of {} lines reached. Please add some filters.\n"
 msgstr ""
 
 #: manalog/manalog.py:394
+#, fuzzy
 msgid "Boots cannot be listed"
-msgstr ""
+msgstr "Bazı paketler kurulamadı"
 
 #: manalog/manalog.py:395
 msgid ""
@@ -136,10 +145,11 @@ msgid ""
 msgstr ""
 
 #: manalog/manalog.py:408
+#, fuzzy
 msgid ""
 "\n"
 "Do you want to remove these files ?"
-msgstr ""
+msgstr "Aşağıdaki kaynakları kaldırmak istediğinizden emin misiniz?"
 
 #: manalog/manalog.py:409 manalog/manalog.py:417 manalog/manalog.py:421
 msgid "ManaLog - Verify journal"
@@ -157,23 +167,8 @@ msgstr ""
 
 #: manalog/manalog.py:477
 msgid "Log viewer is a systemd journal viewer"
-msgstr ""
+msgstr "Günlük görüntüleyici bir systemd journal görüntüleyicisidir"
 
 #: manalog/manalog.py:482
 msgid "Save as.."
 msgstr "Farklı Kaydet..."
-
-#~ msgid "_: Translator(s) name(s) & email(s)\n"
-#~ msgstr ""
-#~ "Faraduntamarti <faradundamarti@yandex.com>\n"
-#~ "Atilla ÖNTAŞ <tarakbumba@gmail.com>\n"
-#~ "Fırat Kutlu <firatkutlu@gmail.com>\n"
-
-#~ msgid "Copyright (C) %s Mageia community"
-#~ msgstr "Copyright (C) %s Mageia Topluluğu"
-
-#~ msgid "To priority"
-#~ msgstr "Önceliğe"
-
-#~ msgid "From priority"
-#~ msgstr "Öncilekten"

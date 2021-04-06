@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: Mageia\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-04-06 07:21+0200\n"
-"PO-Revision-Date: 2017-09-20 13:30+0000\n"
+"PO-Revision-Date: 2018-01-13 02:10+0000\n"
 "Last-Translator: Masanori Kakura <kakurasan@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/MageiaLinux/mageia/"
 "language/ja/)\n"
@@ -26,20 +26,24 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: manalog/manalog.py:45
+#, fuzzy
 msgid "System space"
-msgstr ""
+msgstr "システム"
 
 #: manalog/manalog.py:47
+#, fuzzy
 msgid "User space"
-msgstr ""
+msgstr "ユーザ名"
 
 #: manalog/manalog.py:48
+#, fuzzy
 msgid "ManaLog - ManaTools log viewer"
-msgstr ""
+msgstr "ManaTools ログ ビューア, ユーザ モード"
 
 #: manalog/manalog.py:49
+#, fuzzy
 msgid "Manatools - log viewer - {}"
-msgstr ""
+msgstr "ManaTools ログ ビューア, ユーザ モード"
 
 #: manalog/manalog.py:94
 msgid "A tool to monitor your logs"
@@ -74,8 +78,9 @@ msgid "Select a unit"
 msgstr "ユニットを選択"
 
 #: manalog/manalog.py:186
+#, fuzzy
 msgid "Select a boot"
-msgstr ""
+msgstr "ユニットを選択"
 
 #: manalog/manalog.py:199
 msgid "Priority level"
@@ -114,16 +119,18 @@ msgid "&Quit"
 msgstr "終了(&Q)"
 
 #: manalog/manalog.py:331
+#, fuzzy
 msgid "Reboot"
-msgstr ""
+msgstr "ブート時に開始"
 
 #: manalog/manalog.py:336
 msgid "Limit of {} lines reached. Please add some filters.\n"
 msgstr ""
 
 #: manalog/manalog.py:394
+#, fuzzy
 msgid "Boots cannot be listed"
-msgstr ""
+msgstr "インストールできないパッケージがあります"
 
 #: manalog/manalog.py:395
 msgid ""
@@ -132,10 +139,11 @@ msgid ""
 msgstr ""
 
 #: manalog/manalog.py:408
+#, fuzzy
 msgid ""
 "\n"
 "Do you want to remove these files ?"
-msgstr ""
+msgstr "以下のソースを本当に削除しますか?"
 
 #: manalog/manalog.py:409 manalog/manalog.py:417 manalog/manalog.py:421
 msgid "ManaLog - Verify journal"
@@ -153,21 +161,8 @@ msgstr ""
 
 #: manalog/manalog.py:477
 msgid "Log viewer is a systemd journal viewer"
-msgstr ""
+msgstr "ログ ビューアは systemd journal のビューアです"
 
 #: manalog/manalog.py:482
 msgid "Save as.."
 msgstr "名前を付けて保存.."
-
-#~ msgid "_: Translator(s) name(s) & email(s)\n"
-#~ msgstr ""
-#~ "UTUMI Hirosi <utuhiro78@yahoo.co.jp>\n"
-#~ "Yukiko BANDO <ybando@k6.dion.ne.jp>\n"
-#~ "BALLOON a.k.a. Fu-sen. (Keiichi SHIGA) <balloonakafusen@gmail.com>\n"
-#~ "Masanori Kakura <kakurasan@gmail.com>\n"
-
-#~ msgid "To priority"
-#~ msgstr "最高優先度を指定"
-
-#~ msgid "From priority"
-#~ msgstr "最低優先度を指定"

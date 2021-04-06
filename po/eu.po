@@ -1,7 +1,7 @@
-# #-#-#-#-#  manatools_perl.pot (ManaTools 1.1.2)  #-#-#-#-#
+# #-#-#-#-#  manatools_perl.pot (ManaTools 1.1.7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Angelo Naselli - Matteo Pasotti
-# This file is distributed under the same license as the PACKAGE package.
+# This file is distributed under the same license as the ManaTools package.
 #
 # #-#-#-#-#  manadesktop.pot (PACKAGE VERSION)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
@@ -9,13 +9,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
-# Egoitz Rodriguez Obieta <egoitzro@gmail.com>, 2015-2016
+# Egoitz Rodriguez Obieta <egoitzro@gmail.com>, 2015-2018
 msgid ""
 msgstr ""
 "Project-Id-Version: Mageia\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-04-06 07:21+0200\n"
-"PO-Revision-Date: 2016-10-02 07:55+0000\n"
+"PO-Revision-Date: 2018-03-18 18:35+0000\n"
 "Last-Translator: Egoitz Rodriguez Obieta <egoitzro@gmail.com>\n"
 "Language-Team: Basque (http://www.transifex.com/MageiaLinux/mageia/language/"
 "eu/)\n"
@@ -26,20 +26,24 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: manalog/manalog.py:45
+#, fuzzy
 msgid "System space"
-msgstr ""
+msgstr "Sistema"
 
 #: manalog/manalog.py:47
+#, fuzzy
 msgid "User space"
-msgstr ""
+msgstr "Erabiltzaile Izena"
 
 #: manalog/manalog.py:48
+#, fuzzy
 msgid "ManaLog - ManaTools log viewer"
-msgstr ""
+msgstr "ManaTools log ikuslea, erabiltzaile modua"
 
 #: manalog/manalog.py:49
+#, fuzzy
 msgid "Manatools - log viewer - {}"
-msgstr ""
+msgstr "ManaTools log ikuslea, erabiltzaile modua"
 
 #: manalog/manalog.py:94
 msgid "A tool to monitor your logs"
@@ -74,8 +78,9 @@ msgid "Select a unit"
 msgstr "Hautatu unitatea"
 
 #: manalog/manalog.py:186
+#, fuzzy
 msgid "Select a boot"
-msgstr ""
+msgstr "Hautatu unitatea"
 
 #: manalog/manalog.py:199
 msgid "Priority level"
@@ -114,16 +119,18 @@ msgid "&Quit"
 msgstr "&Irten"
 
 #: manalog/manalog.py:331
+#, fuzzy
 msgid "Reboot"
-msgstr ""
+msgstr "Abioan"
 
 #: manalog/manalog.py:336
 msgid "Limit of {} lines reached. Please add some filters.\n"
 msgstr ""
 
 #: manalog/manalog.py:394
+#, fuzzy
 msgid "Boots cannot be listed"
-msgstr ""
+msgstr "Pakete batzuk ezin dira instalatu"
 
 #: manalog/manalog.py:395
 msgid ""
@@ -132,10 +139,11 @@ msgid ""
 msgstr ""
 
 #: manalog/manalog.py:408
+#, fuzzy
 msgid ""
 "\n"
 "Do you want to remove these files ?"
-msgstr ""
+msgstr "Ziur zaude ondorengo jatorriak ezabatu nahi dituzula?"
 
 #: manalog/manalog.py:409 manalog/manalog.py:417 manalog/manalog.py:421
 msgid "ManaLog - Verify journal"
@@ -153,19 +161,8 @@ msgstr ""
 
 #: manalog/manalog.py:477
 msgid "Log viewer is a systemd journal viewer"
-msgstr ""
+msgstr "Erregistro ikustaile systemd aldizkari ikustailea da"
 
 #: manalog/manalog.py:482
 msgid "Save as.."
 msgstr "Gorde honela.."
-
-#~ msgid "_: Translator(s) name(s) & email(s)\n"
-#~ msgstr ""
-#~ "Iñigo Salvador Azurmendi <xalba@euskalnet.net>\n"
-#~ " Egoitz Rodriguez Obieta <egoitzro2@hotmail.com>\n"
-
-#~ msgid "To priority"
-#~ msgstr "Lehentasuna du"
-
-#~ msgid "From priority"
-#~ msgstr "lehentasunezko"

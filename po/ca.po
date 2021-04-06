@@ -9,15 +9,16 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
-# Davidmp <medipas@gmail.com>, 2015-2017
-# Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2015,2017
+# Davidmp <medipas@gmail.com>, 2015-2020
+# Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2015,2017-2019
 # Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2015
+# Rubén <rbndavid@gmail.com>, 2019
 msgid ""
 msgstr ""
 "Project-Id-Version: Mageia\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-04-06 07:21+0200\n"
-"PO-Revision-Date: 2017-09-13 16:22+0000\n"
+"PO-Revision-Date: 2020-06-03 08:36+0000\n"
 "Last-Translator: Davidmp <medipas@gmail.com>\n"
 "Language-Team: Catalan (http://www.transifex.com/MageiaLinux/mageia/language/"
 "ca/)\n"
@@ -28,20 +29,24 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: manalog/manalog.py:45
+#, fuzzy
 msgid "System space"
-msgstr ""
+msgstr "Sistema"
 
 #: manalog/manalog.py:47
+#, fuzzy
 msgid "User space"
-msgstr ""
+msgstr "Nom d'usuari:"
 
 #: manalog/manalog.py:48
+#, fuzzy
 msgid "ManaLog - ManaTools log viewer"
-msgstr ""
+msgstr "Visualitzador de registres de ManaTools, mode d'usuari"
 
 #: manalog/manalog.py:49
+#, fuzzy
 msgid "Manatools - log viewer - {}"
-msgstr ""
+msgstr "Visualitzador de registres de ManaTools, mode d'usuari"
 
 #: manalog/manalog.py:94
 msgid "A tool to monitor your logs"
@@ -76,8 +81,9 @@ msgid "Select a unit"
 msgstr "Seleccioneu una unitat"
 
 #: manalog/manalog.py:186
+#, fuzzy
 msgid "Select a boot"
-msgstr ""
+msgstr "Seleccioneu una unitat"
 
 #: manalog/manalog.py:199
 msgid "Priority level"
@@ -113,19 +119,21 @@ msgstr "&Desa"
 
 #: manalog/manalog.py:249
 msgid "&Quit"
-msgstr "Surt"
+msgstr "&Surt"
 
 #: manalog/manalog.py:331
+#, fuzzy
 msgid "Reboot"
-msgstr ""
+msgstr "En arrencar"
 
 #: manalog/manalog.py:336
 msgid "Limit of {} lines reached. Please add some filters.\n"
 msgstr ""
 
 #: manalog/manalog.py:394
+#, fuzzy
 msgid "Boots cannot be listed"
-msgstr ""
+msgstr "Alguns paquets no es poden instal·lar"
 
 #: manalog/manalog.py:395
 msgid ""
@@ -134,10 +142,11 @@ msgid ""
 msgstr ""
 
 #: manalog/manalog.py:408
+#, fuzzy
 msgid ""
 "\n"
 "Do you want to remove these files ?"
-msgstr ""
+msgstr "Segur de voler suprimir els orígens següents?"
 
 #: manalog/manalog.py:409 manalog/manalog.py:417 manalog/manalog.py:421
 msgid "ManaLog - Verify journal"
@@ -155,14 +164,8 @@ msgstr ""
 
 #: manalog/manalog.py:477
 msgid "Log viewer is a systemd journal viewer"
-msgstr ""
+msgstr "El visualitzador de registres és un visualitzador del diari de systemd"
 
 #: manalog/manalog.py:482
 msgid "Save as.."
 msgstr "Desa com a..."
-
-#~ msgid "To priority"
-#~ msgstr "Fins a la prioritat"
-
-#~ msgid "From priority"
-#~ msgstr "Des de la prioritat"

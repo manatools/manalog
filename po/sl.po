@@ -27,20 +27,24 @@ msgstr ""
 "%100==4 ? 2 : 3);\n"
 
 #: manalog/manalog.py:45
+#, fuzzy
 msgid "System space"
-msgstr ""
+msgstr "Sistem"
 
 #: manalog/manalog.py:47
+#, fuzzy
 msgid "User space"
-msgstr ""
+msgstr "Uporabniško ime"
 
 #: manalog/manalog.py:48
+#, fuzzy
 msgid "ManaLog - ManaTools log viewer"
-msgstr ""
+msgstr "Pregledovalnik dnevniških datotek ManaTools v uporabniškem načinu"
 
 #: manalog/manalog.py:49
+#, fuzzy
 msgid "Manatools - log viewer - {}"
-msgstr ""
+msgstr "Pregledovalnik dnevniških datotek ManaTools v uporabniškem načinu"
 
 #: manalog/manalog.py:94
 msgid "A tool to monitor your logs"
@@ -75,8 +79,9 @@ msgid "Select a unit"
 msgstr "Izberite enoto"
 
 #: manalog/manalog.py:186
+#, fuzzy
 msgid "Select a boot"
-msgstr ""
+msgstr "Izberite enoto"
 
 #: manalog/manalog.py:199
 msgid "Priority level"
@@ -115,16 +120,18 @@ msgid "&Quit"
 msgstr "&Končaj"
 
 #: manalog/manalog.py:331
+#, fuzzy
 msgid "Reboot"
-msgstr ""
+msgstr "Ob zagonu"
 
 #: manalog/manalog.py:336
 msgid "Limit of {} lines reached. Please add some filters.\n"
 msgstr ""
 
 #: manalog/manalog.py:394
+#, fuzzy
 msgid "Boots cannot be listed"
-msgstr ""
+msgstr "Nekaterih paketov ni mogoče namestiti"
 
 #: manalog/manalog.py:395
 msgid ""
@@ -133,10 +140,11 @@ msgid ""
 msgstr ""
 
 #: manalog/manalog.py:408
+#, fuzzy
 msgid ""
 "\n"
 "Do you want to remove these files ?"
-msgstr ""
+msgstr "Ali ste prepričani, da želite odstraniti naslednje vire?"
 
 #: manalog/manalog.py:409 manalog/manalog.py:417 manalog/manalog.py:421
 msgid "ManaLog - Verify journal"
@@ -154,23 +162,8 @@ msgstr ""
 
 #: manalog/manalog.py:477
 msgid "Log viewer is a systemd journal viewer"
-msgstr ""
+msgstr "Pregledovalnik dnevniških datotek je del sistemskega programa systemd "
 
 #: manalog/manalog.py:482
 msgid "Save as.."
 msgstr "Shrani kot..."
-
-#~ msgid "_: Translator(s) name(s) & email(s)\n"
-#~ msgstr "Filip Komar <filip.komar@gmail.com>\n"
-
-#~ msgid "Copyright (C) %s Mageia community"
-#~ msgstr "Avtorske pravice (C) %s Mageia skupnost"
-
-#~ msgid "GPLv2"
-#~ msgstr "GPLv2"
-
-#~ msgid "To priority"
-#~ msgstr "Do prednosti"
-
-#~ msgid "From priority"
-#~ msgstr "Od prednosti"

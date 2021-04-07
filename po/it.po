@@ -31,16 +31,18 @@ msgid "System space"
 msgstr ""
 
 #: manalog/manalog.py:47
+#, fuzzy
 msgid "User space"
-msgstr ""
+msgstr "Nome utente:"
 
 #: manalog/manalog.py:48
 msgid "ManaLog - ManaTools log viewer"
 msgstr ""
 
 #: manalog/manalog.py:49
+#, fuzzy
 msgid "Manatools - log viewer - {}"
-msgstr ""
+msgstr "Visualizza i log di sistema"
 
 #: manalog/manalog.py:94
 msgid "A tool to monitor your logs"
@@ -115,8 +117,9 @@ msgid "&Quit"
 msgstr "Termina"
 
 #: manalog/manalog.py:331
+#, fuzzy
 msgid "Reboot"
-msgstr ""
+msgstr "All'avvio"
 
 #: manalog/manalog.py:336
 msgid "Limit of {} lines reached. Please add some filters.\n"
@@ -159,8 +162,3 @@ msgstr ""
 #: manalog/manalog.py:482
 msgid "Save as.."
 msgstr ""
-
-#~ msgid "_: Translator(s) name(s) & email(s)\n"
-#~ msgstr ""
-#~ "_pmat_ <matteo.pasotti@gmail.com>\n"
-#~ "Riccardo Di Maio <riccardodimaio11@gmail.com>\n"

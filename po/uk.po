@@ -2,13 +2,13 @@
 # Copyright (C) 2015 Angelo Naselli - Matteo Pasotti
 # This file is distributed under the same license as the manatools package.
 #
-# Yuri Chornoivan <yurchor@ukr.net>, 2015, 2016, 2017.
+# Yuri Chornoivan <yurchor@ukr.net>, 2015, 2016, 2017, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: ManaTools 1.0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-04-06 07:21+0200\n"
-"PO-Revision-Date: 2017-09-10 13:59+0200\n"
+"PO-Revision-Date: 2021-04-06 19:29+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -17,23 +17,23 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 2.0\n"
+"X-Generator: Lokalize 20.12.0\n"
 
 #: manalog/manalog.py:45
 msgid "System space"
-msgstr ""
+msgstr "Загальносистемний простір"
 
 #: manalog/manalog.py:47
 msgid "User space"
-msgstr ""
+msgstr "Простір користувача"
 
 #: manalog/manalog.py:48
 msgid "ManaLog - ManaTools log viewer"
-msgstr ""
+msgstr "ManaLog — засіб для перегляду журналу з ManaTools"
 
 #: manalog/manalog.py:49
 msgid "Manatools - log viewer - {}"
-msgstr ""
+msgstr "Manatools — засіб для перегляду журналу — {}"
 
 #: manalog/manalog.py:94
 msgid "A tool to monitor your logs"
@@ -49,11 +49,11 @@ msgstr "Останнє завантаження"
 
 #: manalog/manalog.py:104
 msgid "Tail mode"
-msgstr ""
+msgstr "Режим кінця виведення"
 
 #: manalog/manalog.py:108
 msgid "Monotonic timestamp"
-msgstr ""
+msgstr "Монотонна часова позначка"
 
 #: manalog/manalog.py:130
 msgid "Since"
@@ -69,11 +69,11 @@ msgstr "Виберіть модуль"
 
 #: manalog/manalog.py:186
 msgid "Select a boot"
-msgstr ""
+msgstr "Виберіть завантаження"
 
 #: manalog/manalog.py:199
 msgid "Priority level"
-msgstr ""
+msgstr "Рівень пріоритетності"
 
 #: manalog/manalog.py:216
 msgid "Matching"
@@ -85,7 +85,7 @@ msgstr "але не відповідає"
 
 #: manalog/manalog.py:224
 msgid "&Stop"
-msgstr ""
+msgstr "&Зупинити"
 
 #: manalog/manalog.py:227
 msgid "&Find"
@@ -109,60 +109,52 @@ msgstr "Ви&йти"
 
 #: manalog/manalog.py:331
 msgid "Reboot"
-msgstr ""
+msgstr "Перезавантажити"
 
 #: manalog/manalog.py:336
 msgid "Limit of {} lines reached. Please add some filters.\n"
-msgstr ""
+msgstr "Досягнуто обмеження у {} рядків. Будь ласка, додайте якісь фільтри.\n"
 
 #: manalog/manalog.py:394
 msgid "Boots cannot be listed"
-msgstr ""
+msgstr "Не вдалося побудувати список завантажень"
 
 #: manalog/manalog.py:395
 msgid ""
 "Failed to determine boots: No data available. Do you want to verify the "
 "system journal ? (this can take a while)"
 msgstr ""
+"Не вдалося визначити завантаження: немає доступних даних. Хочете перевірити "
+"журнал системи? (Процедура може бути досить тривалою.)"
 
 #: manalog/manalog.py:408
 msgid ""
 "\n"
 "Do you want to remove these files ?"
 msgstr ""
+"\n"
+"Хочете вилучити ці файли?"
 
 #: manalog/manalog.py:409 manalog/manalog.py:417 manalog/manalog.py:421
 msgid "ManaLog - Verify journal"
-msgstr ""
+msgstr "ManaLog — перевірка журналу"
 
 #: manalog/manalog.py:416
 msgid ""
 "\n"
 "You must be root to remove these files."
 msgstr ""
+"\n"
+"Для вилучення цих файлів потрібні права доступу root."
 
 #: manalog/manalog.py:422
 msgid "No errors have been detected in journal files."
-msgstr ""
+msgstr "У файлах журналів помилок не виявлено."
 
 #: manalog/manalog.py:477
 msgid "Log viewer is a systemd journal viewer"
-msgstr ""
+msgstr "Засіб перегляду журналу призначено для перегляду журналу systemd"
 
 #: manalog/manalog.py:482
 msgid "Save as.."
 msgstr "Зберегти як…"
-
-#~ msgid "_: Translator(s) name(s) & email(s)\n"
-#~ msgstr ""
-#~ "Тарас Бойчук <btr0001@ukr.net>\n"
-#~ "Юрій Чорноіван <yurchor@ukr.net>\n"
-
-#~ msgid "Copyright (C) %s Mageia community"
-#~ msgstr "© Спільнота Mageia, %s"
-
-#~ msgid "To priority"
-#~ msgstr "На пріоритетність"
-
-#~ msgid "From priority"
-#~ msgstr "З пріоритетності"

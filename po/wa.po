@@ -30,8 +30,9 @@ msgid "System space"
 msgstr ""
 
 #: manalog/manalog.py:47
+#, fuzzy
 msgid "User space"
-msgstr ""
+msgstr "No di l' uzeu"
 
 #: manalog/manalog.py:48
 msgid "ManaLog - ManaTools log viewer"
@@ -74,8 +75,9 @@ msgid "Select a unit"
 msgstr ""
 
 #: manalog/manalog.py:186
+#, fuzzy
 msgid "Select a boot"
-msgstr ""
+msgstr "&Tchoezi ttafwait"
 
 #: manalog/manalog.py:199
 msgid "Priority level"
@@ -114,8 +116,9 @@ msgid "&Quit"
 msgstr "C&witer"
 
 #: manalog/manalog.py:331
+#, fuzzy
 msgid "Reboot"
-msgstr ""
+msgstr "A l' enondaedje"
 
 #: manalog/manalog.py:336
 msgid "Limit of {} lines reached. Please add some filters.\n"
@@ -132,10 +135,11 @@ msgid ""
 msgstr ""
 
 #: manalog/manalog.py:408
+#, fuzzy
 msgid ""
 "\n"
 "Do you want to remove these files ?"
-msgstr ""
+msgstr "Voloz vs vormint disfacer l' groupe %s?"
 
 #: manalog/manalog.py:409 manalog/manalog.py:417 manalog/manalog.py:421
 msgid "ManaLog - Verify journal"
@@ -158,9 +162,3 @@ msgstr ""
 #: manalog/manalog.py:482
 msgid "Save as.."
 msgstr "Schaper eyet rlomer..."
-
-#~ msgid "_: Translator(s) name(s) & email(s)\n"
-#~ msgstr "Pablo Saratxaga <pablo@walon.org>\n"
-
-#~ msgid "Copyright (C) %s Mageia community"
-#~ msgstr "Copyright © %s li cminålté Mageia"

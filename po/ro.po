@@ -27,20 +27,24 @@ msgstr ""
 "2:1));\n"
 
 #: manalog/manalog.py:45
+#, fuzzy
 msgid "System space"
-msgstr ""
+msgstr "Sistem"
 
 #: manalog/manalog.py:47
+#, fuzzy
 msgid "User space"
-msgstr ""
+msgstr "Nume utilizator"
 
 #: manalog/manalog.py:48
+#, fuzzy
 msgid "ManaLog - ManaTools log viewer"
-msgstr ""
+msgstr "Vizualizatorul de fișiere jurnal ManaTools, mod utilizator"
 
 #: manalog/manalog.py:49
+#, fuzzy
 msgid "Manatools - log viewer - {}"
-msgstr ""
+msgstr "Vizualizatorul de fișiere jurnal ManaTools, mod utilizator"
 
 #: manalog/manalog.py:94
 msgid "A tool to monitor your logs"
@@ -75,8 +79,9 @@ msgid "Select a unit"
 msgstr "Selectați o unitate"
 
 #: manalog/manalog.py:186
+#, fuzzy
 msgid "Select a boot"
-msgstr ""
+msgstr "Selectați o unitate"
 
 #: manalog/manalog.py:199
 msgid "Priority level"
@@ -115,16 +120,18 @@ msgid "&Quit"
 msgstr "&Terminare"
 
 #: manalog/manalog.py:331
+#, fuzzy
 msgid "Reboot"
-msgstr ""
+msgstr "La demaraj"
 
 #: manalog/manalog.py:336
 msgid "Limit of {} lines reached. Please add some filters.\n"
 msgstr ""
 
 #: manalog/manalog.py:394
+#, fuzzy
 msgid "Boots cannot be listed"
-msgstr ""
+msgstr "Cîteva pachete nu pot fi instalate"
 
 #: manalog/manalog.py:395
 msgid ""
@@ -133,10 +140,11 @@ msgid ""
 msgstr ""
 
 #: manalog/manalog.py:408
+#, fuzzy
 msgid ""
 "\n"
 "Do you want to remove these files ?"
-msgstr ""
+msgstr "Sigur doriți să înlăturați sursele următoare?"
 
 #: manalog/manalog.py:409 manalog/manalog.py:417 manalog/manalog.py:421
 msgid "ManaLog - Verify journal"
@@ -155,24 +163,9 @@ msgstr ""
 #: manalog/manalog.py:477
 msgid "Log viewer is a systemd journal viewer"
 msgstr ""
+"Vizualizatorul de fișiere jurnal este un vizualizator de fișiere jurnal "
+"systemd"
 
 #: manalog/manalog.py:482
 msgid "Save as.."
 msgstr "Salvează ca..."
-
-#~ msgid "_: Translator(s) name(s) & email(s)\n"
-#~ msgstr ""
-#~ "Florin Cătălin RUSSEN <cfrussen@yahoo.co.uk>\n"
-#~ "\n"
-
-#~ msgid "Copyright (C) %s Mageia community"
-#~ msgstr "Drepturi de autor (C) %s comunitatea Mageia"
-
-#~ msgid "GPLv2"
-#~ msgstr "GPLv2"
-
-#~ msgid "To priority"
-#~ msgstr "La prioritatea"
-
-#~ msgid "From priority"
-#~ msgstr "Din prioritatea"

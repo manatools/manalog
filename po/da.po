@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: Mageia\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-04-06 07:21+0200\n"
-"PO-Revision-Date: 2017-09-10 22:40+0000\n"
+"PO-Revision-Date: 2017-11-19 18:35+0000\n"
 "Last-Translator: scootergrisen\n"
 "Language-Team: Danish (http://www.transifex.com/MageiaLinux/mageia/language/"
 "da/)\n"
@@ -27,20 +27,24 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: manalog/manalog.py:45
+#, fuzzy
 msgid "System space"
-msgstr ""
+msgstr "System"
 
 #: manalog/manalog.py:47
+#, fuzzy
 msgid "User space"
-msgstr ""
+msgstr "Brugernavn"
 
 #: manalog/manalog.py:48
+#, fuzzy
 msgid "ManaLog - ManaTools log viewer"
-msgstr ""
+msgstr "ManaTools log-fremviser, brugertilstand"
 
 #: manalog/manalog.py:49
+#, fuzzy
 msgid "Manatools - log viewer - {}"
-msgstr ""
+msgstr "ManaTools log-fremviser, brugertilstand"
 
 #: manalog/manalog.py:94
 msgid "A tool to monitor your logs"
@@ -75,8 +79,9 @@ msgid "Select a unit"
 msgstr "Vælg en enhed"
 
 #: manalog/manalog.py:186
+#, fuzzy
 msgid "Select a boot"
-msgstr ""
+msgstr "Vælg en enhed"
 
 #: manalog/manalog.py:199
 msgid "Priority level"
@@ -115,16 +120,18 @@ msgid "&Quit"
 msgstr "&Afslut"
 
 #: manalog/manalog.py:331
+#, fuzzy
 msgid "Reboot"
-msgstr ""
+msgstr "Ved opstart"
 
 #: manalog/manalog.py:336
 msgid "Limit of {} lines reached. Please add some filters.\n"
 msgstr ""
 
 #: manalog/manalog.py:394
+#, fuzzy
 msgid "Boots cannot be listed"
-msgstr ""
+msgstr "Nogle pakker kan ikke installeres"
 
 #: manalog/manalog.py:395
 msgid ""
@@ -133,10 +140,11 @@ msgid ""
 msgstr ""
 
 #: manalog/manalog.py:408
+#, fuzzy
 msgid ""
 "\n"
 "Do you want to remove these files ?"
-msgstr ""
+msgstr "Er du sikker på, at du vil fjerne følgende kilder?"
 
 #: manalog/manalog.py:409 manalog/manalog.py:417 manalog/manalog.py:421
 msgid "ManaLog - Verify journal"
@@ -154,17 +162,8 @@ msgstr ""
 
 #: manalog/manalog.py:477
 msgid "Log viewer is a systemd journal viewer"
-msgstr ""
+msgstr "Log-fremviser er en systemd journal-fremviser"
 
 #: manalog/manalog.py:482
 msgid "Save as.."
 msgstr "Gem som.."
-
-#~ msgid "_: Translator(s) name(s) & email(s)\n"
-#~ msgstr "scootergrisen\n"
-
-#~ msgid "To priority"
-#~ msgstr "Til prioritet"
-
-#~ msgid "From priority"
-#~ msgstr "Fra prioritet"

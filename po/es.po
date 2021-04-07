@@ -1,7 +1,7 @@
-# #-#-#-#-#  manatools_perl.pot (ManaTools 1.1.2)  #-#-#-#-#
+# #-#-#-#-#  manatools_perl.pot (ManaTools 1.1.7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Angelo Naselli - Matteo Pasotti
-# This file is distributed under the same license as the PACKAGE package.
+# This file is distributed under the same license as the ManaTools package.
 #
 # #-#-#-#-#  manadesktop.pot (PACKAGE VERSION)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
@@ -9,17 +9,20 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
-# Miguel Ortega, 2015-2016
-# Egoitz Rodriguez Obieta <egoitzro@gmail.com>, 2015
-# Jose Manuel López <inactive+rocholc@transifex.com>, 2016
+# Miguel, 2015-2016
+# Egoitz Rodriguez <egoitzro@gmail.com>, 2015
+# José Alberto Valle Cid <j.alberto.vc@gmail.com>, 2020
+# 9d2429286e4b6db037855ee18ff950ea_21b1117 <e234ccd2dcb0d5482e17780be633a729_130514>, 2016
+# 9d2429286e4b6db037855ee18ff950ea_21b1117 <e234ccd2dcb0d5482e17780be633a729_130514>, 2016
 # Miguel Ortega, 2016
+# Miguel, 2016,2018
 msgid ""
 msgstr ""
 "Project-Id-Version: Mageia\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-04-06 07:21+0200\n"
-"PO-Revision-Date: 2017-03-14 06:18+0000\n"
-"Last-Translator: Miguel Ortega\n"
+"PO-Revision-Date: 2020-06-19 23:11+0000\n"
+"Last-Translator: José Alberto Valle Cid <j.alberto.vc@gmail.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/MageiaLinux/mageia/language/"
 "es/)\n"
 "Language: es\n"
@@ -29,20 +32,24 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: manalog/manalog.py:45
+#, fuzzy
 msgid "System space"
-msgstr ""
+msgstr "Sistema"
 
 #: manalog/manalog.py:47
+#, fuzzy
 msgid "User space"
-msgstr ""
+msgstr "Nombre de usuario"
 
 #: manalog/manalog.py:48
+#, fuzzy
 msgid "ManaLog - ManaTools log viewer"
-msgstr ""
+msgstr "Visor de registros de ManaTools, modo usuario"
 
 #: manalog/manalog.py:49
+#, fuzzy
 msgid "Manatools - log viewer - {}"
-msgstr ""
+msgstr "Visor de registros de ManaTools, modo usuario"
 
 #: manalog/manalog.py:94
 msgid "A tool to monitor your logs"
@@ -77,8 +84,9 @@ msgid "Select a unit"
 msgstr "Seleccione una unidad"
 
 #: manalog/manalog.py:186
+#, fuzzy
 msgid "Select a boot"
-msgstr ""
+msgstr "Seleccione una unidad"
 
 #: manalog/manalog.py:199
 msgid "Priority level"
@@ -98,7 +106,7 @@ msgstr ""
 
 #: manalog/manalog.py:227
 msgid "&Find"
-msgstr "Buscar"
+msgstr "&Buscar"
 
 #: manalog/manalog.py:231
 msgid "Log content"
@@ -117,16 +125,18 @@ msgid "&Quit"
 msgstr "&Salir"
 
 #: manalog/manalog.py:331
+#, fuzzy
 msgid "Reboot"
-msgstr ""
+msgstr "En el arranque"
 
 #: manalog/manalog.py:336
 msgid "Limit of {} lines reached. Please add some filters.\n"
 msgstr ""
 
 #: manalog/manalog.py:394
+#, fuzzy
 msgid "Boots cannot be listed"
-msgstr ""
+msgstr "No se pueden instalar algunos paquetes"
 
 #: manalog/manalog.py:395
 msgid ""
@@ -135,10 +145,11 @@ msgid ""
 msgstr ""
 
 #: manalog/manalog.py:408
+#, fuzzy
 msgid ""
 "\n"
 "Do you want to remove these files ?"
-msgstr ""
+msgstr "¿Está seguro de que desea remover las siguientes fuentes?"
 
 #: manalog/manalog.py:409 manalog/manalog.py:417 manalog/manalog.py:421
 msgid "ManaLog - Verify journal"
@@ -156,20 +167,8 @@ msgstr ""
 
 #: manalog/manalog.py:477
 msgid "Log viewer is a systemd journal viewer"
-msgstr ""
+msgstr "El visor de registros (log viewer) es un visor del systemd journal"
 
 #: manalog/manalog.py:482
 msgid "Save as.."
 msgstr "Grabar como.."
-
-#~ msgid "_: Translator(s) name(s) & email(s)\n"
-#~ msgstr ""
-#~ "Miguel Ortega <cullero@gmail.com>\n"
-#~ "Egoitz Rodriguez Obieta <egoitzro@gmail.com>\n"
-#~ "Jose Manuel López <inactive+rocholc@transifex.com>\n"
-
-#~ msgid "To priority"
-#~ msgstr "A prioridad"
-
-#~ msgid "From priority"
-#~ msgstr "Desde prioridad"

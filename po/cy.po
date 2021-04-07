@@ -27,12 +27,14 @@ msgstr ""
 "11) ? 2 : 3;\n"
 
 #: manalog/manalog.py:45
+#, fuzzy
 msgid "System space"
-msgstr ""
+msgstr "System"
 
 #: manalog/manalog.py:47
+#, fuzzy
 msgid "User space"
-msgstr ""
+msgstr "Enw defnyddiwr"
 
 #: manalog/manalog.py:48
 msgid "ManaLog - ManaTools log viewer"
@@ -75,8 +77,9 @@ msgid "Select a unit"
 msgstr ""
 
 #: manalog/manalog.py:186
+#, fuzzy
 msgid "Select a boot"
-msgstr ""
+msgstr "Dewis popeth"
 
 #: manalog/manalog.py:199
 msgid "Priority level"
@@ -115,16 +118,18 @@ msgid "&Quit"
 msgstr "&Gadael"
 
 #: manalog/manalog.py:331
+#, fuzzy
 msgid "Reboot"
-msgstr ""
+msgstr "Wrth gychwyn"
 
 #: manalog/manalog.py:336
 msgid "Limit of {} lines reached. Please add some filters.\n"
 msgstr ""
 
 #: manalog/manalog.py:394
+#, fuzzy
 msgid "Boots cannot be listed"
-msgstr ""
+msgstr "Ni ellir gosod rhai pecynnau"
 
 #: manalog/manalog.py:395
 msgid ""
@@ -133,10 +138,11 @@ msgid ""
 msgstr ""
 
 #: manalog/manalog.py:408
+#, fuzzy
 msgid ""
 "\n"
 "Do you want to remove these files ?"
-msgstr ""
+msgstr "Ydych chi wir am dynnu'r ffynonellau canlynol?"
 
 #: manalog/manalog.py:409 manalog/manalog.py:417 manalog/manalog.py:421
 msgid "ManaLog - Verify journal"
@@ -159,6 +165,3 @@ msgstr ""
 #: manalog/manalog.py:482
 msgid "Save as.."
 msgstr "Cadw fel.."
-
-#~ msgid "_: Translator(s) name(s) & email(s)\n"
-#~ msgstr "Ciaran\n"

@@ -1,7 +1,7 @@
-# #-#-#-#-#  manatools_perl.pot (ManaTools 1.1.1)  #-#-#-#-#
+# #-#-#-#-#  manatools_perl.pot (ManaTools 1.1.7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Angelo Naselli - Matteo Pasotti
-# This file is distributed under the same license as the PACKAGE package.
+# This file is distributed under the same license as the ManaTools package.
 #
 # #-#-#-#-#  manadesktop.pot (PACKAGE VERSION)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
@@ -9,14 +9,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
-# You-Cheng Hsieh <yochenhsieh@gmail.com>, 2013,2015
+# Cheng-Chia Tseng <pswo10680@gmail.com>, 2018
+# You-Cheng Hsieh <yochenhsieh@gmail.com>, 2013,2015,2018
 msgid ""
 msgstr ""
 "Project-Id-Version: Mageia\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-04-06 07:21+0200\n"
-"PO-Revision-Date: 2016-02-15 09:41+0000\n"
-"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
+"PO-Revision-Date: 2018-12-11 01:29+0000\n"
+"Last-Translator: You-Cheng Hsieh <yochenhsieh@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/MageiaLinux/mageia/"
 "language/zh_TW/)\n"
 "Language: zh_TW\n"
@@ -26,12 +27,14 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: manalog/manalog.py:45
+#, fuzzy
 msgid "System space"
-msgstr ""
+msgstr "系統"
 
 #: manalog/manalog.py:47
+#, fuzzy
 msgid "User space"
-msgstr ""
+msgstr "使用者名稱"
 
 #: manalog/manalog.py:48
 msgid "ManaLog - ManaTools log viewer"
@@ -103,7 +106,7 @@ msgstr ""
 
 #: manalog/manalog.py:243
 msgid "&About"
-msgstr ""
+msgstr "關於(&A)"
 
 #: manalog/manalog.py:247
 msgid "&Save"
@@ -111,19 +114,21 @@ msgstr ""
 
 #: manalog/manalog.py:249
 msgid "&Quit"
-msgstr ""
+msgstr "退出(&Q)"
 
 #: manalog/manalog.py:331
+#, fuzzy
 msgid "Reboot"
-msgstr ""
+msgstr "開機自動載入"
 
 #: manalog/manalog.py:336
 msgid "Limit of {} lines reached. Please add some filters.\n"
 msgstr ""
 
 #: manalog/manalog.py:394
+#, fuzzy
 msgid "Boots cannot be listed"
-msgstr ""
+msgstr "有一些軟體套件無法安裝"
 
 #: manalog/manalog.py:395
 msgid ""
@@ -132,10 +137,11 @@ msgid ""
 msgstr ""
 
 #: manalog/manalog.py:408
+#, fuzzy
 msgid ""
 "\n"
 "Do you want to remove these files ?"
-msgstr ""
+msgstr "您確定要移除以下來源嗎？"
 
 #: manalog/manalog.py:409 manalog/manalog.py:417 manalog/manalog.py:421
 msgid "ManaLog - Verify journal"
@@ -158,8 +164,3 @@ msgstr ""
 #: manalog/manalog.py:482
 msgid "Save as.."
 msgstr "另存新檔..."
-
-#~ msgid "_: Translator(s) name(s) & email(s)\n"
-#~ msgstr ""
-#~ "Shiva Huang <shivahuang@gmail.com>\n"
-#~ "You-Cheng Hsieh <yochenhsieh@gmail.com>\n"

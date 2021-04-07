@@ -29,20 +29,24 @@ msgstr ""
 "%100>=11 && n%100<=14)? 2 : 3);\n"
 
 #: manalog/manalog.py:45
+#, fuzzy
 msgid "System space"
-msgstr ""
+msgstr "Система"
 
 #: manalog/manalog.py:47
+#, fuzzy
 msgid "User space"
-msgstr ""
+msgstr "Имя пользователя"
 
 #: manalog/manalog.py:48
+#, fuzzy
 msgid "ManaLog - ManaTools log viewer"
-msgstr ""
+msgstr "Просмотрщик журналов journalct ManaTools, режим пользователя"
 
 #: manalog/manalog.py:49
+#, fuzzy
 msgid "Manatools - log viewer - {}"
-msgstr ""
+msgstr "Просмотрщик журналов journalct ManaTools, режим пользователя"
 
 #: manalog/manalog.py:94
 msgid "A tool to monitor your logs"
@@ -77,8 +81,9 @@ msgid "Select a unit"
 msgstr "Выберите устройство"
 
 #: manalog/manalog.py:186
+#, fuzzy
 msgid "Select a boot"
-msgstr ""
+msgstr "Выберите устройство"
 
 #: manalog/manalog.py:199
 msgid "Priority level"
@@ -117,16 +122,18 @@ msgid "&Quit"
 msgstr "&Выход"
 
 #: manalog/manalog.py:331
+#, fuzzy
 msgid "Reboot"
-msgstr ""
+msgstr "При загрузке"
 
 #: manalog/manalog.py:336
 msgid "Limit of {} lines reached. Please add some filters.\n"
 msgstr ""
 
 #: manalog/manalog.py:394
+#, fuzzy
 msgid "Boots cannot be listed"
-msgstr ""
+msgstr "Некоторые пакеты не могут быть установлены"
 
 #: manalog/manalog.py:395
 msgid ""
@@ -135,10 +142,11 @@ msgid ""
 msgstr ""
 
 #: manalog/manalog.py:408
+#, fuzzy
 msgid ""
 "\n"
 "Do you want to remove these files ?"
-msgstr ""
+msgstr "Удалить следующие источники?"
 
 #: manalog/manalog.py:409 manalog/manalog.py:417 manalog/manalog.py:421
 msgid "ManaLog - Verify journal"
@@ -156,25 +164,8 @@ msgstr ""
 
 #: manalog/manalog.py:477
 msgid "Log viewer is a systemd journal viewer"
-msgstr ""
+msgstr "Средство просмотра журнала предназначено для просмотра журнала systemd"
 
 #: manalog/manalog.py:482
 msgid "Save as.."
 msgstr "Сохранить как..."
-
-#~ msgid "_: Translator(s) name(s) & email(s)\n"
-#~ msgstr ""
-#~ "Валентин Сайков <saikov.vb@gmail.com>\n"
-#~ "Алексей Логинов <alexl@mageia.org>\n"
-
-#~ msgid "Copyright (C) %s Mageia community"
-#~ msgstr "© Сообщество Mageia, %s"
-
-#~ msgid "GPLv2"
-#~ msgstr "GPLv2"
-
-#~ msgid "To priority"
-#~ msgstr "К приоритету"
-
-#~ msgid "From priority"
-#~ msgstr "От приоритета"

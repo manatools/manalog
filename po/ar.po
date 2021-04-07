@@ -30,8 +30,9 @@ msgid "System space"
 msgstr ""
 
 #: manalog/manalog.py:47
+#, fuzzy
 msgid "User space"
-msgstr ""
+msgstr "User name:"
 
 #: manalog/manalog.py:48
 msgid "ManaLog - ManaTools log viewer"

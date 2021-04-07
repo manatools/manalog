@@ -1,7 +1,7 @@
-# #-#-#-#-#  manatools_perl.pot (ManaTools 1.1.2)  #-#-#-#-#
+# #-#-#-#-#  manatools_perl.pot (ManaTools 1.1.7)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Angelo Naselli - Matteo Pasotti
-# This file is distributed under the same license as the PACKAGE package.
+# This file is distributed under the same license as the ManaTools package.
 #
 # #-#-#-#-#  manadesktop.pot (PACKAGE VERSION)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
@@ -9,40 +9,46 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
-# Jiří Vírava <appukonrad@gmail.com>, 2015-2016
-# Luděk Janča <joelp@email.cz>, 2016
 # fri, 2015
-# fri, 2015-2016
+# Jiří Vírava <appukonrad@gmail.com>, 2015-2016
+# Luděk Janča <joelp@email.cz>, 2016,2020
+# fri, 2015
+# fri, 2015-2017,2020
 msgid ""
 msgstr ""
 "Project-Id-Version: Mageia\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-04-06 07:21+0200\n"
-"PO-Revision-Date: 2016-06-11 21:18+0000\n"
-"Last-Translator: fri\n"
+"PO-Revision-Date: 2020-11-03 17:38+0000\n"
+"Last-Translator: Luděk Janča <joelp@email.cz>\n"
 "Language-Team: Czech (http://www.transifex.com/MageiaLinux/mageia/language/"
 "cs/)\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n "
+"<= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
 
 #: manalog/manalog.py:45
+#, fuzzy
 msgid "System space"
-msgstr ""
+msgstr "Systém"
 
 #: manalog/manalog.py:47
+#, fuzzy
 msgid "User space"
-msgstr ""
+msgstr "Jméno uživatele"
 
 #: manalog/manalog.py:48
+#, fuzzy
 msgid "ManaLog - ManaTools log viewer"
-msgstr ""
+msgstr "Prohlížeč záznamů ManaTools, uživatelský režim"
 
 #: manalog/manalog.py:49
+#, fuzzy
 msgid "Manatools - log viewer - {}"
-msgstr ""
+msgstr "Prohlížeč záznamů ManaTools, uživatelský režim"
 
 #: manalog/manalog.py:94
 msgid "A tool to monitor your logs"
@@ -77,8 +83,9 @@ msgid "Select a unit"
 msgstr "Vybrat jednotku"
 
 #: manalog/manalog.py:186
+#, fuzzy
 msgid "Select a boot"
-msgstr ""
+msgstr "Vybrat jednotku"
 
 #: manalog/manalog.py:199
 msgid "Priority level"
@@ -117,16 +124,18 @@ msgid "&Quit"
 msgstr "U&končit"
 
 #: manalog/manalog.py:331
+#, fuzzy
 msgid "Reboot"
-msgstr ""
+msgstr "Při spuštění"
 
 #: manalog/manalog.py:336
 msgid "Limit of {} lines reached. Please add some filters.\n"
 msgstr ""
 
 #: manalog/manalog.py:394
+#, fuzzy
 msgid "Boots cannot be listed"
-msgstr ""
+msgstr "Některé balíčky nelze nainstalovat"
 
 #: manalog/manalog.py:395
 msgid ""
@@ -135,10 +144,11 @@ msgid ""
 msgstr ""
 
 #: manalog/manalog.py:408
+#, fuzzy
 msgid ""
 "\n"
 "Do you want to remove these files ?"
-msgstr ""
+msgstr "Opravdu chcete odstranit následující zdroje?"
 
 #: manalog/manalog.py:409 manalog/manalog.py:417 manalog/manalog.py:421
 msgid "ManaLog - Verify journal"
@@ -156,19 +166,8 @@ msgstr ""
 
 #: manalog/manalog.py:477
 msgid "Log viewer is a systemd journal viewer"
-msgstr ""
+msgstr "Prohlížeč záznamů je prohlížečem zápisů systemd"
 
 #: manalog/manalog.py:482
 msgid "Save as.."
 msgstr "Uložit jako..."
-
-#~ msgid "_: Translator(s) name(s) & email(s)\n"
-#~ msgstr ""
-#~ "Michal Bukovjan <bukm@centrum.cz>\n"
-#~ "Pavel Fric <pavelfric@seznam.cz>\n"
-
-#~ msgid "To priority"
-#~ msgstr "Do přednosti"
-
-#~ msgid "From priority"
-#~ msgstr "Od přednosti"

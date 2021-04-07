@@ -1,37 +1,49 @@
+# #-#-#-#-#  manatools_perl.pot (ManaTools 1.1.7)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Angelo Naselli - Matteo Pasotti
+# This file is distributed under the same license as the ManaTools package.
+#
+# #-#-#-#-#  manadesktop.pot (PACKAGE VERSION)  #-#-#-#-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Marek Laane <qiilaq69@gmail.com>, 2015, 2016.
+# Translators:
+# Marek Laane <qiilaq69@gmail.com>, 2015-2016,2018
 msgid ""
 msgstr ""
-"Project-Id-Version: ManaTools 1.0.1\n"
+"Project-Id-Version: Mageia\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-04-06 07:21+0200\n"
-"PO-Revision-Date: 2016-06-12 08:23+0300\n"
+"PO-Revision-Date: 2018-05-13 15:22+0000\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
-"Language-Team: Estonian <i18n-et@ml.mageia.org>\n"
+"Language-Team: Estonian (http://www.transifex.com/MageiaLinux/mageia/"
+"language/et/)\n"
 "Language: et\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 1.5\n"
 
 #: manalog/manalog.py:45
+#, fuzzy
 msgid "System space"
-msgstr ""
+msgstr "Süsteem"
 
 #: manalog/manalog.py:47
+#, fuzzy
 msgid "User space"
-msgstr ""
+msgstr "Kasutajanimi"
 
 #: manalog/manalog.py:48
+#, fuzzy
 msgid "ManaLog - ManaTools log viewer"
-msgstr ""
+msgstr "ManaToolsi loginäitaja kasutaja režiimis"
 
 #: manalog/manalog.py:49
+#, fuzzy
 msgid "Manatools - log viewer - {}"
-msgstr ""
+msgstr "ManaToolsi loginäitaja kasutaja režiimis"
 
 #: manalog/manalog.py:94
 msgid "A tool to monitor your logs"
@@ -66,8 +78,9 @@ msgid "Select a unit"
 msgstr "Üksuse valimine"
 
 #: manalog/manalog.py:186
+#, fuzzy
 msgid "Select a boot"
-msgstr ""
+msgstr "Üksuse valimine"
 
 #: manalog/manalog.py:199
 msgid "Priority level"
@@ -106,16 +119,18 @@ msgid "&Quit"
 msgstr "&Välju"
 
 #: manalog/manalog.py:331
+#, fuzzy
 msgid "Reboot"
-msgstr ""
+msgstr "Alglaadimisel"
 
 #: manalog/manalog.py:336
 msgid "Limit of {} lines reached. Please add some filters.\n"
 msgstr ""
 
 #: manalog/manalog.py:394
+#, fuzzy
 msgid "Boots cannot be listed"
-msgstr ""
+msgstr "Mõnda paketti ei saa paigaldada"
 
 #: manalog/manalog.py:395
 msgid ""
@@ -124,10 +139,11 @@ msgid ""
 msgstr ""
 
 #: manalog/manalog.py:408
+#, fuzzy
 msgid ""
 "\n"
 "Do you want to remove these files ?"
-msgstr ""
+msgstr "Kas tõesti eemaldada järgmised allikad?"
 
 #: manalog/manalog.py:409 manalog/manalog.py:417 manalog/manalog.py:421
 msgid "ManaLog - Verify journal"
@@ -145,17 +161,8 @@ msgstr ""
 
 #: manalog/manalog.py:477
 msgid "Log viewer is a systemd journal viewer"
-msgstr ""
+msgstr "Loginäitaja on systemd kirjete näitaja"
 
 #: manalog/manalog.py:482
 msgid "Save as.."
 msgstr "Salvesta kui..."
-
-#~ msgid "_: Translator(s) name(s) & email(s)\n"
-#~ msgstr "Marek Laane <qiilaq69@gmail.com>\n"
-
-#~ msgid "To priority"
-#~ msgstr "Prioriteedini"
-
-#~ msgid "From priority"
-#~ msgstr "Prioriteedist"

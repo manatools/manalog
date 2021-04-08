@@ -1,23 +1,21 @@
-# #-#-#-#-#  manatools_perl.pot (ManaTools 1.1.7)  #-#-#-#-#
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR Angelo Naselli - Matteo Pasotti
-# This file is distributed under the same license as the ManaTools package.
-#
-# #-#-#-#-#  manadesktop.pot (PACKAGE VERSION)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# This file is distributed under the same license as the manalog package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 # Translators:
-# tomaja <toma.jankovic@gmail.com>, 2019
+# Yuri Chornoivan <yurchor@ukr.net>, 2021
+# tomaja <toma.jankovic@gmail.com>, 2021
+#
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Mageia\n"
+"Project-Id-Version: manalog 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-04-06 07:21+0200\n"
-"PO-Revision-Date: 2019-07-30 18:07+0000\n"
-"Last-Translator: tomaja <toma.jankovic@gmail.com>\n"
-"Language-Team: Serbian (http://www.transifex.com/MageiaLinux/mageia/language/"
+"PO-Revision-Date: 2021-04-07 19:23+0000\n"
+"Last-Translator: tomaja <toma.jankovic@gmail.com>, 2021\n"
+"Language-Team: Serbian (https://www.transifex.com/MageiaLinux/teams/9361/"
 "sr/)\n"
 "Language: sr\n"
 "MIME-Version: 1.0\n"
@@ -27,24 +25,20 @@ msgstr ""
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: manalog/manalog.py:45
-#, fuzzy
 msgid "System space"
-msgstr "Систем"
+msgstr "Системски простор"
 
 #: manalog/manalog.py:47
-#, fuzzy
 msgid "User space"
-msgstr "Корисничко Име"
+msgstr "Кориснички простор"
 
 #: manalog/manalog.py:48
-#, fuzzy
 msgid "ManaLog - ManaTools log viewer"
-msgstr "ManaTools прегледач логова, кориснички мод"
+msgstr "ManaLog - ManaTools прегледник логова"
 
 #: manalog/manalog.py:49
-#, fuzzy
 msgid "Manatools - log viewer - {}"
-msgstr "ManaTools прегледач логова, кориснички мод"
+msgstr "Manatools - прегледник логова - {}"
 
 #: manalog/manalog.py:94
 msgid "A tool to monitor your logs"
@@ -60,11 +54,11 @@ msgstr "Последње подизање система"
 
 #: manalog/manalog.py:104
 msgid "Tail mode"
-msgstr ""
+msgstr "Мод за праћење"
 
 #: manalog/manalog.py:108
 msgid "Monotonic timestamp"
-msgstr ""
+msgstr "Monotonic timestamp"
 
 #: manalog/manalog.py:130
 msgid "Since"
@@ -79,13 +73,12 @@ msgid "Select a unit"
 msgstr "Изаберите јединицу"
 
 #: manalog/manalog.py:186
-#, fuzzy
 msgid "Select a boot"
-msgstr "Изаберите јединицу"
+msgstr "Изабери за покретање"
 
 #: manalog/manalog.py:199
 msgid "Priority level"
-msgstr ""
+msgstr "Ниво приоритета"
 
 #: manalog/manalog.py:216
 msgid "Matching"
@@ -97,7 +90,7 @@ msgstr "али без поклапања"
 
 #: manalog/manalog.py:224
 msgid "&Stop"
-msgstr ""
+msgstr "&Заустави"
 
 #: manalog/manalog.py:227
 msgid "&Find"
@@ -120,45 +113,48 @@ msgid "&Quit"
 msgstr "&Излаз"
 
 #: manalog/manalog.py:331
-#, fuzzy
 msgid "Reboot"
-msgstr "При подизању система"
+msgstr "Рестартуј"
 
 #: manalog/manalog.py:336
 msgid "Limit of {} lines reached. Please add some filters.\n"
-msgstr ""
+msgstr "Ограничење од {} линија је достигнуто. Додајте неке филтере.\n"
 
 #: manalog/manalog.py:394
-#, fuzzy
 msgid "Boots cannot be listed"
-msgstr "Неки пакети не могу бити инсталирани"
+msgstr "Покретања не могу бити излистана"
 
 #: manalog/manalog.py:395
 msgid ""
 "Failed to determine boots: No data available. Do you want to verify the "
 "system journal ? (this can take a while)"
 msgstr ""
+"Неуспешно дефинисање покретања: Нема доступних података. Да ли желите да "
+"проверите системски дневник ? (ово може потрајати)"
 
 #: manalog/manalog.py:408
-#, fuzzy
 msgid ""
 "\n"
 "Do you want to remove these files ?"
-msgstr "Да ли сте сигурни да желите да уклоните следеће изворе?"
+msgstr ""
+"\n"
+"Да ли желите да уклоните ове фајлове ?"
 
 #: manalog/manalog.py:409 manalog/manalog.py:417 manalog/manalog.py:421
 msgid "ManaLog - Verify journal"
-msgstr ""
+msgstr "ManaLog - Провера дневника"
 
 #: manalog/manalog.py:416
 msgid ""
 "\n"
 "You must be root to remove these files."
 msgstr ""
+"\n"
+"Морате имати root овлашћења за уклањање ових фајлова."
 
 #: manalog/manalog.py:422
 msgid "No errors have been detected in journal files."
-msgstr ""
+msgstr "Нема грешака у фајловима дневника."
 
 #: manalog/manalog.py:477
 msgid "Log viewer is a systemd journal viewer"

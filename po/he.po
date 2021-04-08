@@ -1,25 +1,21 @@
-# #-#-#-#-#  manatools_perl.pot (ManaTools 1.1.7)  #-#-#-#-#
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR Angelo Naselli - Matteo Pasotti
-# This file is distributed under the same license as the ManaTools package.
-#
-# #-#-#-#-#  manadesktop.pot (PACKAGE VERSION)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# This file is distributed under the same license as the manalog package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 # Translators:
-# Omer I.S. <omeritzicschwartz@gmail.com>, 2020-2021
-# Omer I.S. <omeritzicschwartz@gmail.com>, 2020-2021
-# Yaron Shahrabani <sh.yaron@gmail.com>, 2020
+# Yuri Chornoivan <yurchor@ukr.net>, 2021
+# Omer I.S. <omeritzicschwartz@gmail.com>, 2021
+#
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Mageia\n"
+"Project-Id-Version: manalog 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-04-06 07:21+0200\n"
-"PO-Revision-Date: 2021-04-03 19:47+0000\n"
-"Last-Translator: Omer I.S. <omeritzicschwartz@gmail.com>\n"
-"Language-Team: Hebrew (http://www.transifex.com/MageiaLinux/mageia/language/"
+"PO-Revision-Date: 2021-04-07 19:23+0000\n"
+"Last-Translator: Omer I.S. <omeritzicschwartz@gmail.com>, 2021\n"
+"Language-Team: Hebrew (https://www.transifex.com/MageiaLinux/teams/9361/"
 "he/)\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
@@ -29,23 +25,20 @@ msgstr ""
 "1 == 0) ? 1: (n % 10 == 0 && n % 1 == 0 && n > 10) ? 2 : 3;\n"
 
 #: manalog/manalog.py:45
-#, fuzzy
 msgid "System space"
-msgstr "מערכת"
+msgstr "השטח המוקצה למערכת"
 
 #: manalog/manalog.py:47
-#, fuzzy
 msgid "User space"
-msgstr "שם המשתמש"
+msgstr "השטח המוקצה למשתמשים"
 
 #: manalog/manalog.py:48
 msgid "ManaLog - ManaTools log viewer"
-msgstr ""
+msgstr "‏ManaLog - מציג קובצי היומן של ManaTools"
 
 #: manalog/manalog.py:49
-#, fuzzy
 msgid "Manatools - log viewer - {}"
-msgstr "%s - מציג קובצי היומן"
+msgstr "‏Manatools - מציג קובצי היומן - {}"
 
 #: manalog/manalog.py:94
 msgid "A tool to monitor your logs"
@@ -80,13 +73,12 @@ msgid "Select a unit"
 msgstr ""
 
 #: manalog/manalog.py:186
-#, fuzzy
 msgid "Select a boot"
-msgstr "ל&בחור הכול"
+msgstr ""
 
 #: manalog/manalog.py:199
 msgid "Priority level"
-msgstr ""
+msgstr "רמת עדיפות"
 
 #: manalog/manalog.py:216
 msgid "Matching"
@@ -106,7 +98,7 @@ msgstr "אי&תור"
 
 #: manalog/manalog.py:231
 msgid "Log content"
-msgstr ""
+msgstr "תוכן קובץ היומן"
 
 #: manalog/manalog.py:243
 msgid "&About"
@@ -121,18 +113,16 @@ msgid "&Quit"
 msgstr "י&ציאה"
 
 #: manalog/manalog.py:331
-#, fuzzy
 msgid "Reboot"
-msgstr "בעת הפעלה"
+msgstr "אתחול"
 
 #: manalog/manalog.py:336
 msgid "Limit of {} lines reached. Please add some filters.\n"
 msgstr ""
 
 #: manalog/manalog.py:394
-#, fuzzy
 msgid "Boots cannot be listed"
-msgstr "לא ניתן להתקין מספר חבילות"
+msgstr ""
 
 #: manalog/manalog.py:395
 msgid ""
@@ -141,11 +131,12 @@ msgid ""
 msgstr ""
 
 #: manalog/manalog.py:408
-#, fuzzy
 msgid ""
 "\n"
 "Do you want to remove these files ?"
-msgstr "האם להסיר את המאגרים הבאים?"
+msgstr ""
+"\n"
+"האם להסיר את הקבצים הללו ?"
 
 #: manalog/manalog.py:409 manalog/manalog.py:417 manalog/manalog.py:421
 msgid "ManaLog - Verify journal"
@@ -156,6 +147,8 @@ msgid ""
 "\n"
 "You must be root to remove these files."
 msgstr ""
+"\n"
+"נדרשות הרשאות שורש (root) כדי למחוק את הקבצים הללו."
 
 #: manalog/manalog.py:422
 msgid "No errors have been detected in journal files."

@@ -1,24 +1,22 @@
-# #-#-#-#-#  manatools_perl.pot (ManaTools 1.1.7)  #-#-#-#-#
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR Angelo Naselli - Matteo Pasotti
-# This file is distributed under the same license as the ManaTools package.
-#
-# #-#-#-#-#  manadesktop.pot (PACKAGE VERSION)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# This file is distributed under the same license as the manalog package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 # Translators:
-# Ardit Dani <ardit.dani@gmail.com>, 2016-2017,2019
+# Yuri Chornoivan <yurchor@ukr.net>, 2021
+# Ardit Dani <ardit.dani@gmail.com>, 2021
+#
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Mageia\n"
+"Project-Id-Version: manalog 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-04-06 07:21+0200\n"
-"PO-Revision-Date: 2019-04-29 23:34+0000\n"
-"Last-Translator: Ardit Dani <ardit.dani@gmail.com>\n"
-"Language-Team: Albanian (http://www.transifex.com/MageiaLinux/mageia/"
-"language/sq/)\n"
+"PO-Revision-Date: 2021-04-07 19:23+0000\n"
+"Last-Translator: Ardit Dani <ardit.dani@gmail.com>, 2021\n"
+"Language-Team: Albanian (https://www.transifex.com/MageiaLinux/teams/9361/"
+"sq/)\n"
 "Language: sq\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,26 +24,24 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: manalog/manalog.py:45
-#, fuzzy
 msgid "System space"
-msgstr "Sistem"
+msgstr "Hapsirë Sistemi"
 
 #: manalog/manalog.py:47
-#, fuzzy
 msgid "User space"
-msgstr "Emri Përdoruesit"
+msgstr "Hapsirë Përdoruesi"
 
 #: manalog/manalog.py:48
 msgid "ManaLog - ManaTools log viewer"
-msgstr ""
+msgstr "ManaLog - ManaTools shikues shënime"
 
 #: manalog/manalog.py:49
 msgid "Manatools - log viewer - {}"
-msgstr ""
+msgstr "Manatools - shikues shënime - {}"
 
 #: manalog/manalog.py:94
 msgid "A tool to monitor your logs"
-msgstr ""
+msgstr "Një vegël për të monitoruar shënimet tuaja"
 
 #: manalog/manalog.py:97
 msgid "Options"
@@ -53,19 +49,19 @@ msgstr "Alternativat"
 
 #: manalog/manalog.py:100
 msgid "Last boot"
-msgstr ""
+msgstr "Ndezja fundit"
 
 #: manalog/manalog.py:104
 msgid "Tail mode"
-msgstr ""
+msgstr "Modaliteti i bishtit"
 
 #: manalog/manalog.py:108
 msgid "Monotonic timestamp"
-msgstr ""
+msgstr "Vula monotonike"
 
 #: manalog/manalog.py:130
 msgid "Since"
-msgstr ""
+msgstr "Që kur"
 
 #: manalog/manalog.py:134
 msgid "Until"
@@ -73,28 +69,27 @@ msgstr "Deri në"
 
 #: manalog/manalog.py:159
 msgid "Select a unit"
-msgstr ""
+msgstr "Zgjidhni një njësi"
 
 #: manalog/manalog.py:186
-#, fuzzy
 msgid "Select a boot"
-msgstr "&Zgjedh"
+msgstr "Zgjidhni një ndezës"
 
 #: manalog/manalog.py:199
 msgid "Priority level"
-msgstr ""
+msgstr "Niveli përparësisë"
 
 #: manalog/manalog.py:216
 msgid "Matching"
-msgstr ""
+msgstr "Përputhja"
 
 #: manalog/manalog.py:219
 msgid "but not matching"
-msgstr ""
+msgstr "por nuk përputhet"
 
 #: manalog/manalog.py:224
 msgid "&Stop"
-msgstr ""
+msgstr "&Ndalo"
 
 #: manalog/manalog.py:227
 msgid "&Find"
@@ -102,7 +97,7 @@ msgstr "&Gjej"
 
 #: manalog/manalog.py:231
 msgid "Log content"
-msgstr ""
+msgstr "Shënime përmbajtje"
 
 #: manalog/manalog.py:243
 msgid "&About"
@@ -117,49 +112,52 @@ msgid "&Quit"
 msgstr "&Braktis"
 
 #: manalog/manalog.py:331
-#, fuzzy
 msgid "Reboot"
-msgstr "No ndezje"
+msgstr "Rindez"
 
 #: manalog/manalog.py:336
 msgid "Limit of {} lines reached. Please add some filters.\n"
-msgstr ""
+msgstr "Kufiri i {} vijave të arritura. Ju lutemi shtoni disa filtra.\n"
 
 #: manalog/manalog.py:394
-#, fuzzy
 msgid "Boots cannot be listed"
-msgstr "Një paketë nuk mund të instalohet"
+msgstr "Ndezje muk mund të listohet"
 
 #: manalog/manalog.py:395
 msgid ""
 "Failed to determine boots: No data available. Do you want to verify the "
 "system journal ? (this can take a while)"
 msgstr ""
+"Përcaktimi i dështuar i ndezjes: Nuk ka të dhëna të disponueshme. Dëshironi "
+"të verifikoni ditarin e sistemit? (kjo mund të zgjasë pak)"
 
 #: manalog/manalog.py:408
-#, fuzzy
 msgid ""
 "\n"
 "Do you want to remove these files ?"
-msgstr "Jeni i sigurt se doni të hiqni burimet e mëposhtme?"
+msgstr ""
+"\n"
+"Dëshironi t'i hiqni këto skedarë ?"
 
 #: manalog/manalog.py:409 manalog/manalog.py:417 manalog/manalog.py:421
 msgid "ManaLog - Verify journal"
-msgstr ""
+msgstr "ManaLog - Verifikoni ditarin"
 
 #: manalog/manalog.py:416
 msgid ""
 "\n"
 "You must be root to remove these files."
 msgstr ""
+"\n"
+"Duhet të jesh root për të hequr këto skedarë."
 
 #: manalog/manalog.py:422
 msgid "No errors have been detected in journal files."
-msgstr ""
+msgstr "Asnjë gabim nuk është zbuluar në skedarët e ditarit."
 
 #: manalog/manalog.py:477
 msgid "Log viewer is a systemd journal viewer"
-msgstr ""
+msgstr "Shikuesi i shënimeve është një shikues i sistemuar i ditarit"
 
 #: manalog/manalog.py:482
 msgid "Save as.."

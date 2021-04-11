@@ -5,6 +5,7 @@
 #
 # Translators:
 # Yuri Chornoivan <yurchor@ukr.net>, 2021
+# Luděk Janča <joelp@email.cz>, 2021
 #
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-04-06 07:21+0200\n"
 "PO-Revision-Date: 2021-04-07 19:23+0000\n"
-"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>, 2021\n"
+"Last-Translator: Luděk Janča <joelp@email.cz>, 2021\n"
 "Language-Team: Czech (https://www.transifex.com/MageiaLinux/teams/9361/cs/)\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
@@ -24,11 +25,11 @@ msgstr ""
 
 #: manalog/manalog.py:45
 msgid "System space"
-msgstr ""
+msgstr "Systémový prostor"
 
 #: manalog/manalog.py:47
 msgid "User space"
-msgstr ""
+msgstr "Uživatelský prostor"
 
 #: manalog/manalog.py:48
 msgid "ManaLog - ManaTools log viewer"
@@ -40,11 +41,11 @@ msgstr ""
 
 #: manalog/manalog.py:94
 msgid "A tool to monitor your logs"
-msgstr "Nástroj na sledování záznamů"
+msgstr "Nástroj na sledování logů"
 
 #: manalog/manalog.py:97
 msgid "Options"
-msgstr "Volby"
+msgstr "Možnosti"
 
 #: manalog/manalog.py:100
 msgid "Last boot"
@@ -80,11 +81,11 @@ msgstr ""
 
 #: manalog/manalog.py:216
 msgid "Matching"
-msgstr "Shodných"
+msgstr "Odpovídajícíh"
 
 #: manalog/manalog.py:219
 msgid "but not matching"
-msgstr "neshodných"
+msgstr "ale neodpovídající"
 
 #: manalog/manalog.py:224
 msgid "&Stop"
@@ -96,7 +97,7 @@ msgstr "&Hledat"
 
 #: manalog/manalog.py:231
 msgid "Log content"
-msgstr "Obsah záznamu"
+msgstr "Obsah logů"
 
 #: manalog/manalog.py:243
 msgid "&About"
@@ -112,7 +113,7 @@ msgstr "U&končit"
 
 #: manalog/manalog.py:331
 msgid "Reboot"
-msgstr ""
+msgstr "Restartovat"
 
 #: manalog/manalog.py:336
 msgid "Limit of {} lines reached. Please add some filters.\n"
@@ -133,6 +134,8 @@ msgid ""
 "\n"
 "Do you want to remove these files ?"
 msgstr ""
+"\n"
+"Přejete si odstranit tyto soubory?"
 
 #: manalog/manalog.py:409 manalog/manalog.py:417 manalog/manalog.py:421
 msgid "ManaLog - Verify journal"
@@ -143,14 +146,16 @@ msgid ""
 "\n"
 "You must be root to remove these files."
 msgstr ""
+"\n"
+"Pro odstarnění techto soubor musíte být root."
 
 #: manalog/manalog.py:422
 msgid "No errors have been detected in journal files."
-msgstr ""
+msgstr "V lozích nebyly nalezeny žádné záznamy."
 
 #: manalog/manalog.py:477
 msgid "Log viewer is a systemd journal viewer"
-msgstr "Prohlížeč záznamů je prohlížečem zápisů systemd"
+msgstr "Prohlížeč logů je prohlížečem logů systemd"
 
 #: manalog/manalog.py:482
 msgid "Save as.."

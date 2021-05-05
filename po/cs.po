@@ -33,11 +33,11 @@ msgstr "Uživatelský prostor"
 
 #: manalog/manalog.py:48
 msgid "ManaLog - ManaTools log viewer"
-msgstr ""
+msgstr "ManaLog - ManaTools prohlížeč logů"
 
 #: manalog/manalog.py:49
 msgid "Manatools - log viewer - {}"
-msgstr ""
+msgstr "Manatools - prohlížeč logů - {}"
 
 #: manalog/manalog.py:94
 msgid "A tool to monitor your logs"
@@ -89,7 +89,7 @@ msgstr "ale neodpovídající"
 
 #: manalog/manalog.py:224
 msgid "&Stop"
-msgstr ""
+msgstr "&Stop"
 
 #: manalog/manalog.py:227
 msgid "&Find"
@@ -117,7 +117,7 @@ msgstr "Restartovat"
 
 #: manalog/manalog.py:336
 msgid "Limit of {} lines reached. Please add some filters.\n"
-msgstr ""
+msgstr "Bylo dosaženo limitu {} řádků. Přidejte, prosím, nějaký filtr.\n"
 
 #: manalog/manalog.py:394
 msgid "Boots cannot be listed"
@@ -139,7 +139,7 @@ msgstr ""
 
 #: manalog/manalog.py:409 manalog/manalog.py:417 manalog/manalog.py:421
 msgid "ManaLog - Verify journal"
-msgstr ""
+msgstr "ManaLog - zkontrolovat žurnál"
 
 #: manalog/manalog.py:416
 msgid ""

@@ -1,29 +1,21 @@
-# #-#-#-#-#  manatools_perl.pot (ManaTools 1.1.7)  #-#-#-#-#
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR Angelo Naselli - Matteo Pasotti
-# This file is distributed under the same license as the ManaTools package.
-#
-# #-#-#-#-#  manadesktop.pot (PACKAGE VERSION)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# This file is distributed under the same license as the manalog package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 # Translators:
-# Antoine DUMONDEL, 2015
-# Antoine DUMONDEL, 2015
-# Charles Monzat <superboa@hotmail.fr>, 2016-2017
-# Eric Barbero <dune06@free.fr>, 2016
-# Kévin R., 2015
-# Kévin R., 2015
-# Yves Brungard, 2015-2016
+# Yuri Chornoivan <yurchor@ukr.net>, 2021
+# stroibe974 <sebsweb@gmail.com>, 2021
+#
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Mageia\n"
+"Project-Id-Version: manalog 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-04-06 07:21+0200\n"
-"PO-Revision-Date: 2017-09-10 21:01+0000\n"
-"Last-Translator: Charles Monzat <superboa@hotmail.fr>\n"
-"Language-Team: French (http://www.transifex.com/MageiaLinux/mageia/language/"
+"PO-Revision-Date: 2021-04-07 19:23+0000\n"
+"Last-Translator: stroibe974 <sebsweb@gmail.com>, 2021\n"
+"Language-Team: French (https://www.transifex.com/MageiaLinux/teams/9361/"
 "fr/)\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
@@ -32,24 +24,20 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: manalog/manalog.py:45
-#, fuzzy
 msgid "System space"
-msgstr "Système"
+msgstr "Espace système"
 
 #: manalog/manalog.py:47
-#, fuzzy
 msgid "User space"
-msgstr "Nom d'utilisateur"
+msgstr "Espace utilisateur"
 
 #: manalog/manalog.py:48
-#, fuzzy
 msgid "ManaLog - ManaTools log viewer"
-msgstr "Lecteur ManaTools des journaux, en mode utilisateur"
+msgstr "ManaLog - lecteur ManaTools des journaux"
 
 #: manalog/manalog.py:49
-#, fuzzy
 msgid "Manatools - log viewer - {}"
-msgstr "Lecteur ManaTools des journaux, en mode utilisateur"
+msgstr "ManaTools - lecteur de journaux - {}"
 
 #: manalog/manalog.py:94
 msgid "A tool to monitor your logs"
@@ -65,11 +53,11 @@ msgstr "Dernier démarrage"
 
 #: manalog/manalog.py:104
 msgid "Tail mode"
-msgstr ""
+msgstr "Dernières lignes en premier"
 
 #: manalog/manalog.py:108
 msgid "Monotonic timestamp"
-msgstr ""
+msgstr "Horodatage monotone"
 
 #: manalog/manalog.py:130
 msgid "Since"
@@ -84,13 +72,12 @@ msgid "Select a unit"
 msgstr "Sélectionnez une unité"
 
 #: manalog/manalog.py:186
-#, fuzzy
 msgid "Select a boot"
-msgstr "Sélectionnez une unité"
+msgstr "Sélectionnez le démarrage"
 
 #: manalog/manalog.py:199
 msgid "Priority level"
-msgstr ""
+msgstr "Niveau de priorité"
 
 #: manalog/manalog.py:216
 msgid "Matching"
@@ -102,7 +89,7 @@ msgstr "mais ne contenant pas"
 
 #: manalog/manalog.py:224
 msgid "&Stop"
-msgstr ""
+msgstr "&Arrêter"
 
 #: manalog/manalog.py:227
 msgid "&Find"
@@ -118,52 +105,55 @@ msgstr "À propos"
 
 #: manalog/manalog.py:247
 msgid "&Save"
-msgstr "Sauvegarder"
+msgstr "&Sauvegarder"
 
 #: manalog/manalog.py:249
 msgid "&Quit"
 msgstr "&Quitter"
 
 #: manalog/manalog.py:331
-#, fuzzy
 msgid "Reboot"
-msgstr "Au démarrage"
+msgstr "Redémarrer"
 
 #: manalog/manalog.py:336
 msgid "Limit of {} lines reached. Please add some filters.\n"
-msgstr ""
+msgstr "La limite de {} lignes est atteinte. Veuillez ajouter des filtres.\n"
 
 #: manalog/manalog.py:394
-#, fuzzy
 msgid "Boots cannot be listed"
-msgstr "Certains paquets ne peuvent pas être installés"
+msgstr "Les démarrages ne peuvent être listés"
 
 #: manalog/manalog.py:395
 msgid ""
 "Failed to determine boots: No data available. Do you want to verify the "
 "system journal ? (this can take a while)"
 msgstr ""
+"Impossible de déterminer les démarrages : aucune donnée disponible. Voulez-"
+"vous vérifier le journal système ? (Cela peut prendre un moment)"
 
 #: manalog/manalog.py:408
-#, fuzzy
 msgid ""
 "\n"
 "Do you want to remove these files ?"
-msgstr "Voulez-vous vraiment supprimer les sources suivantes ?"
+msgstr ""
+"\n"
+"Voulez-vous supprimer ces fichiers ?"
 
 #: manalog/manalog.py:409 manalog/manalog.py:417 manalog/manalog.py:421
 msgid "ManaLog - Verify journal"
-msgstr ""
+msgstr "ManaLog – Vérifier le journal"
 
 #: manalog/manalog.py:416
 msgid ""
 "\n"
 "You must be root to remove these files."
 msgstr ""
+"\n"
+"Vous devez être administrateur pour supprimer ces fichiers."
 
 #: manalog/manalog.py:422
 msgid "No errors have been detected in journal files."
-msgstr ""
+msgstr "Aucune erreur n'a été détectée dans les fichiers journaux système."
 
 #: manalog/manalog.py:477
 msgid "Log viewer is a systemd journal viewer"

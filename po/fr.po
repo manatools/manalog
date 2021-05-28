@@ -93,7 +93,7 @@ msgstr "&Arrêter"
 
 #: manalog/manalog.py:227
 msgid "&Find"
-msgstr "Rechercher :"
+msgstr "&Rechercher"
 
 #: manalog/manalog.py:231
 msgid "Log content"
@@ -101,7 +101,7 @@ msgstr "Contenu du fichier journal"
 
 #: manalog/manalog.py:243
 msgid "&About"
-msgstr "À propos"
+msgstr "À &propos"
 
 #: manalog/manalog.py:247
 msgid "&Save"

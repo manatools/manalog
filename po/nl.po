@@ -5,6 +5,7 @@
 #
 # Translators:
 # Yuri Chornoivan <yurchor@ukr.net>, 2021
+# Marcel Pol <marcel@timelord.nl>, 2021
 #
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-04-06 07:21+0200\n"
 "PO-Revision-Date: 2021-04-07 19:23+0000\n"
-"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>, 2021\n"
+"Last-Translator: Marcel Pol <marcel@timelord.nl>, 2021\n"
 "Language-Team: Dutch (https://www.transifex.com/MageiaLinux/teams/9361/nl/)\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
@@ -23,19 +24,19 @@ msgstr ""
 
 #: manalog/manalog.py:45
 msgid "System space"
-msgstr ""
+msgstr "Ruimte voor systeem"
 
 #: manalog/manalog.py:47
 msgid "User space"
-msgstr ""
+msgstr "Ruimte voor gebruiker"
 
 #: manalog/manalog.py:48
 msgid "ManaLog - ManaTools log viewer"
-msgstr ""
+msgstr "ManaLog - ManaTools logboek lezer"
 
 #: manalog/manalog.py:49
 msgid "Manatools - log viewer - {}"
-msgstr ""
+msgstr "Manatools - logboek lezer - {}"
 
 #: manalog/manalog.py:94
 msgid "A tool to monitor your logs"
@@ -47,11 +48,11 @@ msgstr "Opties"
 
 #: manalog/manalog.py:100
 msgid "Last boot"
-msgstr "Laatste keer opstarten"
+msgstr "Laatste keer opgestart"
 
 #: manalog/manalog.py:104
 msgid "Tail mode"
-msgstr ""
+msgstr "Tail modus"
 
 #: manalog/manalog.py:108
 msgid "Monotonic timestamp"
@@ -71,11 +72,11 @@ msgstr "Kies een eenheid"
 
 #: manalog/manalog.py:186
 msgid "Select a boot"
-msgstr ""
+msgstr "Kies een opstartmoment"
 
 #: manalog/manalog.py:199
 msgid "Priority level"
-msgstr ""
+msgstr "Prioriteitsniveau"
 
 #: manalog/manalog.py:216
 msgid "Matching"
@@ -87,7 +88,7 @@ msgstr "maar komt niet overeen met"
 
 #: manalog/manalog.py:224
 msgid "&Stop"
-msgstr ""
+msgstr "&Stoppen"
 
 #: manalog/manalog.py:227
 msgid "&Find"
@@ -111,41 +112,47 @@ msgstr "A&fsluiten"
 
 #: manalog/manalog.py:331
 msgid "Reboot"
-msgstr ""
+msgstr "Herstarten"
 
 #: manalog/manalog.py:336
 msgid "Limit of {} lines reached. Please add some filters.\n"
-msgstr ""
+msgstr "Limiet van {} regels bereikt. Voeg enkele filters toe.\n"
 
 #: manalog/manalog.py:394
 msgid "Boots cannot be listed"
-msgstr ""
+msgstr "Opstartmomenten kunnen niet weergegeven worden"
 
 #: manalog/manalog.py:395
 msgid ""
 "Failed to determine boots: No data available. Do you want to verify the "
 "system journal ? (this can take a while)"
 msgstr ""
+"Kon opstartmomenten niet vinden: geen gegevens beschikbaar. Wil je het "
+"systeemjournaal controleren? (dit kan even duren)"
 
 #: manalog/manalog.py:408
 msgid ""
 "\n"
 "Do you want to remove these files ?"
 msgstr ""
+"\n"
+"Deze bestanden verwijderen?"
 
 #: manalog/manalog.py:409 manalog/manalog.py:417 manalog/manalog.py:421
 msgid "ManaLog - Verify journal"
-msgstr ""
+msgstr "ManaLog - journaal controleren"
 
 #: manalog/manalog.py:416
 msgid ""
 "\n"
 "You must be root to remove these files."
 msgstr ""
+"\n"
+"Alleen root kan deze bestanden verwijderen."
 
 #: manalog/manalog.py:422
 msgid "No errors have been detected in journal files."
-msgstr ""
+msgstr "Geen fouten gevonden in de journaal-bestanden."
 
 #: manalog/manalog.py:477
 msgid "Log viewer is a systemd journal viewer"

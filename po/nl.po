@@ -56,7 +56,7 @@ msgstr "Tail modus"
 
 #: manalog/manalog.py:108
 msgid "Monotonic timestamp"
-msgstr ""
+msgstr "Monotonic timestamp (nanoseconde)"
 
 #: manalog/manalog.py:130
 msgid "Since"

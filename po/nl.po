@@ -127,7 +127,7 @@ msgid ""
 "Failed to determine boots: No data available. Do you want to verify the "
 "system journal ? (this can take a while)"
 msgstr ""
-"Kon opstartmomenten niet vinden: geen gegevens beschikbaar. Wil je het "
+"Kon opstartmomenten niet vinden: geen gegevens beschikbaar. Wilt u het "
 "systeemjournaal controleren? (dit kan even duren)"
 
 #: manalog/manalog.py:408

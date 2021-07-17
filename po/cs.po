@@ -6,6 +6,7 @@
 # Translators:
 # Yuri Chornoivan <yurchor@ukr.net>, 2021
 # Luděk Janča <joelp@email.cz>, 2021
+# fri, 2021
 #
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-04-06 07:21+0200\n"
 "PO-Revision-Date: 2021-04-07 19:23+0000\n"
-"Last-Translator: Luděk Janča <joelp@email.cz>, 2021\n"
+"Last-Translator: fri, 2021\n"
 "Language-Team: Czech (https://www.transifex.com/MageiaLinux/teams/9361/cs/)\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
@@ -73,11 +74,11 @@ msgstr "Vybrat jednotku"
 
 #: manalog/manalog.py:186
 msgid "Select a boot"
-msgstr ""
+msgstr "Vybrat boot"
 
 #: manalog/manalog.py:199
 msgid "Priority level"
-msgstr ""
+msgstr "Úroveň přednosti"
 
 #: manalog/manalog.py:216
 msgid "Matching"
@@ -147,7 +148,7 @@ msgid ""
 "You must be root to remove these files."
 msgstr ""
 "\n"
-"Pro odstarnění techto soubor musíte být root."
+"Pro odstarnění těchto souborů musíte být root."
 
 #: manalog/manalog.py:422
 msgid "No errors have been detected in journal files."

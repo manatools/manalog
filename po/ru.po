@@ -1,24 +1,21 @@
-# #-#-#-#-#  manatools_perl.pot (ManaTools 1.1.7)  #-#-#-#-#
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR Angelo Naselli - Matteo Pasotti
-# This file is distributed under the same license as the ManaTools package.
-#
-# #-#-#-#-#  manadesktop.pot (PACKAGE VERSION)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# This file is distributed under the same license as the manalog package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 # Translators:
-# AlexL <loginov.alex.valer@gmail.com>, 2015-2017
-# Valentin XliN Saikov <saikov.vb@gmail.com>, 2015
+# Yuri Chornoivan <yurchor@ukr.net>, 2021
+# algri14 <aliger14@mail.ru>, 2021
+#
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Mageia\n"
+"Project-Id-Version: manalog 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-04-06 07:21+0200\n"
-"PO-Revision-Date: 2017-09-14 18:18+0000\n"
-"Last-Translator: AlexL <loginov.alex.valer@gmail.com>\n"
-"Language-Team: Russian (http://www.transifex.com/MageiaLinux/mageia/language/"
+"PO-Revision-Date: 2021-04-07 19:23+0000\n"
+"Last-Translator: algri14 <aliger14@mail.ru>, 2021\n"
+"Language-Team: Russian (https://www.transifex.com/MageiaLinux/teams/9361/"
 "ru/)\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -29,24 +26,20 @@ msgstr ""
 "%100>=11 && n%100<=14)? 2 : 3);\n"
 
 #: manalog/manalog.py:45
-#, fuzzy
 msgid "System space"
-msgstr "Система"
+msgstr "Системное пространство"
 
 #: manalog/manalog.py:47
-#, fuzzy
 msgid "User space"
-msgstr "Имя пользователя"
+msgstr "Пространство пользователя"
 
 #: manalog/manalog.py:48
-#, fuzzy
 msgid "ManaLog - ManaTools log viewer"
-msgstr "Просмотрщик журналов journalct ManaTools, режим пользователя"
+msgstr ""
 
 #: manalog/manalog.py:49
-#, fuzzy
 msgid "Manatools - log viewer - {}"
-msgstr "Просмотрщик журналов journalct ManaTools, режим пользователя"
+msgstr ""
 
 #: manalog/manalog.py:94
 msgid "A tool to monitor your logs"
@@ -62,7 +55,7 @@ msgstr "Последняя загрузка"
 
 #: manalog/manalog.py:104
 msgid "Tail mode"
-msgstr ""
+msgstr "Режим tail mode"
 
 #: manalog/manalog.py:108
 msgid "Monotonic timestamp"
@@ -81,9 +74,8 @@ msgid "Select a unit"
 msgstr "Выберите устройство"
 
 #: manalog/manalog.py:186
-#, fuzzy
 msgid "Select a boot"
-msgstr "Выберите устройство"
+msgstr ""
 
 #: manalog/manalog.py:199
 msgid "Priority level"
@@ -122,18 +114,16 @@ msgid "&Quit"
 msgstr "&Выход"
 
 #: manalog/manalog.py:331
-#, fuzzy
 msgid "Reboot"
-msgstr "При загрузке"
+msgstr ""
 
 #: manalog/manalog.py:336
 msgid "Limit of {} lines reached. Please add some filters.\n"
 msgstr ""
 
 #: manalog/manalog.py:394
-#, fuzzy
 msgid "Boots cannot be listed"
-msgstr "Некоторые пакеты не могут быть установлены"
+msgstr ""
 
 #: manalog/manalog.py:395
 msgid ""
@@ -142,11 +132,10 @@ msgid ""
 msgstr ""
 
 #: manalog/manalog.py:408
-#, fuzzy
 msgid ""
 "\n"
 "Do you want to remove these files ?"
-msgstr "Удалить следующие источники?"
+msgstr ""
 
 #: manalog/manalog.py:409 manalog/manalog.py:417 manalog/manalog.py:421
 msgid "ManaLog - Verify journal"
@@ -164,7 +153,7 @@ msgstr ""
 
 #: manalog/manalog.py:477
 msgid "Log viewer is a systemd journal viewer"
-msgstr "Средство просмотра журнала предназначено для просмотра журнала systemd"
+msgstr "Log Viewer — это системный просмотрщик лог-журналов"
 
 #: manalog/manalog.py:482
 msgid "Save as.."

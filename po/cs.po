@@ -6,7 +6,7 @@
 # Translators:
 # Yuri Chornoivan <yurchor@ukr.net>, 2021
 # Luděk Janča <joelp@email.cz>, 2021
-# fri, 2021
+# fri, 2022
 #
 #, fuzzy
 msgid ""
@@ -15,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-04-06 07:21+0200\n"
 "PO-Revision-Date: 2021-04-07 19:23+0000\n"
-"Last-Translator: fri, 2021\n"
+"Last-Translator: fri, 2022\n"
 "Language-Team: Czech (https://www.transifex.com/MageiaLinux/teams/9361/cs/)\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
@@ -54,11 +54,11 @@ msgstr "Poslední zavedení"
 
 #: manalog/manalog.py:104
 msgid "Tail mode"
-msgstr ""
+msgstr "Koncový režim"
 
 #: manalog/manalog.py:108
 msgid "Monotonic timestamp"
-msgstr ""
+msgstr "Monotónní časové razítko"
 
 #: manalog/manalog.py:130
 msgid "Since"
@@ -122,13 +122,15 @@ msgstr "Bylo dosaženo limitu {} řádků. Přidejte, prosím, nějaký filtr.\n
 
 #: manalog/manalog.py:394
 msgid "Boots cannot be listed"
-msgstr ""
+msgstr "Poskoky nelze vypsat"
 
 #: manalog/manalog.py:395
 msgid ""
 "Failed to determine boots: No data available. Do you want to verify the "
 "system journal ? (this can take a while)"
 msgstr ""
+"Nepodařilo se určit poskoky: Nejsou dostupná žádná data. Chcete ověřit "
+"systémový deník? (to může chvíli trvat)"
 
 #: manalog/manalog.py:408
 msgid ""

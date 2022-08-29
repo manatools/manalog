@@ -80,7 +80,7 @@ msgstr ""
 
 #: manalog/manalog.py:199
 msgid "Priority level"
-msgstr ""
+msgstr "Уровень приоритета"
 
 #: manalog/manalog.py:216
 msgid "Matching"
@@ -92,7 +92,7 @@ msgstr "но не совпадает с"
 
 #: manalog/manalog.py:224
 msgid "&Stop"
-msgstr ""
+msgstr "&Остановить"
 
 #: manalog/manalog.py:227
 msgid "&Find"

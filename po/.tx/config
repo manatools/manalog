@@ -1,7 +1,7 @@
 [main]
 host = https://www.transifex.com
 
-[mageia.manalog]
+[o:MageiaLinux:p:mageia:r:manalog]
 file_filter = <lang>.po
 source_file = manalog.pot
 source_lang = en

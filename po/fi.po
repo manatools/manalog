@@ -1,22 +1,21 @@
-# #-#-#-#-#  manatools_perl.pot (ManaTools 1.1.1)  #-#-#-#-#
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR Angelo Naselli - Matteo Pasotti
-# This file is distributed under the same license as the PACKAGE package.
-#
-# #-#-#-#-#  manadesktop.pot (PACKAGE VERSION)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# This file is distributed under the same license as the manalog package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 # Translators:
+# Yuri Chornoivan <yurchor@ukr.net>, 2022
+# Kimmo Kujansuu <mrkujansuu@gmail.com>, 2023
+#
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Mageia\n"
+"Project-Id-Version: manalog 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-04-06 07:21+0200\n"
-"PO-Revision-Date: 2016-03-16 10:50+0000\n"
-"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
-"Language-Team: Finnish (http://www.transifex.com/MageiaLinux/mageia/language/"
+"PO-Revision-Date: 2021-04-07 19:23+0000\n"
+"Last-Translator: Kimmo Kujansuu <mrkujansuu@gmail.com>, 2023\n"
+"Language-Team: Finnish (https://app.transifex.com/MageiaLinux/teams/9361/"
 "fi/)\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
@@ -26,135 +25,140 @@ msgstr ""
 
 #: manalog/manalog.py:45
 msgid "System space"
-msgstr ""
+msgstr "Järjestelmätila"
 
 #: manalog/manalog.py:47
-#, fuzzy
 msgid "User space"
-msgstr "Käyttäjätunnus:"
+msgstr "Käyttäjätila"
 
 #: manalog/manalog.py:48
 msgid "ManaLog - ManaTools log viewer"
-msgstr ""
+msgstr "ManaLog - ManaTools lokin katselu"
 
 #: manalog/manalog.py:49
 msgid "Manatools - log viewer - {}"
-msgstr ""
+msgstr "Manatools - lokin katselu - {}"
 
 #: manalog/manalog.py:94
 msgid "A tool to monitor your logs"
-msgstr ""
+msgstr "Työkalu lokien seurantaan"
 
 #: manalog/manalog.py:97
 msgid "Options"
-msgstr ""
+msgstr "Asetukset"
 
 #: manalog/manalog.py:100
 msgid "Last boot"
-msgstr ""
+msgstr "Viimeinen käynnistys"
 
 #: manalog/manalog.py:104
 msgid "Tail mode"
-msgstr ""
+msgstr "Tail moodi"
 
 #: manalog/manalog.py:108
 msgid "Monotonic timestamp"
-msgstr ""
+msgstr "Monotoninen aikaleima"
 
 #: manalog/manalog.py:130
 msgid "Since"
-msgstr ""
+msgstr "Lähtien"
 
 #: manalog/manalog.py:134
 msgid "Until"
-msgstr ""
+msgstr "Saakka"
 
 #: manalog/manalog.py:159
 msgid "Select a unit"
-msgstr ""
+msgstr "Valitse yksikkö"
 
 #: manalog/manalog.py:186
 msgid "Select a boot"
-msgstr ""
+msgstr "Valitse käynnistys"
 
 #: manalog/manalog.py:199
 msgid "Priority level"
-msgstr ""
+msgstr "Tärkeysaste"
 
 #: manalog/manalog.py:216
 msgid "Matching"
-msgstr ""
+msgstr "Täsmää"
 
 #: manalog/manalog.py:219
 msgid "but not matching"
-msgstr ""
+msgstr "mutta ei täsmää"
 
 #: manalog/manalog.py:224
 msgid "&Stop"
-msgstr ""
+msgstr "&Pysäytä"
 
 #: manalog/manalog.py:227
 msgid "&Find"
-msgstr ""
+msgstr "&Etsi"
 
 #: manalog/manalog.py:231
 msgid "Log content"
-msgstr ""
+msgstr "Lokin sisältö"
 
 #: manalog/manalog.py:243
 msgid "&About"
-msgstr ""
+msgstr "&Tietoja"
 
 #: manalog/manalog.py:247
 msgid "&Save"
-msgstr ""
+msgstr "&Tallenna"
 
 #: manalog/manalog.py:249
 msgid "&Quit"
-msgstr ""
+msgstr "&Lopeta"
 
 #: manalog/manalog.py:331
 msgid "Reboot"
-msgstr ""
+msgstr "Käynnistä uudelleen"
 
 #: manalog/manalog.py:336
 msgid "Limit of {} lines reached. Please add some filters.\n"
-msgstr ""
+msgstr "Raja {} riveille on saavutettu. Lisää suodattimia.\n"
 
 #: manalog/manalog.py:394
 msgid "Boots cannot be listed"
-msgstr ""
+msgstr "Käynnistyksiä ei voi listata"
 
 #: manalog/manalog.py:395
 msgid ""
 "Failed to determine boots: No data available. Do you want to verify the "
 "system journal ? (this can take a while)"
 msgstr ""
+"Käynnistysten määritys epäonnistui: Tietoja ei ole saatavilla. Haluatko "
+"vahvistaa järjestelmän päiväkirjan? (tämä voi kestää hetken)"
 
 #: manalog/manalog.py:408
 msgid ""
 "\n"
 "Do you want to remove these files ?"
 msgstr ""
+"\n"
+"Haluatko poistaa nämä tiedostot?"
 
 #: manalog/manalog.py:409 manalog/manalog.py:417 manalog/manalog.py:421
 msgid "ManaLog - Verify journal"
-msgstr ""
+msgstr "ManaLog - Vahvista päiväkirja"
 
 #: manalog/manalog.py:416
 msgid ""
 "\n"
 "You must be root to remove these files."
 msgstr ""
+"\n"
+"Vain root \"pääkäyttäjä\", voi poistaa nämä tiedostot."
 
 #: manalog/manalog.py:422
 msgid "No errors have been detected in journal files."
-msgstr ""
+msgstr "Virheitä ei ole havaittu päiväkirjatiedostoista."
 
 #: manalog/manalog.py:477
 msgid "Log viewer is a systemd journal viewer"
-msgstr ""
+msgstr "Lokin katseluohjelma on systemd päiväkirjojen katselu"
 
 #: manalog/manalog.py:482
 msgid "Save as.."
-msgstr ""
+msgstr "Tallenna nimellä..."

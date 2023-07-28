@@ -6,7 +6,8 @@
 # Translators:
 # algri14 <aliger14@mail.ru>, 2021
 # Yuri Chornoivan <yurchor@ukr.net>, 2022
-# Виктор, 2022
+# Victor, 2022
+# AlexL <loginov.alex.valer@gmail.com>, 2023
 #
 #, fuzzy
 msgid ""
@@ -15,8 +16,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-04-06 07:21+0200\n"
 "PO-Revision-Date: 2021-04-07 19:23+0000\n"
-"Last-Translator: Виктор, 2022\n"
-"Language-Team: Russian (https://www.transifex.com/MageiaLinux/teams/9361/"
+"Last-Translator: AlexL <loginov.alex.valer@gmail.com>, 2023\n"
+"Language-Team: Russian (https://app.transifex.com/MageiaLinux/teams/9361/"
 "ru/)\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -36,11 +37,11 @@ msgstr "Пространство пользователя"
 
 #: manalog/manalog.py:48
 msgid "ManaLog - ManaTools log viewer"
-msgstr ""
+msgstr "ManaLog – средство для просмотра журнала из ManaTools"
 
 #: manalog/manalog.py:49
 msgid "Manatools - log viewer - {}"
-msgstr ""
+msgstr "Manatools – средство для просмотра журнала – {}"
 
 #: manalog/manalog.py:94
 msgid "A tool to monitor your logs"
@@ -60,7 +61,7 @@ msgstr "Режим tail mode"
 
 #: manalog/manalog.py:108
 msgid "Monotonic timestamp"
-msgstr ""
+msgstr "Монотонная часовая метка"
 
 #: manalog/manalog.py:130
 msgid "Since"
@@ -76,7 +77,7 @@ msgstr "Выберите устройство"
 
 #: manalog/manalog.py:186
 msgid "Select a boot"
-msgstr ""
+msgstr "Выберите загрузку"
 
 #: manalog/manalog.py:199
 msgid "Priority level"
@@ -120,17 +121,19 @@ msgstr "Перезагрузка"
 
 #: manalog/manalog.py:336
 msgid "Limit of {} lines reached. Please add some filters.\n"
-msgstr ""
+msgstr "Достигнуто ограничение в {} строк. Пожалуйста, добавьте фильтры.\n"
 
 #: manalog/manalog.py:394
 msgid "Boots cannot be listed"
-msgstr ""
+msgstr "Не удалось построить список загрузок"
 
 #: manalog/manalog.py:395
 msgid ""
 "Failed to determine boots: No data available. Do you want to verify the "
 "system journal ? (this can take a while)"
 msgstr ""
+"Невозможно определить загрузку: нет доступных данных. Хотите проверить "
+"журнал системы? (Процедура может быть достаточно продолжительной.)"
 
 #: manalog/manalog.py:408
 msgid ""
@@ -142,17 +145,19 @@ msgstr ""
 
 #: manalog/manalog.py:409 manalog/manalog.py:417 manalog/manalog.py:421
 msgid "ManaLog - Verify journal"
-msgstr ""
+msgstr "ManaLog – проверка журнала"
 
 #: manalog/manalog.py:416
 msgid ""
 "\n"
 "You must be root to remove these files."
 msgstr ""
+"\n"
+"Для удаления этих файлов требуются права доступа root."
 
 #: manalog/manalog.py:422
 msgid "No errors have been detected in journal files."
-msgstr ""
+msgstr "В файлах журналов ошибок не обнаружено."
 
 #: manalog/manalog.py:477
 msgid "Log viewer is a systemd journal viewer"

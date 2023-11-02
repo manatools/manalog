@@ -161,7 +161,7 @@ msgstr "В файлах журналов ошибок не обнаружено.
 
 #: manalog/manalog.py:477
 msgid "Log viewer is a systemd journal viewer"
-msgstr "Log Viewer — это системный просмотрщик лог-журналов"
+msgstr "Просмотрщик журналов — это системный просмотрщик лог-журналов"
 
 #: manalog/manalog.py:482
 msgid "Save as.."

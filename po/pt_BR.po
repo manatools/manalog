@@ -6,8 +6,8 @@
 # Translators:
 # Yuri Chornoivan <yurchor@ukr.net>, 2021
 # danilo freitas <danilo.gomes.freitas@gmail.com>, 2021
-# Michael Martins <michaelfm21@gmail.com>, 2021
 # Gilberto F. da Silva, 2022
+# Michael Martins <michaelfm21@gmail.com>, 2024
 #
 #, fuzzy
 msgid ""
@@ -16,8 +16,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-04-06 07:21+0200\n"
 "PO-Revision-Date: 2021-04-07 19:23+0000\n"
-"Last-Translator: Gilberto F. da Silva, 2022\n"
-"Language-Team: Portuguese (Brazil) (https://www.transifex.com/MageiaLinux/"
+"Last-Translator: Michael Martins <michaelfm21@gmail.com>, 2024\n"
+"Language-Team: Portuguese (Brazil) (https://app.transifex.com/MageiaLinux/"
 "teams/9361/pt_BR/)\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
@@ -36,13 +36,11 @@ msgstr "Espaço do usuário"
 
 #: manalog/manalog.py:48
 msgid "ManaLog - ManaTools log viewer"
-msgstr ""
-"ManaLog - visualizador de log ManaTools\n"
-" "
+msgstr "ManaLog - Visualizador de logs do ManaTools"
 
 #: manalog/manalog.py:49
 msgid "Manatools - log viewer - {}"
-msgstr "Manatools - visualizador de log - {}"
+msgstr "Manatools - visualizador de logs - {}"
 
 #: manalog/manalog.py:94
 msgid "A tool to monitor your logs"
@@ -58,7 +56,7 @@ msgstr "Última inicialização"
 
 #: manalog/manalog.py:104
 msgid "Tail mode"
-msgstr "Modo Tail "
+msgstr "Modo de acompanhamento"
 
 #: manalog/manalog.py:108
 msgid "Monotonic timestamp"
@@ -66,7 +64,7 @@ msgstr "Timestamp monotônico"
 
 #: manalog/manalog.py:130
 msgid "Since"
-msgstr "Ano"
+msgstr "Desde"
 
 #: manalog/manalog.py:134
 msgid "Until"
@@ -78,7 +76,7 @@ msgstr "Selecione uma unidade"
 
 #: manalog/manalog.py:186
 msgid "Select a boot"
-msgstr "Selecione um boot"
+msgstr "Selecione uma inicialização"
 
 #: manalog/manalog.py:199
 msgid "Priority level"
@@ -86,7 +84,7 @@ msgstr "Nível de prioridade"
 
 #: manalog/manalog.py:216
 msgid "Matching"
-msgstr "Coincidindo"
+msgstr "Combinando"
 
 #: manalog/manalog.py:219
 msgid "but not matching"
@@ -102,7 +100,7 @@ msgstr "&Encontrar"
 
 #: manalog/manalog.py:231
 msgid "Log content"
-msgstr "Conteúdo de Log"
+msgstr "Conteúdo do Log"
 
 #: manalog/manalog.py:243
 msgid "&About"
@@ -123,21 +121,20 @@ msgstr "Reiniciar"
 #: manalog/manalog.py:336
 msgid "Limit of {} lines reached. Please add some filters.\n"
 msgstr ""
-"Limite de {} linhas atingido. Adicione alguns filtros.\n"
+"Limite de {} linhas alcançado. Por favor, adicione alguns filtros.\n"
 "\n"
 
 #: manalog/manalog.py:394
 msgid "Boots cannot be listed"
-msgstr "Os boots não podem ser carregados"
+msgstr "As inicializações não podem ser listadas"
 
 #: manalog/manalog.py:395
 msgid ""
 "Failed to determine boots: No data available. Do you want to verify the "
 "system journal ? (this can take a while)"
 msgstr ""
-"Falha ao determinar as inicializações: Sem dados disponíveis. Você quer "
-"verificar a coleta e gerenciamento de entradas de registros diários de todas "
-"as partes do sistema.? (Isso pode demorar um pouco)"
+"Falha ao determinar as inicializações: Nenhum dado disponível. Você deseja "
+"verificar o journal do sistema? (Isso pode levar algum tempo)"
 
 #: manalog/manalog.py:408
 msgid ""
@@ -145,13 +142,11 @@ msgid ""
 "Do you want to remove these files ?"
 msgstr ""
 "\n"
-"Você quer remover esses arquivos ?"
+"Você deseja remover esses arquivos?"
 
 #: manalog/manalog.py:409 manalog/manalog.py:417 manalog/manalog.py:421
 msgid "ManaLog - Verify journal"
-msgstr ""
-"ManaLog - Verificar a coleta e gerenciamento de entradas de registros "
-"diários de todas as partes do sistema."
+msgstr "ManaLog - Verificar journal"
 
 #: manalog/manalog.py:416
 msgid ""
@@ -159,13 +154,11 @@ msgid ""
 "You must be root to remove these files."
 msgstr ""
 "\n"
-"Você deve ser o administrador para remover esses arquivos."
+"Você deve ser root para remover esses arquivos."
 
 #: manalog/manalog.py:422
 msgid "No errors have been detected in journal files."
-msgstr ""
-"Nenhum erro foi detectado nos arquivos de coleta e gerenciamento de entradas "
-"de registros diários de todas as partes do sistema."
+msgstr "Nenhum erro foi detectado nos arquivos do journal."
 
 #: manalog/manalog.py:477
 msgid "Log viewer is a systemd journal viewer"

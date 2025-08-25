@@ -26,7 +26,7 @@ import manatools.services as mnservices
 import yui
 import time
 import gettext
-from datetime import date, datetime
+from datetime import date, datetime, timezone
 from systemd import journal
 import os, select, subprocess
 import re
@@ -105,7 +105,7 @@ class MlDialog(basedialog.BaseDialog):
     self.tailing.setNotify(True)
     self.eventManager.addWidgetEvent(self.tailing, self.onTailingEvent)
     #### Monotonic display for timestamp
-    self.monotonbt = self.factory.createCheckBox(self.factory.createLeft(vbox),_("Monotonic timestamp"),True)
+    self.monotonbt = self.factory.createCheckBox(self.factory.createLeft(vbox),_("Monotonic timestamp"), False)
 
     self.factory.createVSpacing(vbox,0.5)
     row1 = self.factory.createHBox(vbox)
@@ -309,10 +309,17 @@ class MlDialog(basedialog.BaseDialog):
         lenghtlimit = 100000
         logstr=""
         previousBoot = ""
+        # locale offset from UTC
+        ts = 1288483950
+        offset = datetime.fromtimestamp(ts) - datetime.utcfromtimestamp(ts)
         if self.untilFrame.value() :
-            untilDatetime = datetime.strptime(self.untilDate.value() +" "+self.untilTime.value(), '%Y-%m-%d %H:%M:%S' )
+            # naive datetime
+            untilDatetime = datetime.strptime(self.untilDate.value() + " " + self.untilTime.value(), '%Y-%m-%d %H:%M:%S' )
+            # aware datetime
+            untilDatetime = untilDatetime.replace(tzinfo=timezone.utc) - offset
         else :
-            untilDatetime = datetime.now()
+            # aware datetime
+            untilDatetime = datetime.now(timezone.utc) + offset
         matching = self.matchingInputField.value()
         notmatching = self.notMatchingInputField.value()
         matching = matching.replace(' OR ','|')

@@ -28,6 +28,7 @@ import time
 import gettext
 from datetime import date, datetime, timezone
 from systemd import journal
+from log import Logviewer
 import os, select, subprocess
 import re
 import operator
@@ -262,25 +263,6 @@ class MlDialog(basedialog.BaseDialog):
   def onFindButton(self) :
     yui.YUI.app().busyCursor()
     j = journal.Reader()
-    if self.lastBoot.value() :
-         j.this_boot()
-         monotonic = self.monotonbt.value()
-    else :
-        monotonic = False
-    if self.unitsFrame.value() :
-        if self.units.value() != "" :
-            j.add_match("_SYSTEMD_UNIT={}.service".format(self.units.value()))
-    if self.bootsFrame.value() :
-        monotonic = self.monotonbt.value()
-        if self.boots.value() != "" :
-            j.this_boot(self.bootModel[self.boots.value()])
-    if self.priorityFromFrame.value() :
-        level = self.pr.index(self.priorityFrom.value())
-        print(level)
-        j.log_level(level)
-    if self.sinceFrame.value() :
-        begin = datetime.strptime(self.sinceDate.value() +" "+self.sinceTime.value(), '%Y-%m-%d %H:%M:%S' )
-        j.seek_realtime(begin)
     if self.tailing.value() :
         #   Display in logview all new lines starting from now
         self.stopButton.setEnabled()
@@ -303,13 +285,8 @@ class MlDialog(basedialog.BaseDialog):
                 if j.process() == journal.APPEND:
                     for l in j:
                         self.logView.appendLines(self._displayLine(l, monotonic))
-    else:
-        #   Query for journal lines matching the criteria
-        i=0
-        lenghtlimit = 100000
-        logstr=""
-        previousBoot = ""
-        # locale offset from UTC
+    else :
+        lv = Logviewer()
         ts = 1288483950
         offset = datetime.fromtimestamp(ts) - datetime.utcfromtimestamp(ts)
         if self.untilFrame.value() :
@@ -327,57 +304,21 @@ class MlDialog(basedialog.BaseDialog):
             matching = ''
         if notmatching =='*' : 
             notmatching = '.*'
-        neni = not notmatching and not matching
-        yeni = notmatching and not matching
-        neyi = not notmatching and matching
-        yeyi = notmatching and matching
-        
-        for l in j:
-            if previousBoot != l['_BOOT_ID'] :
-                if previousBoot != "" :
-                    logstr += "=== {} ===\n".format(_("Reboot"))
-                previousBoot = l['_BOOT_ID']
-            if untilDatetime < l['__REALTIME_TIMESTAMP'] :
-                break
-            if i>lenghtlimit :
-               logstr += _("Limit of {} lines reached. Please add some filters.\n").format(lenghtlimit) 
-               break
-            i+=1
-            newline=self._displayLine(l,monotonic)
-            if neni : # not notmatching and not matching
-                    logstr += newline
-            if yeni : #notmatching and not matching
-                if not (notmatching in newline) :
-                    logstr += newline
-            if neyi :  #not notmatching and matching
-                if matching in newline :
-                    logstr += newline
-            if yeyi : # notmatching and matching
-                if not (notmatching in newline) and (matching in newline):
-                    logstr += newline
+        logstr, i = lv.query(self.lastBoot.value(),
+                         self.monotonbt.value(),
+                         self.units.value() if self.unitsFrame.value() else None,
+                         self.bootModel[self.boots.value()] if self.bootsFrame.value() else None,
+                         datetime.strptime(self.sinceDate.value() +" "+self.sinceTime.value(), '%Y-%m-%d %H:%M:%S' ) if self.sinceFrame.value() else None,
+                         untilDatetime,
+                         matching,
+                         notmatching,
+                         self.pr.index(self.priorityFrom.value()) if self.priorityFromFrame.value() else None,
+                         )
+    
         self.logView.setLogText(logstr)
         print("Found {} lines".format(i))
     yui.YUI.app().normalCursor()
-    
-  def _displayLine(self, entry, monotonic = False):
-      if monotonic :
-         timeStr = "[{:.3f}]".format(entry['__MONOTONIC_TIMESTAMP'].timestamp.total_seconds())
-      else :
-          timeStr = datetime.strftime(entry['__REALTIME_TIMESTAMP'], '%Y-%m-%d %H:%M:%S' )
-      try:
-              pid = "[{}]".format(entry['_PID'])
-      except :
-             pid = ""
-      if 'SYSLOG_IDENTIFIER' in entry.keys() :
-           rline = "{} {}{}: {}\n".format(timeStr ,entry['SYSLOG_IDENTIFIER'], pid, entry['MESSAGE'])
-      else:
-        try:
-              rline = "{} {}{}: {}\n".format( timeStr,entry['_COMM'],pid, entry['MESSAGE'])
-        except:
-            rline=""
-            for key in entry.keys() :
-                rline += ("{}: {}\n".format(key,entry[key]))
-      return rline
+
             
   def onLastBootEvent(self) :
       yui.YUI.ui().blockEvents()

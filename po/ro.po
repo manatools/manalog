@@ -118,7 +118,7 @@ msgstr "Repornește"
 
 #: manalog/manalog.py:336
 msgid "Limit of {} lines reached. Please add some filters.\n"
-msgstr "Limita de {} linii atinsă. Vă rugăm să adăugați câteva filtre."
+msgstr "Limita de {} linii atinsă. Vă rugăm să adăugați câteva filtre.\n"
 
 #: manalog/manalog.py:394
 msgid "Boots cannot be listed"

@@ -1,24 +1,22 @@
-# #-#-#-#-#  manatools_perl.pot (ManaTools 1.1.2)  #-#-#-#-#
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR Angelo Naselli - Matteo Pasotti
-# This file is distributed under the same license as the PACKAGE package.
-#
-# #-#-#-#-#  manadesktop.pot (PACKAGE VERSION)  #-#-#-#-#
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# This file is distributed under the same license as the manalog package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 # Translators:
-# Florin Cătălin RUSSEN <cfrussen@yahoo.co.uk>, 2015-2016
+# Yuri Chornoivan <yurchor@ukr.net>, 2022
+# Aurelian R, 2026
+#
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Mageia\n"
+"Project-Id-Version: manalog 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-04-06 07:21+0200\n"
-"PO-Revision-Date: 2016-09-15 16:42+0000\n"
-"Last-Translator: Florin Cătălin RUSSEN <cfrussen@yahoo.co.uk>\n"
-"Language-Team: Romanian (http://www.transifex.com/MageiaLinux/mageia/"
-"language/ro/)\n"
+"PO-Revision-Date: 2021-04-07 19:23+0000\n"
+"Last-Translator: Aurelian R, 2026\n"
+"Language-Team: Romanian (https://app.transifex.com/MageiaLinux/teams/9361/"
+"ro/)\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -27,24 +25,20 @@ msgstr ""
 "2:1));\n"
 
 #: manalog/manalog.py:45
-#, fuzzy
 msgid "System space"
-msgstr "Sistem"
+msgstr "Spațiul pentru sistem"
 
 #: manalog/manalog.py:47
-#, fuzzy
 msgid "User space"
-msgstr "Nume utilizator"
+msgstr "Spațiul pentru utilizator"
 
 #: manalog/manalog.py:48
-#, fuzzy
 msgid "ManaLog - ManaTools log viewer"
-msgstr "Vizualizatorul de fișiere jurnal ManaTools, mod utilizator"
+msgstr "ManaLog - Vizualizator jurnal ManaTools"
 
 #: manalog/manalog.py:49
-#, fuzzy
 msgid "Manatools - log viewer - {}"
-msgstr "Vizualizatorul de fișiere jurnal ManaTools, mod utilizator"
+msgstr "ManaLog - Vizualizator jurnal - {}"
 
 #: manalog/manalog.py:94
 msgid "A tool to monitor your logs"
@@ -60,11 +54,11 @@ msgstr "Ultimul demaraj"
 
 #: manalog/manalog.py:104
 msgid "Tail mode"
-msgstr ""
+msgstr "Mod coadă"
 
 #: manalog/manalog.py:108
 msgid "Monotonic timestamp"
-msgstr ""
+msgstr "Marcaj temporal monotonic"
 
 #: manalog/manalog.py:130
 msgid "Since"
@@ -72,20 +66,19 @@ msgstr "De la"
 
 #: manalog/manalog.py:134
 msgid "Until"
-msgstr "Pînă la"
+msgstr "Până la"
 
 #: manalog/manalog.py:159
 msgid "Select a unit"
 msgstr "Selectați o unitate"
 
 #: manalog/manalog.py:186
-#, fuzzy
 msgid "Select a boot"
-msgstr "Selectați o unitate"
+msgstr "Selectați o pornire"
 
 #: manalog/manalog.py:199
 msgid "Priority level"
-msgstr ""
+msgstr "Nivel de prioritate"
 
 #: manalog/manalog.py:216
 msgid "Matching"
@@ -97,7 +90,7 @@ msgstr "dar nu conține"
 
 #: manalog/manalog.py:224
 msgid "&Stop"
-msgstr ""
+msgstr "&Oprire"
 
 #: manalog/manalog.py:227
 msgid "&Find"
@@ -120,45 +113,48 @@ msgid "&Quit"
 msgstr "&Terminare"
 
 #: manalog/manalog.py:331
-#, fuzzy
 msgid "Reboot"
-msgstr "La demaraj"
+msgstr "Repornește"
 
 #: manalog/manalog.py:336
 msgid "Limit of {} lines reached. Please add some filters.\n"
-msgstr ""
+msgstr "Limita de {} linii atinsă. Vă rugăm să adăugați câteva filtre."
 
 #: manalog/manalog.py:394
-#, fuzzy
 msgid "Boots cannot be listed"
-msgstr "Cîteva pachete nu pot fi instalate"
+msgstr "Pornirile nu pot fi listate"
 
 #: manalog/manalog.py:395
 msgid ""
 "Failed to determine boots: No data available. Do you want to verify the "
 "system journal ? (this can take a while)"
 msgstr ""
+"Nu s-au putut determina pornirile: Nu există date disponibile. Doriți să "
+"verificați jurnalul sistemului? (acest lucru poate dura ceva timp)"
 
 #: manalog/manalog.py:408
-#, fuzzy
 msgid ""
 "\n"
 "Do you want to remove these files ?"
-msgstr "Sigur doriți să înlăturați sursele următoare?"
+msgstr ""
+"\n"
+"Doriți să eliminați aceste fișiere ?"
 
 #: manalog/manalog.py:409 manalog/manalog.py:417 manalog/manalog.py:421
 msgid "ManaLog - Verify journal"
-msgstr ""
+msgstr "ManaLog - Verificați jurnalul"
 
 #: manalog/manalog.py:416
 msgid ""
 "\n"
 "You must be root to remove these files."
 msgstr ""
+"\n"
+"Trebuie să fiți root pentru a elimina aceste fișiere."
 
 #: manalog/manalog.py:422
 msgid "No errors have been detected in journal files."
-msgstr ""
+msgstr "Nu au fost detectate erori în fișierele jurnal."
 
 #: manalog/manalog.py:477
 msgid "Log viewer is a systemd journal viewer"
